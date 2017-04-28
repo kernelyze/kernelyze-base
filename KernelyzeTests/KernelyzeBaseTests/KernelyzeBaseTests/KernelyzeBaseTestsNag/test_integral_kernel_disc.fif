@@ -1,0 +1,79 @@
+M TEST_INTEGRAL_KERNEL_DISC_MOD,#h("../test_integral_kernel_disc.f90",23)
+ F TEST_INTEGRAL_KERNEL_DISC_EXPPROD,TEST_INTEGRAL_KERNEL_DISC_MOD_MP_test_integral_kernel_disc_expprod,result(TEST_PASS),#h("../test_integral_kernel_disc.f90",56)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  T integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_kernel_disc.f90",58)
+  V DESCRIP_STR,descrip_str,Character(Len=255),Char[255],,0,#t("../test_integral_kernel_disc.f90",66)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_kernel_disc.f90",60)
+  V EVAL_SZ,eval_sz,Integer,int,,0,#t("../test_integral_kernel_disc.f90",67)
+  V TEST_SZ,test_sz,Integer,int,,0,#t("../test_integral_kernel_disc.f90",67)
+  V TEST_RES,test_res,Real(Kind=2),double,,0,#t("../test_integral_kernel_disc.f90",68)
+  V REFERENCE_RES,reference_res,Real(Kind=2),double,,0,#t("../test_integral_kernel_disc.f90",68)
+  V KERNEL_INTEGRAL,kernel_integral,Type(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,,0,#t("../test_integral_kernel_disc.f90",63)
+  V I,i,Integer,int,,0,#t("../test_integral_kernel_disc.f90",67)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_kernel_disc.f90",70)
+  V TEST_PTS,test_pts,Real(Kind=2),double,,1,f(1:21),#t("../test_integral_kernel_disc.f90",69)
+  V WEIGHTS,weights,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_kernel_disc.f90",70)
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_integral_kernel_disc.f90",62)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_integral_kernel_disc.f90",64)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_integral_kernel_disc.f90",65)
+ EF
+ F TEST_INTEGRAL_KERNEL_DISC_GAUSSIAN,TEST_INTEGRAL_KERNEL_DISC_MOD_MP_test_integral_kernel_disc_gaussian,result(TEST_PASS),#h("../test_integral_kernel_disc.f90",124)
+  T integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_kernel_disc.f90",126)
+  V DESCRIP_STR,descrip_str,Character(Len=255),Char[255],,0,#t("../test_integral_kernel_disc.f90",134)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_kernel_disc.f90",128)
+  V EVAL_SZ,eval_sz,Integer,int,,0,#t("../test_integral_kernel_disc.f90",135)
+  V TEST_SZ,test_sz,Integer,int,,0,#t("../test_integral_kernel_disc.f90",135)
+  V TEST_RES,test_res,Real(Kind=2),double,,0,#t("../test_integral_kernel_disc.f90",136)
+  V REFERENCE_RES,reference_res,Real(Kind=2),double,,0,#t("../test_integral_kernel_disc.f90",136)
+  V TEST_PTS,test_pts,Real(Kind=2),double,,1,f(1:21),#t("../test_integral_kernel_disc.f90",137)
+  V KERNEL_INTEGRAL,kernel_integral,Type(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,,0,#t("../test_integral_kernel_disc.f90",131)
+  V I,i,Integer,int,,0,#t("../test_integral_kernel_disc.f90",135)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_integral_kernel_disc.f90",130)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_kernel_disc.f90",138)
+  V WEIGHTS,weights,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_kernel_disc.f90",138)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_integral_kernel_disc.f90",132)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_integral_kernel_disc.f90",133)
+ EF
+ F TEST_INTEGRAL_KERNEL_DISC_CAUCHY,TEST_INTEGRAL_KERNEL_DISC_MOD_MP_test_integral_kernel_disc_cauchy,result(TEST_PASS),#h("../test_integral_kernel_disc.f90",192)
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  T integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_kernel_disc.f90",194)
+  V DESCRIP_STR,descrip_str,Character(Len=255),Char[255],,0,#t("../test_integral_kernel_disc.f90",202)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_kernel_disc.f90",196)
+  V EVAL_SZ,eval_sz,Integer,int,,0,#t("../test_integral_kernel_disc.f90",203)
+  V TEST_SZ,test_sz,Integer,int,,0,#t("../test_integral_kernel_disc.f90",203)
+  V TEST_RES,test_res,Real(Kind=2),double,,0,#t("../test_integral_kernel_disc.f90",204)
+  V REFERENCE_RES,reference_res,Real(Kind=2),double,,0,#t("../test_integral_kernel_disc.f90",204)
+  V TEST_PTS,test_pts,Real(Kind=2),double,,1,f(1:21),#t("../test_integral_kernel_disc.f90",205)
+  V KERNEL_INTEGRAL,kernel_integral,Type(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,,0,#t("../test_integral_kernel_disc.f90",199)
+  V I,i,Integer,int,,0,#t("../test_integral_kernel_disc.f90",203)
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_integral_kernel_disc.f90",198)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_kernel_disc.f90",206)
+  V WEIGHTS,weights,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_kernel_disc.f90",206)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_integral_kernel_disc.f90",200)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_integral_kernel_disc.f90",201)
+ EF
+ F TEST_INTEGRAL_KERNEL_DISC,TEST_INTEGRAL_KERNEL_DISC_MOD_MP_test_integral_kernel_disc,result(TEST_PASS),#h("../test_integral_kernel_disc.f90",37)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_kernel_disc.f90",39)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_kernel_disc.f90",41)
+ EF
+EM

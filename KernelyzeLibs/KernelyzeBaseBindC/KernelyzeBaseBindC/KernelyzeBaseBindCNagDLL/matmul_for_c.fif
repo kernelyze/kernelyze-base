@@ -1,0 +1,10 @@
+M MATMUL_FOR_C_MOD,#h("../matmul_for_c.f90",24)
+ S MATMUL_FOR_C,matmul,#h("../matmul_for_c.f90",36)
+  V C_M,c_m,Integer,int,d,0,#t("../matmul_for_c.f90",45)
+  V C_N,c_n,Integer,int,d,0,#t("../matmul_for_c.f90",46)
+  V C_P,c_p,Integer,int,d,0,#t("../matmul_for_c.f90",47)
+  V C_A,c_a,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../matmul_for_c.f90",48)
+  V C_B,c_b,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../matmul_for_c.f90",49)
+  V C_D,c_d,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../matmul_for_c.f90",50)
+ ES
+EM

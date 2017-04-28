@@ -1,0 +1,16 @@
+M MOORE_PENROSE_INVERSE_MOD,#h("../moore_penrose_inverse.f90",27)
+ F MOORE_PENROSE_INVERSE,MOORE_PENROSE_INVERSE_MOD_MP_moore_penrose_inverse,result(MPINV),#h("../moore_penrose_inverse.f90",33)
+  V INFO,info,Integer,int,,0,#t("../moore_penrose_inverse.f90",41)
+  V AMAT,amat,Real(Kind=2),double,d,2,d(1:*,1:*),#t("../moore_penrose_inverse.f90",35)
+  V THRESH,thresh,Real(Kind=2),double,d,0,#t("../moore_penrose_inverse.f90",36)
+  V MPINV,mpinv,Real(Kind=2),double,,2,i(1:*,1:*),#t("../moore_penrose_inverse.f90",38)
+  V NUM_S,num_s,Integer,int,,0,#t("../moore_penrose_inverse.f90",42)
+  V TOLER,toler,Real(Kind=2),double,,0,#t("../moore_penrose_inverse.f90",43)
+  V AMATCOPY,amatcopy,Real(Kind=2),double,,2,i(1:*,1:*),#t("../moore_penrose_inverse.f90",44)
+  V SVEC,svec,Real(Kind=2),double,,1,i(1:*),#t("../moore_penrose_inverse.f90",45)
+  V UMAT,umat,Real(Kind=2),double,,2,i(1:*,1:*),#t("../moore_penrose_inverse.f90",46)
+  V J,j,Integer,int,,0,#t("../moore_penrose_inverse.f90",40)
+  V VMAT_T,vmat_t,Real(Kind=2),double,,2,i(1:*,1:*),#t("../moore_penrose_inverse.f90",47)
+  V WWVEC,wwvec,Real(Kind=2),double,,1,i(1:*),#t("../moore_penrose_inverse.f90",48)
+ EF
+EM

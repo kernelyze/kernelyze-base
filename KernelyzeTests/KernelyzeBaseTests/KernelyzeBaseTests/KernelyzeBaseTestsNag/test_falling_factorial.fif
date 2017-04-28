@@ -1,0 +1,19 @@
+M TEST_FALLING_FACTORIAL_MOD,#h("../test_falling_factorial.f90",24)
+ F TEST_FALLING_FACTORIAL,TEST_FALLING_FACTORIAL_MOD_MP_test_falling_factorial,result(TEST_PASS),#h("../test_falling_factorial.f90",33)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_falling_factorial.f90",35)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_falling_factorial.f90",37)
+ EF
+ F TEST_FALLING_FACTORIAL_SMALL_N,TEST_FALLING_FACTORIAL_MOD_MP_test_falling_factorial_small_n,result(TEST_PASS),#h("../test_falling_factorial.f90",50)
+  V TESTFAC,testfac,Real(Kind=2),double,,0,#t("../test_falling_factorial.f90",56)
+  V EXPECTED_FACTORIAL,expected_factorial,Real(Kind=2),double,,0,#t("../test_falling_factorial.f90",57)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_falling_factorial.f90",52)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_falling_factorial.f90",54)
+ EF
+ F TEST_FALLING_FACTORIAL_LARGE_N,TEST_FALLING_FACTORIAL_MOD_MP_test_falling_factorial_large_n,result(TEST_PASS),#h("../test_falling_factorial.f90",72)
+  V TESTFAC,testfac,Real(Kind=2),double,,0,#t("../test_falling_factorial.f90",79)
+  V EXPECTED_FACTORIAL,expected_factorial,Real(Kind=2),double,,0,#t("../test_falling_factorial.f90",80)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_falling_factorial.f90",74)
+  V I,i,Integer,int,,0,#t("../test_falling_factorial.f90",78)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_falling_factorial.f90",76)
+ EF
+EM

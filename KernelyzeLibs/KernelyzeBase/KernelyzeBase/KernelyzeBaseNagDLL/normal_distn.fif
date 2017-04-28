@@ -1,0 +1,42 @@
+M NORMAL_DISTN,#h("../normal_distn.f90",27)
+ F STD_NORMAL_PDF,NORMAL_DISTN_MP_std_normal_pdf,result(PDF),#h("../normal_distn.f90",97)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",99)
+  V PDF,pdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",101)
+ EF
+ F STD_NORMAL_CDF,NORMAL_DISTN_MP_std_normal_cdf,result(CDF),#h("../normal_distn.f90",117)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",119)
+  V CDF,cdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",121)
+ EF
+ F STD_NORMAL_PDF_ELT,NORMAL_DISTN_MP_std_normal_pdf_elt,result(PDF),#h("../normal_distn.f90",108)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",110)
+  V PDF,pdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",112)
+ EF
+ F STD_NORMAL_CDF_ELT,NORMAL_DISTN_MP_std_normal_cdf_elt,result(CDF),#h("../normal_distn.f90",128)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",130)
+  V CDF,cdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",132)
+ EF
+ F NORMAL_PDF,NORMAL_DISTN_MP_normal_pdf,result(PDF),#h("../normal_distn.f90",50)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",52)
+  V MU,mu,Real(Kind=2),double,d,0,#t("../normal_distn.f90",53)
+  V SIGMA,sigma,Real(Kind=2),double,d,0,#t("../normal_distn.f90",54)
+  V PDF,pdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",56)
+ EF
+ F NORMAL_CDF,NORMAL_DISTN_MP_normal_cdf,result(CDF),#h("../normal_distn.f90",73)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",75)
+  V MU,mu,Real(Kind=2),double,d,0,#t("../normal_distn.f90",76)
+  V SIGMA,sigma,Real(Kind=2),double,d,0,#t("../normal_distn.f90",77)
+  V CDF,cdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",79)
+ EF
+ F NORMAL_PDF_ELT,NORMAL_DISTN_MP_normal_pdf_elt,result(PDF),#h("../normal_distn.f90",62)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",64)
+  V MU,mu,Real(Kind=2),double,d,0,#t("../normal_distn.f90",65)
+  V SIGMA,sigma,Real(Kind=2),double,d,0,#t("../normal_distn.f90",66)
+  V PDF,pdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",68)
+ EF
+ F NORMAL_CDF_ELT,NORMAL_DISTN_MP_normal_cdf_elt,result(CDF),#h("../normal_distn.f90",86)
+  V X,x,Real(Kind=2),double,d,0,#t("../normal_distn.f90",88)
+  V MU,mu,Real(Kind=2),double,d,0,#t("../normal_distn.f90",89)
+  V SIGMA,sigma,Real(Kind=2),double,d,0,#t("../normal_distn.f90",90)
+  V CDF,cdf,Real(Kind=2),double,,0,#t("../normal_distn.f90",92)
+ EF
+EM

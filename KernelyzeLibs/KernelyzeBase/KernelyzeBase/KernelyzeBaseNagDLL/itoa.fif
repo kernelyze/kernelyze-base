@@ -1,0 +1,6 @@
+M ITOA_MOD,#h("../itoa.f90",26)
+ F ITOA,ITOA_MOD_MP_itoa,result(A),#h("../itoa.f90",36)
+  V I,i,Integer,int,d,0,#t("../itoa.f90",38)
+  V A,a,Character(Len=:),Char[:],a,0,#t("../itoa.f90",40)
+ EF
+EM

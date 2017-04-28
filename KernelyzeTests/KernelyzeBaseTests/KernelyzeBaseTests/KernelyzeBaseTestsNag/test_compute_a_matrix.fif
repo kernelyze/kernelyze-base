@@ -1,0 +1,52 @@
+M TEST_COMPUTE_A_MATRIX_MOD,#h("../test_compute_a_matrix.f90",24)
+ F TEST_COMPUTE_A_MATRIX_CAUCHY,TEST_COMPUTE_A_MATRIX_MOD_MP_test_compute_a_matrix_cauchy,result(TEST_PASS),#h("../test_compute_a_matrix.f90",144)
+  T kernel_cauchy_mod:kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  V CAUCHY_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0
+  V TEST_A_MATRIX,test_a_matrix,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_matrix.f90",150)
+  V KERNEL_MATRIX,kernel_matrix,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_matrix.f90",150)
+  V IDENTITY_MATRIX,identity_matrix,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_matrix.f90",151)
+  V SHOULD_BE_IDENTITY,should_be_identity,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_matrix.f90",151)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:8),#t("../test_compute_a_matrix.f90",152)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_matrix.f90",146)
+  V I,i,Integer,int,,0,#t("../test_compute_a_matrix.f90",156)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_matrix.f90",148)
+  V J,j,Integer,int,,0,#t("../test_compute_a_matrix.f90",156)
+ EF
+ F TEST_COMPUTE_A_MATRIX,TEST_COMPUTE_A_MATRIX_MOD_MP_test_compute_a_matrix,result(TEST_PASS),#h("../test_compute_a_matrix.f90",36)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_matrix.f90",38)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_matrix.f90",40)
+ EF
+ F TEST_COMPUTE_A_MATRIX_EXP_PROD,TEST_COMPUTE_A_MATRIX_MOD_MP_test_compute_a_matrix_exp_prod,result(TEST_PASS),#h("../test_compute_a_matrix.f90",54)
+  T kernel_expprod_mod:kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V TEST_A_MATRIX,test_a_matrix,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_matrix.f90",60)
+  V KERNEL_MATRIX,kernel_matrix,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_matrix.f90",60)
+  V IDENTITY_MATRIX,identity_matrix,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_matrix.f90",61)
+  V SHOULD_BE_IDENTITY,should_be_identity,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_matrix.f90",61)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:9),#t("../test_compute_a_matrix.f90",62)
+  V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_matrix.f90",56)
+  V I,i,Integer,int,,0,#t("../test_compute_a_matrix.f90",64)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_matrix.f90",58)
+  V J,j,Integer,int,,0,#t("../test_compute_a_matrix.f90",64)
+ EF
+ F TEST_COMPUTE_A_MATRIX_GAUSSIAN,TEST_COMPUTE_A_MATRIX_MOD_MP_test_compute_a_matrix_gaussian,result(TEST_PASS),#h("../test_compute_a_matrix.f90",99)
+  T kernel_gaussian_mod:kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V GAUSSIAN_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0
+  V TEST_A_MATRIX,test_a_matrix,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_matrix.f90",105)
+  V KERNEL_MATRIX,kernel_matrix,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_matrix.f90",105)
+  V IDENTITY_MATRIX,identity_matrix,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_matrix.f90",106)
+  V SHOULD_BE_IDENTITY,should_be_identity,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_matrix.f90",106)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:6),#t("../test_compute_a_matrix.f90",107)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_matrix.f90",101)
+  V I,i,Integer,int,,0,#t("../test_compute_a_matrix.f90",109)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_matrix.f90",103)
+  V J,j,Integer,int,,0,#t("../test_compute_a_matrix.f90",109)
+ EF
+EM

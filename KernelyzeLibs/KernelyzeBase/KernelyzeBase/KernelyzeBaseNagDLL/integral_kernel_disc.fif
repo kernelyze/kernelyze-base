@@ -1,0 +1,85 @@
+M INTEGRAL_KERNEL_DISC_MOD,#h("../integral_kernel_disc.f90",28)
+ T kernel,KERNEL_MOD_DT_kernel
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+  C Y_LB,y_lb,Real(Kind=2),double,16,,0
+  C Y_UB,y_ub,Real(Kind=2),double,24,,0
+ ET
+ T integral_kernel_measure,INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure
+  C INTEGRAL_IS_OVER_X,integral_is_over_x,Logical,int,40,,0
+  C DESCRIPTION,description,Character(Len=255),Char[255],44,,0
+  C KERNEL_TO_USE,kernel_to_use,Class(kernel),KERNEL_MOD_DT_kernel,16,a,0
+ ET
+ T integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,#d("../integral_kernel_disc.f90",39)
+  C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*),#c("../integral_kernel_disc.f90",41)
+  C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*),#c("../integral_kernel_disc.f90",43)
+ ET
+ F NTH_DERIV,INTEGRAL_KERNEL_DISC_MOD_MP_nth_deriv,result(DERIV),#h("../integral_kernel_disc.f90",173)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_disc.f90",177)
+  V I,i,Integer,int,,0,#t("../integral_kernel_disc.f90",182)
+  V N,n,Integer,int,d,0,#t("../integral_kernel_disc.f90",176)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_disc.f90",180)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",175)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_disc.f90",178)
+ EF
+ F EVAL_INTEGRAL_DISC,INTEGRAL_KERNEL_DISC_MOD_MP_eval_integral_disc,result(EVAL_RES),#h("../integral_kernel_disc.f90",72)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../integral_kernel_disc.f90",77)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../integral_kernel_disc.f90",75)
+  V I,i,Integer,int,,0,#t("../integral_kernel_disc.f90",79)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",74)
+  V KERNEL_EVAL_RES,kernel_eval_res,Real(Kind=2),double,,1,i(1:*),#t("../integral_kernel_disc.f90",80)
+ EF
+ S INTEGRAL_ASSIGN,INTEGRAL_KERNEL_DISC_MOD_MP_integral_assign,#h("../integral_kernel_disc.f90",215)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V LEFT,left,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",217)
+  V RIGHT,right,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../integral_kernel_disc.f90",218)
+  V KERNEL_USED,kernel_used,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,a,0,#t("../integral_kernel_disc.f90",220)
+ ES
+ F GET_EVAL_PTS,INTEGRAL_KERNEL_DISC_MOD_MP_get_eval_pts,result(CURR_EVAL_PTS),#h("../integral_kernel_disc.f90",234)
+  V CURR_EVAL_PTS,curr_eval_pts,Real(Kind=2),double,a,1,a(*:*),#t("../integral_kernel_disc.f90",238)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",236)
+ EF
+ S SET_EVAL_PTS,INTEGRAL_KERNEL_DISC_MOD_MP_set_eval_pts,#h("../integral_kernel_disc.f90",244)
+  V NEW_EVAL_PTS,new_eval_pts,Real(Kind=2),double,d,1,d(1:*),#t("../integral_kernel_disc.f90",247)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",246)
+ ES
+ F GET_WEIGHTS,INTEGRAL_KERNEL_DISC_MOD_MP_get_weights,result(CURR_WEIGHTS),#h("../integral_kernel_disc.f90",253)
+  V CURR_WEIGHTS,curr_weights,Real(Kind=2),double,a,1,a(*:*),#t("../integral_kernel_disc.f90",257)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",255)
+ EF
+ S SET_WEIGHTS,INTEGRAL_KERNEL_DISC_MOD_MP_set_weights,#h("../integral_kernel_disc.f90",263)
+  V NEW_WEIGHTS,new_weights,Real(Kind=2),double,d,1,d(1:*),#t("../integral_kernel_disc.f90",266)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",265)
+ ES
+ F GET_EFFECTIVE_EVAL_PTS,INTEGRAL_KERNEL_DISC_MOD_MP_get_effective_eval_pts,result(CURR_EFF_EVAL_PTS),#h("../integral_kernel_disc.f90",273)
+  V CURR_EFF_EVAL_PTS,curr_eff_eval_pts,Real(Kind=2),double,a,1,a(*:*),#t("../integral_kernel_disc.f90",277)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",275)
+ EF
+ F GET_EFFECTIVE_WEIGHTS,INTEGRAL_KERNEL_DISC_MOD_MP_get_effective_weights,result(CURR_EFF_WEIGHTS),#h("../integral_kernel_disc.f90",284)
+  V CURR_EFF_WEIGHTS,curr_eff_weights,Real(Kind=2),double,a,1,a(*:*),#t("../integral_kernel_disc.f90",288)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",286)
+ EF
+ F FIRST_DERIV,INTEGRAL_KERNEL_DISC_MOD_MP_first_deriv,result(DERIV),#h("../integral_kernel_disc.f90",97)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_disc.f90",100)
+  V I,i,Integer,int,,0,#t("../integral_kernel_disc.f90",105)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_disc.f90",103)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",99)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_disc.f90",101)
+ EF
+ F SECOND_DERIV,INTEGRAL_KERNEL_DISC_MOD_MP_second_deriv,result(DERIV),#h("../integral_kernel_disc.f90",135)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_disc.f90",138)
+  V I,i,Integer,int,,0,#t("../integral_kernel_disc.f90",143)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_disc.f90",141)
+  V THIS,this,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,0,#t("../integral_kernel_disc.f90",137)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_disc.f90",139)
+ EF
+EM

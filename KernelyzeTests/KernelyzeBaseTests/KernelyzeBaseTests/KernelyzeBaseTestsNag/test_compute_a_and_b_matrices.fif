@@ -1,0 +1,58 @@
+M TEST_COMPUTE_A_AND_B_MATRICES_MOD,#h("../test_compute_a_and_b_matrices.f90",24)
+ F TEST_COMPUTE_A_AND_B_MATRICES,TEST_COMPUTE_A_AND_B_MATRICES_MOD_MP_test_compute_a_and_b_matrices,result(TEST_PASS),#h("../test_compute_a_and_b_matrices.f90",36)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_and_b_matrices.f90",38)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_and_b_matrices.f90",40)
+ EF
+ F TEST_A_AND_B_MATRICES_EXP_PROD,TEST_COMPUTE_A_AND_B_MATRICES_MOD_MP_test_a_and_b_matrices_exp_prod,result(TEST_PASS),#h("../test_compute_a_and_b_matrices.f90",54)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V EXP_PROD_KERNEL,exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_compute_a_and_b_matrices.f90",60)
+  V TEST_A_MATRIX,test_a_matrix,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_and_b_matrices.f90",61)
+  V TEST_B_MATRIX,test_b_matrix,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_and_b_matrices.f90",61)
+  V KERNEL_MATRIX,kernel_matrix,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_and_b_matrices.f90",61)
+  V IDENTITY_MATRIX,identity_matrix,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_and_b_matrices.f90",62)
+  V SHOULD_BE_IDENTITY,should_be_identity,Real(Kind=2),double,,2,f(1:9,1:9),#t("../test_compute_a_and_b_matrices.f90",62)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_and_b_matrices.f90",56)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:9),#t("../test_compute_a_and_b_matrices.f90",63)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_and_b_matrices.f90",58)
+  V TEST_GAMMA,test_gamma,Real(Kind=2),double,,1,f(1:9),#t("../test_compute_a_and_b_matrices.f90",63)
+  V I,i,Integer,int,,0,#t("../test_compute_a_and_b_matrices.f90",65)
+  V J,j,Integer,int,,0,#t("../test_compute_a_and_b_matrices.f90",65)
+ EF
+ F TEST_A_AND_B_MATRICES_GAUSSIAN,TEST_COMPUTE_A_AND_B_MATRICES_MOD_MP_test_a_and_b_matrices_gaussian,result(TEST_PASS),#h("../test_compute_a_and_b_matrices.f90",111)
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V TEST_A_MATRIX,test_a_matrix,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_and_b_matrices.f90",118)
+  V TEST_B_MATRIX,test_b_matrix,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_and_b_matrices.f90",118)
+  V KERNEL_MATRIX,kernel_matrix,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_and_b_matrices.f90",118)
+  V IDENTITY_MATRIX,identity_matrix,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_and_b_matrices.f90",119)
+  V SHOULD_BE_IDENTITY,should_be_identity,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_compute_a_and_b_matrices.f90",119)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_and_b_matrices.f90",113)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:6),#t("../test_compute_a_and_b_matrices.f90",120)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_and_b_matrices.f90",115)
+  V TEST_GAMMA,test_gamma,Real(Kind=2),double,,1,f(1:6),#t("../test_compute_a_and_b_matrices.f90",120)
+  V I,i,Integer,int,,0,#t("../test_compute_a_and_b_matrices.f90",122)
+  V J,j,Integer,int,,0,#t("../test_compute_a_and_b_matrices.f90",122)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_compute_a_and_b_matrices.f90",117)
+ EF
+ F TEST_A_AND_B_MATRICES_CAUCHY,TEST_COMPUTE_A_AND_B_MATRICES_MOD_MP_test_a_and_b_matrices_cauchy,result(TEST_PASS),#h("../test_compute_a_and_b_matrices.f90",168)
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  V TEST_A_MATRIX,test_a_matrix,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_and_b_matrices.f90",175)
+  V TEST_B_MATRIX,test_b_matrix,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_and_b_matrices.f90",175)
+  V KERNEL_MATRIX,kernel_matrix,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_and_b_matrices.f90",175)
+  V IDENTITY_MATRIX,identity_matrix,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_and_b_matrices.f90",176)
+  V SHOULD_BE_IDENTITY,should_be_identity,Real(Kind=2),double,,2,f(1:8,1:8),#t("../test_compute_a_and_b_matrices.f90",176)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_compute_a_and_b_matrices.f90",170)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:8),#t("../test_compute_a_and_b_matrices.f90",177)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_compute_a_and_b_matrices.f90",172)
+  V TEST_GAMMA,test_gamma,Real(Kind=2),double,,1,f(1:8),#t("../test_compute_a_and_b_matrices.f90",177)
+  V I,i,Integer,int,,0,#t("../test_compute_a_and_b_matrices.f90",181)
+  V J,j,Integer,int,,0,#t("../test_compute_a_and_b_matrices.f90",181)
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_compute_a_and_b_matrices.f90",174)
+ EF
+EM

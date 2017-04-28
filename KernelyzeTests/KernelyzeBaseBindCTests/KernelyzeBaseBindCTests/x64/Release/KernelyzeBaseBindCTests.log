@@ -1,0 +1,16 @@
+﻿  borsuk_lower_bound_test.cpp
+  brent_test.cpp
+  matmul_test.cpp
+  eigen_approx_test.cpp
+  KernelyzeBaseBindCTests.cpp
+  num_opt_funcs_test.cpp
+  taylor_approx_test.cpp
+  find_all_zeros_test.cpp
+  option_formulae_test.cpp
+  kernel_integral_eval_test.cpp
+  test_function_ptrs.cpp
+  find_rel_optima_test.cpp
+  worst_rho_and_gamma_test.cpp
+  stdafx.cpp
+  linear_solve_test.cpp
+  KernelyzeBaseBindCTests.vcxproj -> C:\Users\thoma\Documents\Kernelyze\KernelyzeTests\KernelyzeBaseBindCTests\x64\Release\KernelyzeBaseBindCTests.exe

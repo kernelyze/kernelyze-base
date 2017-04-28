@@ -1,0 +1,149 @@
+M TEST_EIGEN_RANKN_KERNEL_MOD,#h("../test_eigen_rankn_kernel.f90",23)
+ F TEST_EIGEN_RANKN_KERNEL_BACHELIER,TEST_EIGEN_RANKN_KERNEL_MOD_MP_test_eigen_rankn_kernel_bachelier,result(TEST_PASS),#h("../test_eigen_rankn_kernel.f90",345)
+  T kernel_bachelier,KERNEL_BACHELIER_MOD_DT_kernel_bachelier
+   C SIGMA,sigma,Real(Kind=2),double,32,,0
+   C IS_CALL,is_call,Logical,int,40,,0
+  ET
+  T integral_kernel_disc_mod:integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",364)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",354)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_eigen_rankn_kernel.f90",348)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_eigen_rankn_kernel.f90",350)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",357)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_eigen_rankn_kernel.f90",358)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",360)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",360)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",361)
+  V I,i,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",359)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",361)
+  V J,j,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",359)
+  V X_PTS,x_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",362)
+  V Y_PTS,y_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",362)
+  V X_WTS,x_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",363)
+  V Y_WTS,y_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",363)
+  V BACHELIER_KERNEL,bachelier_kernel,Type(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,,0,#t("../test_eigen_rankn_kernel.f90",355)
+  V BACHELIER_EVAL,bachelier_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",361)
+  V EIGEN_MATRIX,eigen_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",366)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,a,0,#t("../test_eigen_rankn_kernel.f90",356)
+  V W_MATRIX,w_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",365)
+ EF
+ F TEST_EIGEN_RANKN_KERNEL,TEST_EIGEN_RANKN_KERNEL_MOD_MP_test_eigen_rankn_kernel,result(TEST_PASS),#h("../test_eigen_rankn_kernel.f90",40)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_eigen_rankn_kernel.f90",42)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_eigen_rankn_kernel.f90",44)
+ EF
+ F TEST_EIGEN_RANKN_KERNEL_EXPPROD,TEST_EIGEN_RANKN_KERNEL_MOD_MP_test_eigen_rankn_kernel_expprod,result(TEST_PASS),#h("../test_eigen_rankn_kernel.f90",64)
+  T integral_kernel_disc_mod:integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",83)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",73)
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_eigen_rankn_kernel.f90",74)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_eigen_rankn_kernel.f90",67)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_eigen_rankn_kernel.f90",69)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",76)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_eigen_rankn_kernel.f90",77)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",79)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",79)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",80)
+  V I,i,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",78)
+  V EXPPROD_EVAL,expprod_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",80)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",80)
+  V J,j,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",78)
+  V X_PTS,x_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",81)
+  V Y_PTS,y_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",81)
+  V X_WTS,x_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",82)
+  V Y_WTS,y_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",82)
+  V EIGEN_MATRIX,eigen_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",84)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,a,0,#t("../test_eigen_rankn_kernel.f90",75)
+ EF
+ F TEST_EIGEN_RANKN_KERNEL_GAUSSIAN,TEST_EIGEN_RANKN_KERNEL_MOD_MP_test_eigen_rankn_kernel_gaussian,result(TEST_PASS),#h("../test_eigen_rankn_kernel.f90",157)
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  T integral_kernel_disc_mod:integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",176)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",166)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_eigen_rankn_kernel.f90",160)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_eigen_rankn_kernel.f90",162)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",169)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_eigen_rankn_kernel.f90",170)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",172)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",172)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",173)
+  V I,i,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",171)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",173)
+  V J,j,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",171)
+  V X_PTS,x_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",174)
+  V Y_PTS,y_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",174)
+  V X_WTS,x_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",175)
+  V Y_WTS,y_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",175)
+  V EIGEN_MATRIX,eigen_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",177)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_eigen_rankn_kernel.f90",167)
+  V GAUSSIAN_EVAL,gaussian_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",173)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,a,0,#t("../test_eigen_rankn_kernel.f90",168)
+ EF
+ F TEST_EIGEN_RANKN_KERNEL_CAUCHY,TEST_EIGEN_RANKN_KERNEL_MOD_MP_test_eigen_rankn_kernel_cauchy,result(TEST_PASS),#h("../test_eigen_rankn_kernel.f90",250)
+  T integral_kernel_disc_mod:integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",269)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",259)
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_eigen_rankn_kernel.f90",260)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_eigen_rankn_kernel.f90",253)
+  V CAUCHY_EVAL,cauchy_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",266)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_eigen_rankn_kernel.f90",255)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",262)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_eigen_rankn_kernel.f90",263)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",265)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",265)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",266)
+  V I,i,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",264)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_eigen_rankn_kernel.f90",266)
+  V J,j,Integer,int,,0,#t("../test_eigen_rankn_kernel.f90",264)
+  V X_PTS,x_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",267)
+  V Y_PTS,y_pts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",267)
+  V X_WTS,x_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",268)
+  V Y_WTS,y_wts,Real(Kind=2),double,,1,f(1:50),#t("../test_eigen_rankn_kernel.f90",268)
+  V EIGEN_MATRIX,eigen_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_eigen_rankn_kernel.f90",270)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,a,0,#t("../test_eigen_rankn_kernel.f90",261)
+ EF
+EM

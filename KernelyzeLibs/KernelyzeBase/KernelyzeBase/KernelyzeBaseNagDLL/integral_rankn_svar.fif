@@ -1,0 +1,11 @@
+M INTEGRAL_RANKN_SVAR_MOD,#h("../integral_rankn_svar.f90",24)
+ T singlevar_func_mod:singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+ ET
+ T integral_kernel_singlevar,INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar
+  C SVAR_FUNC,svar_func,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,304,a,0
+ ET
+ T integral_rankn_svar,INTEGRAL_RANKN_SVAR_MOD_DT_integral_rankn_svar,#d("../integral_rankn_svar.f90",33)
+ ET
+EM

@@ -1,0 +1,42 @@
+M TEST_FIND_ALL_ZEROS_MOD,#h("../test_find_all_zeros.f90",24)
+ F TEST_FIND_ALL_ZEROS,TEST_FIND_ALL_ZEROS_MOD_MP_test_find_all_zeros,result(TEST_PASS),#h("../test_find_all_zeros.f90",34)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_find_all_zeros.f90",36)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_find_all_zeros.f90",38)
+ EF
+ F TEST_FIND_ALL_ZEROS_SIN,TEST_FIND_ALL_ZEROS_MOD_MP_test_find_all_zeros_sin,result(TEST_PASS),#h("../test_find_all_zeros.f90",51)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_find_all_zeros.f90",53)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_find_all_zeros.f90",55)
+  V J,j,Integer,int,,0,#t("../test_find_all_zeros.f90",59)
+  V GRID_VEC,grid_vec,Real(Kind=2),double,,1,f(1:21),#t("../test_find_all_zeros.f90",57)
+  V RES_ZEROS,res_zeros,Real(Kind=2),double,a,1,a(*:*),#t("../test_find_all_zeros.f90",58)
+ EF
+ F TEST_FIND_ALL_ZEROS_LOG,TEST_FIND_ALL_ZEROS_MOD_MP_test_find_all_zeros_log,result(TEST_PASS),#h("../test_find_all_zeros.f90",74)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_find_all_zeros.f90",76)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_find_all_zeros.f90",78)
+  V J,j,Integer,int,,0,#t("../test_find_all_zeros.f90",82)
+  V GRID_VEC,grid_vec,Real(Kind=2),double,,1,f(1:21),#t("../test_find_all_zeros.f90",80)
+  V LOG_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_log_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V RES_ZEROS,res_zeros,Real(Kind=2),double,a,1,a(*:*),#t("../test_find_all_zeros.f90",81)
+ EF
+ F TEST_FIND_ALL_ZEROS_EXP,TEST_FIND_ALL_ZEROS_MOD_MP_test_find_all_zeros_exp,result(TEST_PASS),#h("../test_find_all_zeros.f90",97)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V EXP_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_exp_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_find_all_zeros.f90",99)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_find_all_zeros.f90",101)
+  V J,j,Integer,int,,0,#t("../test_find_all_zeros.f90",105)
+  V GRID_VEC,grid_vec,Real(Kind=2),double,,1,f(1:21),#t("../test_find_all_zeros.f90",103)
+  V RES_ZEROS,res_zeros,Real(Kind=2),double,a,1,a(*:*),#t("../test_find_all_zeros.f90",104)
+ EF
+EM

@@ -1,0 +1,29 @@
+M BORSUK_LOWER_BOUND_FOR_C_MOD,#h("../borsuk_lower_bound_for_c.f90",25)
+ S BORSUK_LOWER_BOUND_FOR_C,borsuk_lower_bound,#h("../borsuk_lower_bound_for_c.f90",54)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../borsuk_lower_bound_for_c.f90",91)
+  V ERRORS_AT_NODES,errors_at_nodes,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound_for_c.f90",81)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,d,0,#t("../borsuk_lower_bound_for_c.f90",82)
+  V NUM_ITER,num_iter,Integer,int,d,0,#t("../borsuk_lower_bound_for_c.f90",83)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound_for_c.f90",73)
+  V TOLERANCE,tolerance,Real(Kind=2),double,d,0,#t("../borsuk_lower_bound_for_c.f90",75)
+  V NODES,nodes,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound_for_c.f90",80)
+  V IS_OVER_X,is_over_x,Logical(Kind=1),signed char,d,0,#t("../borsuk_lower_bound_for_c.f90",74)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../borsuk_lower_bound_for_c.f90",71)
+  V SIZE_OF_RHO,size_of_rho,Integer,int,d,0,#t("../borsuk_lower_bound_for_c.f90",72)
+  V GRID,grid,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound_for_c.f90",78)
+  V N_GRID_PTS,n_grid_pts,Integer,int,d,0,#t("../borsuk_lower_bound_for_c.f90",77)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../borsuk_lower_bound_for_c.f90",85)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../borsuk_lower_bound_for_c.f90",87)
+  V COEFFS,coeffs,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound_for_c.f90",79)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../borsuk_lower_bound_for_c.f90",90)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../borsuk_lower_bound_for_c.f90",76)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../borsuk_lower_bound_for_c.f90",92)
+ ES
+EM

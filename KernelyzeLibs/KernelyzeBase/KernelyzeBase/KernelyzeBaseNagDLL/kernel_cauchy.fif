@@ -1,0 +1,75 @@
+M KERNEL_CAUCHY_MOD,#h("../kernel_cauchy.f90",30)
+ T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable
+ ET
+ T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy,#d("../kernel_cauchy.f90",41)
+  C C,c,Real(Kind=2),double,32,,0,#c("../kernel_cauchy.f90",44)
+  C ALPHA,alpha,Real(Kind=2),double,40,,0,#c("../kernel_cauchy.f90",47)
+ ET
+ S SET_ALPHA_PARAM,KERNEL_CAUCHY_MOD_MP_set_alpha_param,#h("../kernel_cauchy.f90",192)
+  V ALPHA_PARAM,alpha_param,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",195)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",194)
+ ES
+ F SECOND_PARTIAL_DX_DY,KERNEL_CAUCHY_MOD_MP_second_partial_dx_dy,result(DERIV),#h("../kernel_cauchy.f90",139)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",146)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",142)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",141)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",143)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",144)
+ EF
+ F MTH_NTH_PARTIAL,KERNEL_CAUCHY_MOD_MP_mth_nth_partial,result(DERIV),#h("../kernel_cauchy.f90",151)
+  V M,m,Integer,int,d,0,#t("../kernel_cauchy.f90",154)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",160)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",156)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",153)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",157)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",158)
+  V N,n,Integer,int,d,0,#t("../kernel_cauchy.f90",155)
+ EF
+ F EVAL_CAUCHY_KERNEL,KERNEL_CAUCHY_MOD_MP_eval_cauchy_kernel,result(EVAL_RES),#h("../kernel_cauchy.f90",72)
+  V Z,z,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",80)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",75)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",74)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",76)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",78)
+ EF
+ F GET_C_PARAM,KERNEL_CAUCHY_MOD_MP_get_c_param,result(C_PARAM),#h("../kernel_cauchy.f90",166)
+  V C_PARAM,c_param,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",170)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",168)
+ EF
+ F FIRST_PARTIAL_DX,KERNEL_CAUCHY_MOD_MP_first_partial_dx,result(DERIV),#h("../kernel_cauchy.f90",90)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",97)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",93)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",92)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",94)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",95)
+ EF
+ S SET_C_PARAM,KERNEL_CAUCHY_MOD_MP_set_c_param,#h("../kernel_cauchy.f90",175)
+  V C_PARAM,c_param,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",178)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",177)
+ ES
+ F FIRST_PARTIAL_DY,KERNEL_CAUCHY_MOD_MP_first_partial_dy,result(DERIV),#h("../kernel_cauchy.f90",102)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",109)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",105)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",104)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",106)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",107)
+ EF
+ F GET_ALPHA_PARAM,KERNEL_CAUCHY_MOD_MP_get_alpha_param,result(ALPHA_PARAM),#h("../kernel_cauchy.f90",183)
+  V ALPHA_PARAM,alpha_param,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",187)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",185)
+ EF
+ F SECOND_PARTIAL_DX_DX,KERNEL_CAUCHY_MOD_MP_second_partial_dx_dx,result(DERIV),#h("../kernel_cauchy.f90",114)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",121)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",117)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",116)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",118)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",119)
+ EF
+ F SECOND_PARTIAL_DY_DY,KERNEL_CAUCHY_MOD_MP_second_partial_dy_dy,result(DERIV),#h("../kernel_cauchy.f90",127)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_cauchy.f90",134)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",130)
+  V THIS,this,Class(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,d,0,#t("../kernel_cauchy.f90",129)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",131)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_cauchy.f90",132)
+ EF
+EM

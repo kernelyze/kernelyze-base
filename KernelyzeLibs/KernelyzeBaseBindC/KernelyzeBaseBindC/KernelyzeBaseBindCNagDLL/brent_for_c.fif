@@ -1,0 +1,75 @@
+M BRENT_FOR_C_MOD,#h("../brent_for_c.f90",23)
+ F ZEROIN_FOR_C,zeroin,result(Z),#h("../brent_for_c.f90",50)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V A,a,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",56)
+  V B,b,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",57)
+  V Z,z,Real(Kind=2),double,,0,#t("../brent_for_c.f90",61)
+  V F,f,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../brent_for_c.f90",58)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",59)
+  V SVAR,svar,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../brent_for_c.f90",64)
+ EF
+ S BRENT_ZERO_FOR_C,brent_zero,#h("../brent_for_c.f90",77)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V A,a,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",88)
+  V B,b,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",89)
+  V F,f,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../brent_for_c.f90",90)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",91)
+  V ERR_CODE,err_code,Integer,int,d,0,#t("../brent_for_c.f90",94)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../brent_for_c.f90",92)
+  V X_ZERO,x_zero,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",95)
+  V F_ZERO,f_zero,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",96)
+  V NEVAL,neval,Integer,int,d,0,#t("../brent_for_c.f90",93)
+  V SVAR,svar,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../brent_for_c.f90",99)
+ ES
+ S FMIN_FOR_C,f_min,#h("../brent_for_c.f90",112)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V A,a,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",122)
+  V B,b,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",123)
+  V F,f,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../brent_for_c.f90",124)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",125)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../brent_for_c.f90",129)
+  V XOPT,xopt,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",126)
+  V FOPT,fopt,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",127)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../brent_for_c.f90",131)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../brent_for_c.f90",135)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../brent_for_c.f90",136)
+  V SVAR,svar,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../brent_for_c.f90",134)
+ ES
+ S BRENT_MIN_FOR_C,brent_min,#h("../brent_for_c.f90",156)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V A,a,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",167)
+  V B,b,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",168)
+  V F,f,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../brent_for_c.f90",169)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",170)
+  V ERR_CODE,err_code,Integer,int,d,0,#t("../brent_for_c.f90",173)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../brent_for_c.f90",171)
+  V NEVAL,neval,Integer,int,d,0,#t("../brent_for_c.f90",172)
+  V X_MIN,x_min,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",174)
+  V F_MIN,f_min,Real(Kind=2),double,d,0,#t("../brent_for_c.f90",175)
+  V SVAR,svar,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../brent_for_c.f90",178)
+ ES
+EM

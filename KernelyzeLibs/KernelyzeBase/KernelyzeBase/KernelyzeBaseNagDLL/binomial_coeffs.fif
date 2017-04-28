@@ -1,0 +1,9 @@
+M BINOMIAL_COEFFS_MOD,#h("../binomial_coeffs.f90",30)
+ F BINOMIAL_COEFFS,BINOMIAL_COEFFS_MOD_MP_binomial_coeffs,result(COEFFS),#h("../binomial_coeffs.f90",46)
+  V COEFFS,coeffs,Real(Kind=2),double,,1,i(1:*),#t("../binomial_coeffs.f90",50)
+  V COEFFS_OLD,coeffs_old,Real(Kind=2),double,,1,i(1:*),#t("../binomial_coeffs.f90",53)
+  V I,i,Integer,int,,0,#t("../binomial_coeffs.f90",52)
+  V J,j,Integer,int,,0,#t("../binomial_coeffs.f90",52)
+  V N,n,Integer,int,d,0,#t("../binomial_coeffs.f90",48)
+ EF
+EM

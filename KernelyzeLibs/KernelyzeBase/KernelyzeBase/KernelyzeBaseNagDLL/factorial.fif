@@ -1,0 +1,7 @@
+M FACTORIAL_MOD,#h("../factorial.f90",24)
+ F FACTORIAL,FACTORIAL_MOD_MP_factorial,result(FACT),#h("../factorial.f90",38)
+  V FACT,fact,Real(Kind=2),double,,0,#t("../factorial.f90",42)
+  V J,j,Integer,int,,0,#t("../factorial.f90",44)
+  V N,n,Integer,int,d,0,#t("../factorial.f90",40)
+ EF
+EM

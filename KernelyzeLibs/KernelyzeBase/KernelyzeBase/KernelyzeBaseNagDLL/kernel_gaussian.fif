@@ -1,0 +1,66 @@
+M KERNEL_GAUSSIAN_MOD,#h("../kernel_gaussian.f90",41)
+ T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable
+ ET
+ T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,#d("../kernel_gaussian.f90",52)
+  C C,c,Real(Kind=2),double,32,,0,#c("../kernel_gaussian.f90",55)
+ ET
+ F FIRST_PARTIAL_DY,KERNEL_GAUSSIAN_MOD_MP_first_partial_dy,result(DERIV),#h("../kernel_gaussian.f90",99)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",102)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",106)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",101)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",104)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",103)
+ EF
+ F SECOND_PARTIAL_DX_DX,KERNEL_GAUSSIAN_MOD_MP_second_partial_dx_dx,result(DERIV),#h("../kernel_gaussian.f90",112)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",115)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",119)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",114)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",117)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",116)
+ EF
+ F SECOND_PARTIAL_DY_DY,KERNEL_GAUSSIAN_MOD_MP_second_partial_dy_dy,result(DERIV),#h("../kernel_gaussian.f90",126)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",129)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",133)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",128)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",131)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",130)
+ EF
+ F SECOND_PARTIAL_DX_DY,KERNEL_GAUSSIAN_MOD_MP_second_partial_dx_dy,result(DERIV),#h("../kernel_gaussian.f90",138)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",141)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",145)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",140)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",143)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",142)
+ EF
+ F MTH_NTH_PARTIAL,KERNEL_GAUSSIAN_MOD_MP_mth_nth_partial,result(DERIV),#h("../kernel_gaussian.f90",150)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",155)
+  V M,m,Integer,int,d,0,#t("../kernel_gaussian.f90",153)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",159)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",152)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",157)
+  V N,n,Integer,int,d,0,#t("../kernel_gaussian.f90",154)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",156)
+  V HERMITE_POLY,hermite_poly,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",161)
+ EF
+ F EVAL_GAUSSIAN_KERNEL,KERNEL_GAUSSIAN_MOD_MP_eval_gaussian_kernel,result(EVAL_RES),#h("../kernel_gaussian.f90",76)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",79)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",78)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",82)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",80)
+ EF
+ F GET_C_PARAM,KERNEL_GAUSSIAN_MOD_MP_get_c_param,result(C_PARAM),#h("../kernel_gaussian.f90",179)
+  V C_PARAM,c_param,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",183)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",181)
+ EF
+ S SET_C_PARAM,KERNEL_GAUSSIAN_MOD_MP_set_c_param,#h("../kernel_gaussian.f90",188)
+  V C_PARAM,c_param,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",191)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",190)
+ ES
+ F FIRST_PARTIAL_DX,KERNEL_GAUSSIAN_MOD_MP_first_partial_dx,result(DERIV),#h("../kernel_gaussian.f90",86)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",89)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_gaussian.f90",93)
+  V THIS,this,Class(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,d,0,#t("../kernel_gaussian.f90",88)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",91)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_gaussian.f90",90)
+ EF
+EM

@@ -1,0 +1,34 @@
+M TEST_MRGRNK_MOD,#h("../test_mrgrnk.f90",23)
+ F TEST_MRGRNK,TEST_MRGRNK_MOD_MP_test_mrgrnk,result(TEST_PASS),#h("../test_mrgrnk.f90",33)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_mrgrnk.f90",35)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_mrgrnk.f90",37)
+ EF
+ F TEST_MRGRNK_IDENTICAL,TEST_MRGRNK_MOD_MP_test_mrgrnk_identical,result(TEST_PASS),#h("../test_mrgrnk.f90",52)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:51),#t("../test_mrgrnk.f90",58)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:51),#t("../test_mrgrnk.f90",59)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_mrgrnk.f90",54)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_mrgrnk.f90",56)
+  V J,j,Integer,int,,0,#t("../test_mrgrnk.f90",60)
+ EF
+ F TEST_MRGRNK_ORDERED,TEST_MRGRNK_MOD_MP_test_mrgrnk_ordered,result(TEST_PASS),#h("../test_mrgrnk.f90",79)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:20),#t("../test_mrgrnk.f90",85)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:20),#t("../test_mrgrnk.f90",86)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_mrgrnk.f90",81)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_mrgrnk.f90",83)
+  V J,j,Integer,int,,0,#t("../test_mrgrnk.f90",87)
+ EF
+ F TEST_MRGRNK_REVERSE_ORDERED,TEST_MRGRNK_MOD_MP_test_mrgrnk_reverse_ordered,result(TEST_PASS),#h("../test_mrgrnk.f90",113)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:27),#t("../test_mrgrnk.f90",119)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:27),#t("../test_mrgrnk.f90",120)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_mrgrnk.f90",115)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_mrgrnk.f90",117)
+  V J,j,Integer,int,,0,#t("../test_mrgrnk.f90",121)
+ EF
+ F TEST_MRGRNK_WITH_NANS,TEST_MRGRNK_MOD_MP_test_mrgrnk_with_nans,result(TEST_PASS),#h("../test_mrgrnk.f90",147)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:19),#t("../test_mrgrnk.f90",153)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:19),#t("../test_mrgrnk.f90",154)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_mrgrnk.f90",149)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_mrgrnk.f90",151)
+  V J,j,Integer,int,,0,#t("../test_mrgrnk.f90",155)
+ EF
+EM

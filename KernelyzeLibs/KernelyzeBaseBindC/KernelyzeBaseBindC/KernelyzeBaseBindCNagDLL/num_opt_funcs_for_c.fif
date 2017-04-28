@@ -1,0 +1,176 @@
+M NUM_OPT_FUNCS_FOR_C_MOD,#h("../num_opt_funcs_for_c.f90",35)
+ S NUM_OPT_RANKN_PARAMS_FOR_C,num_opt_rankn_params,#h("../num_opt_funcs_for_c.f90",66)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../num_opt_funcs_for_c.f90",105)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../num_opt_funcs_for_c.f90",84)
+  V C_X_LB,c_x_lb,Real(Kind=2),double,d,0,#t("../num_opt_funcs_for_c.f90",85)
+  V C_X_UB,c_x_ub,Real(Kind=2),double,d,0,#t("../num_opt_funcs_for_c.f90",86)
+  V C_Y_LB,c_y_lb,Real(Kind=2),double,d,0,#t("../num_opt_funcs_for_c.f90",87)
+  V C_Y_UB,c_y_ub,Real(Kind=2),double,d,0,#t("../num_opt_funcs_for_c.f90",88)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",89)
+  V C_MAX_ITER,c_max_iter,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",90)
+  V C_TOLER,c_toler,Real(Kind=2),double,d,0,#t("../num_opt_funcs_for_c.f90",91)
+  V C_RHO_VEC,c_rho_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",92)
+  V C_GAMMA_VEC,c_gamma_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",93)
+  V C_V_MAT,c_v_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",94)
+  V C_W_MAT,c_w_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",96)
+  V C_BORSUK_LB,c_borsuk_lb,Real(Kind=2),double,d,0,#t("../num_opt_funcs_for_c.f90",98)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",100)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../num_opt_funcs_for_c.f90",101)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../num_opt_funcs_for_c.f90",104)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../num_opt_funcs_for_c.f90",106)
+ ES
+ S NUM_OPT_RANKN_INTEGRAL_EVAL_FOR_C,num_opt_rankn_integral_eval,#h("../num_opt_funcs_for_c.f90",198)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T integral_rankn_disc,INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../num_opt_funcs_for_c.f90",237)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../num_opt_funcs_for_c.f90",216)
+  V C_RESULTS_OF_EVAL,c_results_of_eval,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",230)
+  V I,i,Integer,int,,0,#t("../num_opt_funcs_for_c.f90",239)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",217)
+  V C_RHO_VEC,c_rho_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",218)
+  V C_INTEGRAL_IS_OVER_X,c_integral_is_over_x,Logical(Kind=1),signed char,d,0,#t("../num_opt_funcs_for_c.f90",224)
+  V C_GAMMA_VEC,c_gamma_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",219)
+  V C_V_MAT,c_v_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",220)
+  V C_NUM_INTEGRAL_PTS,c_num_integral_pts,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",225)
+  V C_W_MAT,c_w_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",222)
+  V C_INTEGRAL_PTS,c_integral_pts,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",226)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",232)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../num_opt_funcs_for_c.f90",233)
+  V C_INTEGRAL_WTS,c_integral_wts,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",227)
+  V C_EVAL_PTS,c_eval_pts,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",229)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../num_opt_funcs_for_c.f90",236)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../num_opt_funcs_for_c.f90",238)
+  V RANKN_INTEGRAL,rankn_integral,Class(integral_nsect_disc_mod:integral_rankn_disc),INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc,a,0,#t("../num_opt_funcs_for_c.f90",241)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../num_opt_funcs_for_c.f90",240)
+  V C_NUM_EVAL_PTS,c_num_eval_pts,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",228)
+ ES
+ S NUM_OPT_RANKN_EVAL_FOR_C,num_opt_rankn_eval,#h("../num_opt_funcs_for_c.f90",134)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../num_opt_funcs_for_c.f90",167)
+  V C_EVAL_X_PTS,c_eval_x_pts,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",158)
+  V C_EVAL_Y_PTS,c_eval_y_pts,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",159)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../num_opt_funcs_for_c.f90",149)
+  V C_RESULTS_OF_EVAL,c_results_of_eval,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",160)
+  V I,i,Integer,int,,0,#t("../num_opt_funcs_for_c.f90",169)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",150)
+  V C_RHO_VEC,c_rho_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",151)
+  V C_GAMMA_VEC,c_gamma_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",152)
+  V C_V_MAT,c_v_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",153)
+  V C_W_MAT,c_w_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",155)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",162)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../num_opt_funcs_for_c.f90",163)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../num_opt_funcs_for_c.f90",166)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../num_opt_funcs_for_c.f90",168)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../num_opt_funcs_for_c.f90",170)
+  V C_NUM_EVAL_PTS,c_num_eval_pts,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",157)
+ ES
+ S NUM_OPT_RANKN_INTEGRAL_COEFFS_FOR_C,num_opt_rankn_integral_coeffs,#h("../num_opt_funcs_for_c.f90",283)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T integral_rankn_disc,INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../num_opt_funcs_for_c.f90",320)
+  V C_NUM_COEFFS,c_num_coeffs,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",312)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../num_opt_funcs_for_c.f90",300)
+  V C_COEFFS,c_coeffs,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",313)
+  V I,i,Integer,int,,0,#t("../num_opt_funcs_for_c.f90",322)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",301)
+  V C_RHO_VEC,c_rho_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",302)
+  V COEFF_VEC,coeff_vec,Real(Kind=2),double,a,1,a(*:*),#t("../num_opt_funcs_for_c.f90",325)
+  V C_INTEGRAL_IS_OVER_X,c_integral_is_over_x,Logical(Kind=1),signed char,d,0,#t("../num_opt_funcs_for_c.f90",308)
+  V C_GAMMA_VEC,c_gamma_vec,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",303)
+  V C_V_MAT,c_v_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",304)
+  V C_NUM_INTEGRAL_PTS,c_num_integral_pts,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",309)
+  V C_W_MAT,c_w_mat,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../num_opt_funcs_for_c.f90",306)
+  V C_INTEGRAL_PTS,c_integral_pts,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",310)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../num_opt_funcs_for_c.f90",315)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../num_opt_funcs_for_c.f90",316)
+  V C_INTEGRAL_WTS,c_integral_wts,Real(Kind=2),double,d,1,i(1:*),#t("../num_opt_funcs_for_c.f90",311)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../num_opt_funcs_for_c.f90",319)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../num_opt_funcs_for_c.f90",321)
+  V RANKN_INTEGRAL,rankn_integral,Class(integral_nsect_disc_mod:integral_rankn_disc),INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc,a,0,#t("../num_opt_funcs_for_c.f90",324)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../num_opt_funcs_for_c.f90",323)
+ ES
+EM

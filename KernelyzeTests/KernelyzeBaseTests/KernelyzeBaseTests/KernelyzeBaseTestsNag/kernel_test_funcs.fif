@@ -1,0 +1,20 @@
+M KERNEL_TEST_FUNCS_MOD,#h("../kernel_test_funcs.f90",23)
+ T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+  C C,c,Real(Kind=2),double,32,,0
+ ET
+ T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+  C C,c,Real(Kind=2),double,32,,0
+  C ALPHA,alpha,Real(Kind=2),double,40,,0
+ ET
+ T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+  C C,c,Real(Kind=2),double,32,,0
+ ET
+ V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../kernel_test_funcs.f90",32)
+ V GAUSSIAN_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_gaussian_kernel,Type(kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../kernel_test_funcs.f90",33)
+ V CAUCHY_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_cauchy_kernel,Type(kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../kernel_test_funcs.f90",34)
+ S INIT_TEST_KERNELS,KERNEL_TEST_FUNCS_MOD_MP_init_test_kernels,#h("../kernel_test_funcs.f90",38)
+  V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../kernel_test_funcs.f90",32)
+  V GAUSSIAN_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../kernel_test_funcs.f90",33)
+  V CAUCHY_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../kernel_test_funcs.f90",34)
+ ES
+EM

@@ -1,0 +1,54 @@
+M SINGLEVAR_PROC_PTR_MOD,#h("../singlevar_proc_ptr.f90",33)
+ T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+ ET
+ T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,#d("../singlevar_proc_ptr.f90",40)
+  C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0,#c("../singlevar_proc_ptr.f90",41)
+  C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0,#c("../singlevar_proc_ptr.f90",42)
+ ET
+ F NTH_DERIV,SINGLEVAR_PROC_PTR_MOD_MP_nth_deriv,result(DERIV),#h("../singlevar_proc_ptr.f90",151)
+  V X,x,Real(Kind=2),double,d,0,#t("../singlevar_proc_ptr.f90",155)
+  V N,n,Integer,int,d,0,#t("../singlevar_proc_ptr.f90",154)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../singlevar_proc_ptr.f90",158)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",153)
+  V D,d,Real(Kind=2),double,d,0,#t("../singlevar_proc_ptr.f90",156)
+ EF
+ S SINGLEVAR_PROC_PTR_ASSIGN,SINGLEVAR_PROC_PTR_MOD_MP_singlevar_proc_ptr_assign,#h("../singlevar_proc_ptr.f90",173)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V RIGHT,right,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../singlevar_proc_ptr.f90",176)
+  V LEFT,left,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",175)
+ ES
+ S SET_PROC_PTR,SINGLEVAR_PROC_PTR_MOD_MP_set_proc_ptr,#h("../singlevar_proc_ptr.f90",186)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",188)
+ ES
+ S GET_PROC_PTR,SINGLEVAR_PROC_PTR_MOD_MP_get_proc_ptr,#h("../singlevar_proc_ptr.f90",195)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",197)
+ ES
+ S SET_DERIV_PTR,SINGLEVAR_PROC_PTR_MOD_MP_set_deriv_ptr,#h("../singlevar_proc_ptr.f90",205)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",207)
+ ES
+ S GET_DERIV_PTR,SINGLEVAR_PROC_PTR_MOD_MP_get_deriv_ptr,#h("../singlevar_proc_ptr.f90",214)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",216)
+ ES
+ F EVAL,SINGLEVAR_PROC_PTR_MOD_MP_eval,result(EVAL_RES),#h("../singlevar_proc_ptr.f90",99)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../singlevar_proc_ptr.f90",104)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../singlevar_proc_ptr.f90",102)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",101)
+ EF
+ F FIRST_DERIV,SINGLEVAR_PROC_PTR_MOD_MP_first_deriv,result(DERIV),#h("../singlevar_proc_ptr.f90",113)
+  V X,x,Real(Kind=2),double,d,0,#t("../singlevar_proc_ptr.f90",116)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../singlevar_proc_ptr.f90",119)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",115)
+  V D,d,Real(Kind=2),double,d,0,#t("../singlevar_proc_ptr.f90",117)
+ EF
+ F SECOND_DERIV,SINGLEVAR_PROC_PTR_MOD_MP_second_deriv,result(DERIV),#h("../singlevar_proc_ptr.f90",132)
+  V X,x,Real(Kind=2),double,d,0,#t("../singlevar_proc_ptr.f90",135)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../singlevar_proc_ptr.f90",138)
+  V THIS,this,Class(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,d,0,#t("../singlevar_proc_ptr.f90",134)
+  V D,d,Real(Kind=2),double,d,0,#t("../singlevar_proc_ptr.f90",136)
+ EF
+EM

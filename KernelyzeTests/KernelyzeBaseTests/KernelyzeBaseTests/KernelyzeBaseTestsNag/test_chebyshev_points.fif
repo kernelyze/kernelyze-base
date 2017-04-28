@@ -1,0 +1,18 @@
+M TEST_CHEBYSHEV_POINTS_MOD,#h("../test_chebyshev_points.f90",23)
+ F TEST_CHEBYSHEV_POINTS,TEST_CHEBYSHEV_POINTS_MOD_MP_test_chebyshev_points,result(TEST_PASS),#h("../test_chebyshev_points.f90",33)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_chebyshev_points.f90",35)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_chebyshev_points.f90",37)
+ EF
+ F TEST_CHEBYSHEV_POINTS_SMALL,TEST_CHEBYSHEV_POINTS_MOD_MP_test_chebyshev_points_small,result(TEST_PASS),#h("../test_chebyshev_points.f90",50)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_chebyshev_points.f90",52)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_chebyshev_points.f90",54)
+  V J,j,Integer,int,,0,#t("../test_chebyshev_points.f90",58)
+  V CHEB_PTS,cheb_pts,Real(Kind=2),double,,1,f(1:10),#t("../test_chebyshev_points.f90",57)
+ EF
+ F TEST_CHEBYSHEV_POINTS_LARGE,TEST_CHEBYSHEV_POINTS_MOD_MP_test_chebyshev_points_large,result(TEST_PASS),#h("../test_chebyshev_points.f90",69)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_chebyshev_points.f90",71)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_chebyshev_points.f90",73)
+  V J,j,Integer,int,,0,#t("../test_chebyshev_points.f90",77)
+  V CHEB_PTS,cheb_pts,Real(Kind=2),double,,1,f(1:200),#t("../test_chebyshev_points.f90",76)
+ EF
+EM

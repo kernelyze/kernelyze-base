@@ -1,0 +1,42 @@
+M KERNEL_SUMMABLE_MOD,#h("../kernel_summable.f90",30)
+ T kernel,KERNEL_MOD_DT_kernel
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+  C Y_LB,y_lb,Real(Kind=2),double,16,,0
+  C Y_UB,y_ub,Real(Kind=2),double,24,,0
+ ET
+ T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable,#d("../kernel_summable.f90",43)
+ ET
+ S KERNEL_INTEGRAL,KERNEL_SUMMABLE_MOD_MP_kernel_integral,#h("../kernel_summable.f90",59)
+  T integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V SUM_IS_OVER_X,sum_is_over_x,Logical,int,d,0,#t("../kernel_summable.f90",69)
+  V INTEGRAL,integral,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,da,0,#t("../kernel_summable.f90",72)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../kernel_summable.f90",77)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../kernel_summable.f90",74)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../kernel_summable.f90",75)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,d,1,i(1:*),#t("../kernel_summable.f90",71)
+  V WEIGHTS,weights,Real(Kind=2),double,d,1,d(1:*),#t("../kernel_summable.f90",70)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../kernel_summable.f90",78)
+  V THIS,this,Class(kernel_summable_mod:kernel_summable),KERNEL_SUMMABLE_MOD_DT_kernel_summable,d,0,#t("../kernel_summable.f90",68)
+ ES
+ S KERNEL_INTEGRAL_SVAR,KERNEL_SUMMABLE_MOD_MP_kernel_integral_svar,#h("../kernel_summable.f90",123)
+  T singlevar_func_mod:singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  T integral_kernel_singlevar,INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar
+   C SVAR_FUNC,svar_func,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,304,a,0
+  ET
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../kernel_summable.f90",141)
+  V INTEGRAL,integral,Class(integral_kernel_singlevar_mod:integral_kernel_singlevar),INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar,da,0,#t("../kernel_summable.f90",134)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../kernel_summable.f90",140)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../kernel_summable.f90",137)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../kernel_summable.f90",138)
+  V INT_IS_OVER_X,int_is_over_x,Logical,int,d,0,#t("../kernel_summable.f90",132)
+  V THIS,this,Class(kernel_summable_mod:kernel_summable),KERNEL_SUMMABLE_MOD_DT_kernel_summable,d,0,#t("../kernel_summable.f90",131)
+  V SVAR,svar,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,da,0,#t("../kernel_summable.f90",133)
+ ES
+EM

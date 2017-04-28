@@ -1,0 +1,37 @@
+M EIGEN_RANKN_KERNEL_OF_PARAMS_MOD,#h("../eigen_rankn_kernel_of_params.f90",28)
+ S EIGEN_RANKN_KERNEL_OF_PARAMS,EIGEN_RANKN_KERNEL_OF_PARAMS_MOD_MP_eigen_rankn_kernel_of_params,#h("../eigen_rankn_kernel_of_params.f90",40)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V Y_FUNC_WTS,y_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_rankn_kernel_of_params.f90",57)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,da,0,#t("../eigen_rankn_kernel_of_params.f90",59)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../eigen_rankn_kernel_of_params.f90",64)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../eigen_rankn_kernel_of_params.f90",65)
+  V X_COMPFUNCS,x_compfuncs,Type(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,,1,i(1:*),#t("../eigen_rankn_kernel_of_params.f90",69)
+  V Y_COMPFUNCS,y_compfuncs,Type(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,,1,i(1:*),#t("../eigen_rankn_kernel_of_params.f90",70)
+  V DIAG_MATRIX,diag_matrix,Real(Kind=2),double,,2,i(1:*,1:*),#t("../eigen_rankn_kernel_of_params.f90",71)
+  V I,i,Integer,int,,0,#t("../eigen_rankn_kernel_of_params.f90",73)
+  V RANK,rank,Integer,int,,0,#t("../eigen_rankn_kernel_of_params.f90",74)
+  V J,j,Integer,int,,0,#t("../eigen_rankn_kernel_of_params.f90",73)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../eigen_rankn_kernel_of_params.f90",61)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../eigen_rankn_kernel_of_params.f90",62)
+  V KERNEL_TO_APPROX,kernel_to_approx,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../eigen_rankn_kernel_of_params.f90",51)
+  V X_POINTS,x_points,Real(Kind=2),double,d,1,d(1:*),#t("../eigen_rankn_kernel_of_params.f90",52)
+  V Y_POINTS,y_points,Real(Kind=2),double,d,1,d(1:*),#t("../eigen_rankn_kernel_of_params.f90",53)
+  V TRUNC_SING_VALS,trunc_sing_vals,Real(Kind=2),double,d,1,d(1:*),#t("../eigen_rankn_kernel_of_params.f90",54)
+  V X_FUNC_WTS,x_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_rankn_kernel_of_params.f90",55)
+ ES
+EM

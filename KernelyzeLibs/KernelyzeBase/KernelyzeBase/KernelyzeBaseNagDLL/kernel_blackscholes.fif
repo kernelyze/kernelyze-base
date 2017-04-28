@@ -1,0 +1,30 @@
+M KERNEL_BLACKSCHOLES_MOD,#h("../kernel_blackscholes.f90",33)
+ T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable
+ ET
+ T kernel_blackscholes,KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes,#d("../kernel_blackscholes.f90",43)
+  C SIGMA,sigma,Real(Kind=2),double,32,,0,#c("../kernel_blackscholes.f90",46)
+  C IS_CALL,is_call,Logical,int,40,,0,#c("../kernel_blackscholes.f90",48)
+ ET
+ F EVAL_BLACKSCHOLES_KERNEL,KERNEL_BLACKSCHOLES_MOD_MP_eval_blackscholes_kernel,result(EVAL_RES),#h("../kernel_blackscholes.f90",65)
+  V THIS,this,Class(kernel_blackscholes_mod:kernel_blackscholes),KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes,d,0,#t("../kernel_blackscholes.f90",67)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_blackscholes.f90",69)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_blackscholes.f90",68)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../kernel_blackscholes.f90",71)
+ EF
+ F GET_SIGMA_PARAM,KERNEL_BLACKSCHOLES_MOD_MP_get_sigma_param,result(SIGMA_PARAM),#h("../kernel_blackscholes.f90",81)
+  V THIS,this,Class(kernel_blackscholes_mod:kernel_blackscholes),KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes,d,0,#t("../kernel_blackscholes.f90",83)
+  V SIGMA_PARAM,sigma_param,Real(Kind=2),double,,0,#t("../kernel_blackscholes.f90",85)
+ EF
+ S SET_SIGMA_PARAM,KERNEL_BLACKSCHOLES_MOD_MP_set_sigma_param,#h("../kernel_blackscholes.f90",90)
+  V THIS,this,Class(kernel_blackscholes_mod:kernel_blackscholes),KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes,d,0,#t("../kernel_blackscholes.f90",92)
+  V SIGMA_PARAM,sigma_param,Real(Kind=2),double,d,0,#t("../kernel_blackscholes.f90",93)
+ ES
+ F GET_IS_CALL,KERNEL_BLACKSCHOLES_MOD_MP_get_is_call,result(CALL_FLAG),#h("../kernel_blackscholes.f90",98)
+  V CALL_FLAG,call_flag,Logical,int,,0,#t("../kernel_blackscholes.f90",102)
+  V THIS,this,Class(kernel_blackscholes_mod:kernel_blackscholes),KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes,d,0,#t("../kernel_blackscholes.f90",100)
+ EF
+ S SET_IS_CALL,KERNEL_BLACKSCHOLES_MOD_MP_set_is_call,#h("../kernel_blackscholes.f90",107)
+  V CALL_FLAG,call_flag,Logical,int,d,0,#t("../kernel_blackscholes.f90",110)
+  V THIS,this,Class(kernel_blackscholes_mod:kernel_blackscholes),KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes,d,0,#t("../kernel_blackscholes.f90",109)
+ ES
+EM

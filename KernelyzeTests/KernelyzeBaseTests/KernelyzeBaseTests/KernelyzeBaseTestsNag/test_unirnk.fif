@@ -1,0 +1,37 @@
+M TEST_UNIRNK_MOD,#h("../test_unirnk.f90",23)
+ F TEST_UNIRNK_ORDERED,TEST_UNIRNK_MOD_MP_test_unirnk_ordered,result(TEST_PASS),#h("../test_unirnk.f90",72)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:200),#t("../test_unirnk.f90",78)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:200),#t("../test_unirnk.f90",79)
+  V NUM_UNIQUE,num_unique,Integer,int,,0,#t("../test_unirnk.f90",80)
+  V J,j,Integer,int,,0,#t("../test_unirnk.f90",80)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_unirnk.f90",74)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_unirnk.f90",76)
+ EF
+ F TEST_UNIRNK_REVERSE_ORDERED,TEST_UNIRNK_MOD_MP_test_unirnk_reverse_ordered,result(TEST_PASS),#h("../test_unirnk.f90",104)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:200),#t("../test_unirnk.f90",110)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:200),#t("../test_unirnk.f90",111)
+  V NUM_UNIQUE,num_unique,Integer,int,,0,#t("../test_unirnk.f90",112)
+  V J,j,Integer,int,,0,#t("../test_unirnk.f90",112)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_unirnk.f90",106)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_unirnk.f90",108)
+ EF
+ F TEST_UNIRNK_WITH_NANS,TEST_UNIRNK_MOD_MP_test_unirnk_with_nans,result(TEST_PASS),#h("../test_unirnk.f90",136)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:200),#t("../test_unirnk.f90",142)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:200),#t("../test_unirnk.f90",143)
+  V NUM_UNIQUE,num_unique,Integer,int,,0,#t("../test_unirnk.f90",144)
+  V J,j,Integer,int,,0,#t("../test_unirnk.f90",144)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_unirnk.f90",138)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_unirnk.f90",140)
+ EF
+ F TEST_UNIRNK,TEST_UNIRNK_MOD_MP_test_unirnk,result(TEST_PASS),#h("../test_unirnk.f90",33)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_unirnk.f90",35)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_unirnk.f90",37)
+ EF
+ F TEST_UNIRNK_IDENTICAL,TEST_UNIRNK_MOD_MP_test_unirnk_identical,result(TEST_PASS),#h("../test_unirnk.f90",52)
+  V TEST_VALUE_ARRAY,test_value_array,Real(Kind=2),double,,1,f(1:200),#t("../test_unirnk.f90",58)
+  V TEST_ORDER_ARRAY,test_order_array,Integer,int,,1,f(1:200),#t("../test_unirnk.f90",59)
+  V NUM_UNIQUE,num_unique,Integer,int,,0,#t("../test_unirnk.f90",60)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_unirnk.f90",54)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_unirnk.f90",56)
+ EF
+EM

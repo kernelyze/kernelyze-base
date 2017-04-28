@@ -1,0 +1,99 @@
+M BRENT_MOD,#h("../brent.f90",44)
+ F ZEROIN,BRENT_MOD_MP_zeroin,result(Z),#h("../brent.f90",57)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V F,f,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../brent.f90",63)
+  V A,a,Real(Kind=2),double,d,0,#t("../brent.f90",61)
+  V B,b,Real(Kind=2),double,d,0,#t("../brent.f90",61)
+  V Z,z,Real(Kind=2),double,,0,#t("../brent.f90",65)
+  V ERRCODE,errcode,Integer,int,,0,#t("../brent.f90",67)
+  V NEVAL,neval,Integer,int,,0,#t("../brent.f90",69)
+  V XZERO,xzero,Real(Kind=2),double,,0,#t("../brent.f90",70)
+  V FZERO,fzero,Real(Kind=2),double,,0,#t("../brent.f90",70)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent.f90",62)
+ EF
+ S BRENTZERO,BRENT_MOD_MP_brentzero,#h("../brent.f90",79)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V F,f,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../brent.f90",84)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent.f90",85)
+  V B,b,Real(Kind=2),double,,0,#t("../brent.f90",92)
+  V ERRCODE,errcode,Integer,int,d,0,#t("../brent.f90",88)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../brent.f90",86)
+  V NEVAL,neval,Integer,int,d,0,#t("../brent.f90",87)
+  V XZERO,xzero,Real(Kind=2),double,d,0,#t("../brent.f90",90)
+  V FZERO,fzero,Real(Kind=2),double,d,0,#t("../brent.f90",90)
+  V AX,ax,Real(Kind=2),double,d,0,#t("../brent.f90",83)
+  V BX,bx,Real(Kind=2),double,d,0,#t("../brent.f90",83)
+  V C,c,Real(Kind=2),double,,0,#t("../brent.f90",92)
+  V E,e,Real(Kind=2),double,,0,#t("../brent.f90",92)
+  V EPS,eps,Real(Kind=2),double,,0,#t("../brent.f90",92)
+  V FA,fa,Real(Kind=2),double,,0,#t("../brent.f90",93)
+  V FB,fb,Real(Kind=2),double,,0,#t("../brent.f90",93)
+  V FC,fc,Real(Kind=2),double,,0,#t("../brent.f90",93)
+  V TOL1,tol1,Real(Kind=2),double,,0,#t("../brent.f90",93)
+  V R,r,Real(Kind=2),double,,0,#t("../brent.f90",96)
+  V KITER,kiter,Integer,int,,0,#t("../brent.f90",94)
+  V D,d,Real(Kind=2),double,,0,#t("../brent.f90",92)
+  V XM,xm,Real(Kind=2),double,,0,#t("../brent.f90",96)
+  V P,p,Real(Kind=2),double,,0,#t("../brent.f90",96)
+  V Q,q,Real(Kind=2),double,,0,#t("../brent.f90",96)
+  V S,s,Real(Kind=2),double,,0,#t("../brent.f90",96)
+  V A,a,Real(Kind=2),double,,0,#t("../brent.f90",92)
+ ES
+ S FMIN,BRENT_MOD_MP_fmin,#h("../brent.f90",220)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V F,f,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../brent.f90",234)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent.f90",235)
+  V ERRCODE,errcode,Integer,int,,0,#t("../brent.f90",243)
+  V NEVAL,neval,Integer,int,,0,#t("../brent.f90",246)
+  V AX,ax,Real(Kind=2),double,d,0,#t("../brent.f90",232)
+  V BX,bx,Real(Kind=2),double,d,0,#t("../brent.f90",233)
+  V XOPT,xopt,Real(Kind=2),double,d,0,#t("../brent.f90",236)
+  V FOPT,fopt,Real(Kind=2),double,d,0,#t("../brent.f90",237)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../brent.f90",240)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../brent.f90",241)
+ ES
+ S BRENTMIN,BRENT_MOD_MP_brentmin,#h("../brent.f90",272)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V X,x,Real(Kind=2),double,,0,#t("../brent.f90",287)
+  V TOL2,tol2,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V U,u,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V V,v,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V W,w,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V FU,fu,Real(Kind=2),double,,0,#t("../brent.f90",287)
+  V FV,fv,Real(Kind=2),double,,0,#t("../brent.f90",287)
+  V FW,fw,Real(Kind=2),double,,0,#t("../brent.f90",287)
+  V FX,fx,Real(Kind=2),double,,0,#t("../brent.f90",287)
+  V ITER,iter,Integer,int,,0,#t("../brent.f90",288)
+  V F,f,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../brent.f90",277)
+  V TOL,tol,Real(Kind=2),double,d,0,#t("../brent.f90",278)
+  V B,b,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V ERRCODE,errcode,Integer,int,d,0,#t("../brent.f90",281)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../brent.f90",279)
+  V NEVAL,neval,Integer,int,d,0,#t("../brent.f90",280)
+  V XZERO,xzero,Real(Kind=2),double,d,0,#t("../brent.f90",282)
+  V FZERO,fzero,Real(Kind=2),double,d,0,#t("../brent.f90",282)
+  V AX,ax,Real(Kind=2),double,d,0,#t("../brent.f90",275)
+  V BX,bx,Real(Kind=2),double,d,0,#t("../brent.f90",276)
+  V E,e,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V EPS,eps,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V TOL1,tol1,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V R,r,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V D,d,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V XM,xm,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V P,p,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V Q,q,Real(Kind=2),double,,0,#t("../brent.f90",286)
+  V A,a,Real(Kind=2),double,,0,#t("../brent.f90",286)
+ ES
+EM

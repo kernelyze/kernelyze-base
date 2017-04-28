@@ -1,0 +1,14 @@
+M INTRINSIC_TEST_FUNCS_MOD,#h("../intrinsic_test_funcs.f90",23)
+ T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+  C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+  C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+ ET
+ V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../intrinsic_test_funcs.f90",41)
+ V EXP_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_exp_func,Type(singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../intrinsic_test_funcs.f90",42)
+ V LOG_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_log_func,Type(singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../intrinsic_test_funcs.f90",43)
+ S INIT_TEST_FUNCS,INTRINSIC_TEST_FUNCS_MOD_MP_init_test_funcs,#h("../intrinsic_test_funcs.f90",47)
+  V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../intrinsic_test_funcs.f90",41)
+  V EXP_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_exp_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../intrinsic_test_funcs.f90",42)
+  V LOG_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_log_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../intrinsic_test_funcs.f90",43)
+ ES
+EM

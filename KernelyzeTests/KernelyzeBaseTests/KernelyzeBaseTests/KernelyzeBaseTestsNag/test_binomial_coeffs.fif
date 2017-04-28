@@ -1,0 +1,21 @@
+M TEST_BINOMIAL_COEFFS_MOD,#h("../test_binomial_coeffs.f90",24)
+ F TEST_BINOMIAL_COEFFS,TEST_BINOMIAL_COEFFS_MOD_MP_test_binomial_coeffs,result(TEST_PASS),#h("../test_binomial_coeffs.f90",33)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_binomial_coeffs.f90",35)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_binomial_coeffs.f90",37)
+ EF
+ F TEST_BINOMIAL_COEFFS_SMALL_N,TEST_BINOMIAL_COEFFS_MOD_MP_test_binomial_coeffs_small_n,result(TEST_PASS),#h("../test_binomial_coeffs.f90",50)
+  V EXPECTED_COEFFS,expected_coeffs,Real(Kind=2),double,,1,f(1:6),#t("../test_binomial_coeffs.f90",58)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_binomial_coeffs.f90",52)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_binomial_coeffs.f90",54)
+  V I,i,Integer,int,,0,#t("../test_binomial_coeffs.f90",56)
+  V BIN_COEFFS,bin_coeffs,Real(Kind=2),double,,1,f(1:6),#t("../test_binomial_coeffs.f90",57)
+ EF
+ F TEST_BINOMIAL_COEFFS_LARGE_N,TEST_BINOMIAL_COEFFS_MOD_MP_test_binomial_coeffs_large_n,result(TEST_PASS),#h("../test_binomial_coeffs.f90",80)
+  V EXPECTED_COEFFS,expected_coeffs,Real(Kind=2),double,,1,f(1:21),#t("../test_binomial_coeffs.f90",89)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_binomial_coeffs.f90",82)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_binomial_coeffs.f90",84)
+  V I,i,Integer,int,,0,#t("../test_binomial_coeffs.f90",86)
+  V PREV_BIN_COEFFS,prev_bin_coeffs,Real(Kind=2),double,,1,f(1:20),#t("../test_binomial_coeffs.f90",87)
+  V BIN_COEFFS,bin_coeffs,Real(Kind=2),double,,1,f(1:21),#t("../test_binomial_coeffs.f90",88)
+ EF
+EM

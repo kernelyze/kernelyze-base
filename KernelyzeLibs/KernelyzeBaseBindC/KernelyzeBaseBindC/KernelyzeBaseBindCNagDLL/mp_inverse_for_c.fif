@@ -1,0 +1,9 @@
+M MP_INVERSE_FOR_C_MOD,#h("../mp_inverse_for_c.f90",23)
+ S MP_INVERSE_FOR_C,mp_inverse,#h("../mp_inverse_for_c.f90",33)
+  V TO_RETURN,to_return,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../mp_inverse_for_c.f90",42)
+  V TO_INVERT,to_invert,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../mp_inverse_for_c.f90",43)
+  V NROWS,nrows,Integer,int,v,0,#t("../mp_inverse_for_c.f90",40)
+  V NCOLS,ncols,Integer,int,v,0,#t("../mp_inverse_for_c.f90",41)
+  V TOLER,toler,Real(Kind=2),double,v,0,#t("../mp_inverse_for_c.f90",44)
+ ES
+EM

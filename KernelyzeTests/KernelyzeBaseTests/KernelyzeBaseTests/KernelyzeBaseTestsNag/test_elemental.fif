@@ -1,0 +1,18 @@
+M TEST_ELEMENTAL_MOD,#h("../test_elemental.f90",25)
+ F ELEMENTAL_EXAMPLE,TEST_ELEMENTAL_MOD_MP_elemental_example,#h("../test_elemental.f90",33)
+  V ELEMENTAL_EXAMPLE,TEST_ELEMENTAL_MOD_MP_elemental_exampleResult,Real(Kind=2),double,,0
+  V X,x,Real(Kind=2),double,d,0,#t("../test_elemental.f90",35)
+  V Y,y,Real(Kind=2),double,d,0,#t("../test_elemental.f90",36)
+ EF
+ F TEST_ELEMENTAL,TEST_ELEMENTAL_MOD_MP_test_elemental,#h("../test_elemental.f90",41)
+  V TEST_ELEMENTAL,TEST_ELEMENTAL_MOD_MP_test_elementalResult,Logical,int,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_elemental.f90",43)
+  V A_ARR,a_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_elemental.f90",45)
+  V B_ARR,b_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_elemental.f90",45)
+  V RES_ARR,res_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_elemental.f90",45)
+  V A,a,Real(Kind=2),double,,0,#t("../test_elemental.f90",46)
+  V B,b,Real(Kind=2),double,,0,#t("../test_elemental.f90",46)
+  V RES,res,Real(Kind=2),double,,0,#t("../test_elemental.f90",46)
+  V J,j,Integer,int,,0,#t("../test_elemental.f90",47)
+ EF
+EM

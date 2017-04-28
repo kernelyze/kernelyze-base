@@ -1,0 +1,31 @@
+M TEST_FIND_REL_OPTIMA_MOD,#h("../test_find_rel_optima.f90",24)
+ F TEST_FIND_REL_OPTIMA_SIN,TEST_FIND_REL_OPTIMA_MOD_MP_test_find_rel_optima_sin,result(TEST_PASS),#h("../test_find_rel_optima.f90",51)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V GRID_VEC,grid_vec,Real(Kind=2),double,,1,f(1:21),#t("../test_find_rel_optima.f90",57)
+  V RES_ZEROS,res_zeros,Real(Kind=2),double,a,1,a(*:*),#t("../test_find_rel_optima.f90",58)
+  V RES_REL_OPTIMA,res_rel_optima,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_find_rel_optima.f90",59)
+  V J,j,Integer,int,,0,#t("../test_find_rel_optima.f90",60)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_find_rel_optima.f90",53)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_find_rel_optima.f90",55)
+ EF
+ F TEST_FIND_REL_OPTIMA_EXP,TEST_FIND_REL_OPTIMA_MOD_MP_test_find_rel_optima_exp,result(TEST_PASS),#h("../test_find_rel_optima.f90",79)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V EXP_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_exp_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V GRID_VEC,grid_vec,Real(Kind=2),double,,1,f(1:2),#t("../test_find_rel_optima.f90",85)
+  V RES_REL_OPTIMA,res_rel_optima,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_find_rel_optima.f90",86)
+  V J,j,Integer,int,,0,#t("../test_find_rel_optima.f90",87)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_find_rel_optima.f90",81)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_find_rel_optima.f90",83)
+ EF
+ F TEST_FIND_REL_OPTIMA,TEST_FIND_REL_OPTIMA_MOD_MP_test_find_rel_optima,result(TEST_PASS),#h("../test_find_rel_optima.f90",35)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_find_rel_optima.f90",37)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_find_rel_optima.f90",39)
+ EF
+EM

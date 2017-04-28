@@ -1,0 +1,22 @@
+M FIND_REL_OPTIMA_FOR_C_MOD,#h("../find_rel_optima_for_c.f90",23)
+ S FIND_REL_OPTIMA_FOR_C,find_rel_optima,#h("../find_rel_optima_for_c.f90",50)
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  V GRID,grid,Real(Kind=2),double,d,1,i(1:*),#t("../find_rel_optima_for_c.f90",65)
+  V TOLER,toler,Real(Kind=2),double,d,0,#t("../find_rel_optima_for_c.f90",66)
+  V F,f,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../find_rel_optima_for_c.f90",64)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../find_rel_optima_for_c.f90",74)
+  V N_GRID_PTS,n_grid_pts,Integer,int,d,0,#t("../find_rel_optima_for_c.f90",62)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../find_rel_optima_for_c.f90",68)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../find_rel_optima_for_c.f90",70)
+  V SVAR,svar,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../find_rel_optima_for_c.f90",73)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../find_rel_optima_for_c.f90",75)
+  V RES_OPTIMA,res_optima,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../find_rel_optima_for_c.f90",76)
+  V RESULT_OPTIMA,result_optima,Real(Kind=2),double,d,2,i(1:*,1:2),#t("../find_rel_optima_for_c.f90",63)
+ ES
+EM

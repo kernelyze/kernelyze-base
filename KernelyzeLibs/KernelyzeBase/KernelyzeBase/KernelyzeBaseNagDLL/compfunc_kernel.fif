@@ -1,0 +1,96 @@
+M COMPFUNC_KERNEL_MOD,#h("../compfunc_kernel.f90",41)
+ T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+ ET
+ T compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,#d("../compfunc_kernel.f90",52)
+  C X_IS_FIXED,x_is_fixed,Logical,int,48,,0,#c("../compfunc_kernel.f90",57)
+  C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0,#c("../compfunc_kernel.f90",60)
+  C KERNEL_SECTIONED,kernel_sectioned,Class(kernel),KERNEL_MOD_DT_kernel,24,a,0,#c("../compfunc_kernel.f90",63)
+ ET
+ S GET_KERNEL,COMPFUNC_KERNEL_MOD_MP_get_kernel,#h("../compfunc_kernel.f90",238)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V KERNEL_USED,kernel_used,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,da,0,#t("../compfunc_kernel.f90",241)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../compfunc_kernel.f90",243)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../compfunc_kernel.f90",244)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../compfunc_kernel.f90",246)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../compfunc_kernel.f90",247)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",240)
+ ES
+ S SET_KERNEL,COMPFUNC_KERNEL_MOD_MP_set_kernel,#h("../compfunc_kernel.f90",279)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../compfunc_kernel.f90",284)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../compfunc_kernel.f90",285)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../compfunc_kernel.f90",287)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../compfunc_kernel.f90",288)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",281)
+  V NEW_KERNEL,new_kernel,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../compfunc_kernel.f90",282)
+ ES
+ S SET_X_IS_FIXED,COMPFUNC_KERNEL_MOD_MP_set_x_is_fixed,#h("../compfunc_kernel.f90",211)
+  V FIX_X,fix_x,Logical,int,d,0,#t("../compfunc_kernel.f90",214)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",213)
+ ES
+ F INTEGRATE_SVAR,COMPFUNC_KERNEL_MOD_MP_integrate_svar,result(RES),#h("../compfunc_kernel.f90",334)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",336)
+  V RES,res,Real(Kind=2),double,,0,#t("../compfunc_kernel.f90",339)
+  V SVAR,svar,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../compfunc_kernel.f90",337)
+ EF
+ S COMPFUNC_ASSIGN,COMPFUNC_KERNEL_MOD_MP_compfunc_assign,#h("../compfunc_kernel.f90",185)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V LEFT,left,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",187)
+  V RIGHT,right,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../compfunc_kernel.f90",188)
+ ES
+ F EVAL,COMPFUNC_KERNEL_MOD_MP_eval,result(EVAL_RES),#h("../compfunc_kernel.f90",93)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../compfunc_kernel.f90",98)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",96)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",95)
+ EF
+ F GET_X_IS_FIXED,COMPFUNC_KERNEL_MOD_MP_get_x_is_fixed,result(IS_X_FIXED),#h("../compfunc_kernel.f90",202)
+  V IS_X_FIXED,is_x_fixed,Logical,int,,0,#t("../compfunc_kernel.f90",206)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",204)
+ EF
+ F FIRST_DERIV,COMPFUNC_KERNEL_MOD_MP_first_deriv,result(DERIV),#h("../compfunc_kernel.f90",107)
+  V X,x,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",110)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../compfunc_kernel.f90",113)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",109)
+  V D,d,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",111)
+ EF
+ F SECOND_DERIV,COMPFUNC_KERNEL_MOD_MP_second_deriv,result(DERIV),#h("../compfunc_kernel.f90",130)
+  V X,x,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",133)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../compfunc_kernel.f90",136)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",132)
+  V D,d,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",134)
+ EF
+ F GET_EVAL_PT,COMPFUNC_KERNEL_MOD_MP_get_eval_pt,result(EVAL_POINT),#h("../compfunc_kernel.f90",219)
+  V EVAL_POINT,eval_point,Real(Kind=2),double,,0,#t("../compfunc_kernel.f90",223)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",221)
+ EF
+ F NTH_DERIV,COMPFUNC_KERNEL_MOD_MP_nth_deriv,result(DERIV),#h("../compfunc_kernel.f90",157)
+  V X,x,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",161)
+  V N,n,Integer,int,d,0,#t("../compfunc_kernel.f90",160)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../compfunc_kernel.f90",164)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",159)
+  V D,d,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",162)
+ EF
+ S SET_EVAL_PT,COMPFUNC_KERNEL_MOD_MP_set_eval_pt,#h("../compfunc_kernel.f90",228)
+  V EVAL_POINT,eval_point,Real(Kind=2),double,d,0,#t("../compfunc_kernel.f90",231)
+  V THIS,this,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,d,0,#t("../compfunc_kernel.f90",230)
+ ES
+EM

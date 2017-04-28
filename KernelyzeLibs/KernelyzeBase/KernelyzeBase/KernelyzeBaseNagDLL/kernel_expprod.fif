@@ -1,0 +1,70 @@
+M KERNEL_EXPPROD_MOD,#h("../kernel_expprod.f90",30)
+ T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable
+ ET
+ T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod,#d("../kernel_expprod.f90",41)
+  C C,c,Real(Kind=2),double,32,,0,#c("../kernel_expprod.f90",44)
+ ET
+ F SECOND_PARTIAL_DX_DY,KERNEL_EXPPROD_MOD_MP_second_partial_dx_dy,result(DERIV),#h("../kernel_expprod.f90",124)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",131)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",127)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",126)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",129)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",128)
+ EF
+ F MTH_NTH_PARTIAL,KERNEL_EXPPROD_MOD_MP_mth_nth_partial,result(DERIV),#h("../kernel_expprod.f90",136)
+  V M,m,Integer,int,d,0,#t("../kernel_expprod.f90",139)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",145)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",141)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",138)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",143)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",142)
+  V I,i,Integer,int,,0,#t("../kernel_expprod.f90",147)
+  V N,n,Integer,int,d,0,#t("../kernel_expprod.f90",140)
+  V BIN_COEFFS,bin_coeffs,Real(Kind=2),double,,1,i(1:*),#t("../kernel_expprod.f90",148)
+  V XTERM,xterm,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",149)
+  V YTERM,yterm,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",150)
+  V CMFACTOR,cmfactor,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",151)
+ EF
+ F EVAL_EXPPROD_KERNEL,KERNEL_EXPPROD_MOD_MP_eval_expprod_kernel,result(EVAL_RES),#h("../kernel_expprod.f90",65)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",68)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",67)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",69)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",71)
+ EF
+ F GET_C_PARAM,KERNEL_EXPPROD_MOD_MP_get_c_param,result(C_PARAM),#h("../kernel_expprod.f90",193)
+  V C_PARAM,c_param,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",197)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",195)
+ EF
+ S SET_C_PARAM,KERNEL_EXPPROD_MOD_MP_set_c_param,#h("../kernel_expprod.f90",202)
+  V C_PARAM,c_param,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",205)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",204)
+ ES
+ F FIRST_PARTIAL_DX,KERNEL_EXPPROD_MOD_MP_first_partial_dx,result(DERIV),#h("../kernel_expprod.f90",76)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",83)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",79)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",78)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",81)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",80)
+ EF
+ F FIRST_PARTIAL_DY,KERNEL_EXPPROD_MOD_MP_first_partial_dy,result(DERIV),#h("../kernel_expprod.f90",88)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",95)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",91)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",90)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",93)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",92)
+ EF
+ F SECOND_PARTIAL_DX_DX,KERNEL_EXPPROD_MOD_MP_second_partial_dx_dx,result(DERIV),#h("../kernel_expprod.f90",100)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",107)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",103)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",102)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",105)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",104)
+ EF
+ F SECOND_PARTIAL_DY_DY,KERNEL_EXPPROD_MOD_MP_second_partial_dy_dy,result(DERIV),#h("../kernel_expprod.f90",112)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_expprod.f90",119)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",115)
+  V THIS,this,Class(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,d,0,#t("../kernel_expprod.f90",114)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",117)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_expprod.f90",116)
+ EF
+EM

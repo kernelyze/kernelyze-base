@@ -1,0 +1,241 @@
+M KERNEL_NEIGEN_MOD,#h("../kernel_neigen.f90",31)
+ T kernel,KERNEL_MOD_DT_kernel
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+  C Y_LB,y_lb,Real(Kind=2),double,16,,0
+  C Y_UB,y_ub,Real(Kind=2),double,24,,0
+ ET
+ T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn,#d("../template_kernelrankn.f90",56)
+  C F_ARRAY,f_array,Class(singlevar_type),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*),#c("../template_kernelrankn.f90",59)
+  C G_ARRAY,g_array,Class(singlevar_type),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*),#c("../template_kernelrankn.f90",62)
+  C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*),#c("../template_kernelrankn.f90",65)
+  C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*),#c("../template_kernelrankn.f90",68)
+ ET
+ S KERNEL_INTEGRAL_SVAR,KERNEL_NEIGEN_MOD_MP_kernel_integral_svar,#h("../template_kernelrankn.f90",851)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T integral_sv_type,INTEGRAL_NEIGEN_SVAR_MOD_DT_integral_neigen_svar
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,328,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,368,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,424,a,2,a(*:*,*:*)
+  ET
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V SVAR,svar,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,da,0,#t("../template_kernelrankn.f90",861)
+  V TEMP_COEFFS,temp_coeffs,Real(Kind=2),double,,1,i(1:*),#t("../template_kernelrankn.f90",875)
+  V TEMP_COMPFUNC_ARRAY,temp_compfunc_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,a,1,a(*:*),#t("../template_kernelrankn.f90",876)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",865)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",866)
+  V I,i,Integer,int,,0,#t("../template_kernelrankn.f90",874)
+  V INT_IS_OVER_X,int_is_over_x,Logical,int,d,0,#t("../template_kernelrankn.f90",860)
+  V INTEGRAL,integral,Class(integral_neigen_svar_mod:integral_neigen_svar),INTEGRAL_NEIGEN_SVAR_MOD_DT_integral_neigen_svar,da,0,#t("../template_kernelrankn.f90",862)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../template_kernelrankn.f90",868)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",859)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",869)
+ ES
+ F MTH_NTH_PARTIAL,KERNEL_NEIGEN_MOD_MP_mth_nth_partial,result(DERIV),#h("../template_kernelrankn.f90",257)
+  V F_DERIV,f_deriv,Real(Kind=2),double,,1,i(1:*),#t("../template_kernelrankn.f90",269)
+  V G_DERIV,g_deriv,Real(Kind=2),double,,1,i(1:*),#t("../template_kernelrankn.f90",270)
+  V I,i,Integer,int,,0,#t("../template_kernelrankn.f90",268)
+  V N,n,Integer,int,d,0,#t("../template_kernelrankn.f90",261)
+  V X,x,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",262)
+  V Y,y,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",263)
+  V M,m,Integer,int,d,0,#t("../template_kernelrankn.f90",260)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../template_kernelrankn.f90",266)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",259)
+  V D,d,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",264)
+ EF
+ F EVAL_RANKN_KERNEL,KERNEL_NEIGEN_MOD_MP_eval_rankn_kernel,result(EVAL_RES),#h("../template_kernelrankn.f90",131)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../template_kernelrankn.f90",137)
+  V X,x,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",134)
+  V Y,y,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",135)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",133)
+ EF
+ F GET_V_MATRIX,KERNEL_NEIGEN_MOD_MP_get_v_matrix,result(CURR_V_MATRIX),#h("../template_kernelrankn.f90",637)
+  V CURR_V_MATRIX,curr_v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../template_kernelrankn.f90",641)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",639)
+ EF
+ F GET_RANK,KERNEL_NEIGEN_MOD_MP_get_rank,result(RANK_RES),#h("../template_kernelrankn.f90",297)
+  V RANK_RES,rank_res,Integer,int,,0,#t("../template_kernelrankn.f90",301)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",299)
+ EF
+ S SET_V_MATRIX,KERNEL_NEIGEN_MOD_MP_set_v_matrix,#h("../template_kernelrankn.f90",646)
+  V NEW_V_MATRIX,new_v_matrix,Real(Kind=2),double,d,2,d(1:*,1:*),#t("../template_kernelrankn.f90",649)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",648)
+ ES
+ F GET_NUM_COMPONENT_FUNCS,KERNEL_NEIGEN_MOD_MP_get_num_component_funcs,result(NUM_RES),#h("../template_kernelrankn.f90",314)
+  V NUM_RES,num_res,Integer,int,,0,#t("../template_kernelrankn.f90",318)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",316)
+ EF
+ F GET_SIZE_F_ARRAY,KERNEL_NEIGEN_MOD_MP_get_size_f_array,result(NUM_RES),#h("../template_kernelrankn.f90",327)
+  V NUM_RES,num_res,Integer,int,,0,#t("../template_kernelrankn.f90",331)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",329)
+ EF
+ F GET_SIZE_G_ARRAY,KERNEL_NEIGEN_MOD_MP_get_size_g_array,result(NUM_RES),#h("../template_kernelrankn.f90",336)
+  V NUM_RES,num_res,Integer,int,,0,#t("../template_kernelrankn.f90",340)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",338)
+ EF
+ F FIRST_PARTIAL_DX,KERNEL_NEIGEN_MOD_MP_first_partial_dx,result(DERIV),#h("../template_kernelrankn.f90",147)
+  V X,x,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",150)
+  V Y,y,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",151)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../template_kernelrankn.f90",154)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",149)
+  V D,d,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",152)
+ EF
+ S GET_F_FUNC,KERNEL_NEIGEN_MOD_MP_get_f_func,#h("../template_kernelrankn.f90",346)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",353)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",354)
+  V RES_FUNC,res_func,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,da,0,#t("../template_kernelrankn.f90",350)
+  V FUNC_INDEX,func_index,Integer,int,d,0,#t("../template_kernelrankn.f90",349)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_kernelrankn.f90",356)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",357)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",348)
+ ES
+ S GET_F_ARRAY,KERNEL_NEIGEN_MOD_MP_get_f_array,#h("../template_kernelrankn.f90",397)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",403)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",404)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_kernelrankn.f90",406)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",407)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",399)
+  V CURR_F_ARRAY,curr_f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,da,1,a(*:*),#t("../template_kernelrankn.f90",400)
+ ES
+ F FIRST_PARTIAL_DY,KERNEL_NEIGEN_MOD_MP_first_partial_dy,result(DERIV),#h("../template_kernelrankn.f90",169)
+  V X,x,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",172)
+  V Y,y,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",173)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../template_kernelrankn.f90",176)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",171)
+  V D,d,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",174)
+ EF
+ S SET_F_ARRAY,KERNEL_NEIGEN_MOD_MP_set_f_array,#h("../template_kernelrankn.f90",437)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V NEW_F_ARRAY,new_f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,1,d(1:*),#t("../template_kernelrankn.f90",440)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",442)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",443)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_kernelrankn.f90",445)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",446)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",439)
+ ES
+ F SECOND_PARTIAL_DX_DX,KERNEL_NEIGEN_MOD_MP_second_partial_dx_dx,result(DERIV),#h("../template_kernelrankn.f90",191)
+  V X,x,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",194)
+  V Y,y,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",195)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../template_kernelrankn.f90",198)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",193)
+  V D,d,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",196)
+ EF
+ S GET_G_FUNC,KERNEL_NEIGEN_MOD_MP_get_g_func,#h("../template_kernelrankn.f90",492)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",499)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",500)
+  V RES_FUNC,res_func,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,da,0,#t("../template_kernelrankn.f90",496)
+  V FUNC_INDEX,func_index,Integer,int,d,0,#t("../template_kernelrankn.f90",495)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_kernelrankn.f90",502)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",503)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",494)
+ ES
+ F SECOND_PARTIAL_DY_DY,KERNEL_NEIGEN_MOD_MP_second_partial_dy_dy,result(DERIV),#h("../template_kernelrankn.f90",213)
+  V X,x,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",216)
+  V Y,y,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",217)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../template_kernelrankn.f90",220)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",215)
+  V D,d,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",218)
+ EF
+ S GET_G_ARRAY,KERNEL_NEIGEN_MOD_MP_get_g_array,#h("../template_kernelrankn.f90",543)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",549)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",550)
+  V CURR_G_ARRAY,curr_g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,da,1,a(*:*),#t("../template_kernelrankn.f90",546)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_kernelrankn.f90",552)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",553)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",545)
+ ES
+ S SET_G_ARRAY,KERNEL_NEIGEN_MOD_MP_set_g_array,#h("../template_kernelrankn.f90",583)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",588)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",589)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_kernelrankn.f90",591)
+  V NEW_G_ARRAY,new_g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,1,d(1:*),#t("../template_kernelrankn.f90",586)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",592)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",585)
+ ES
+ F GET_W_MATRIX,KERNEL_NEIGEN_MOD_MP_get_w_matrix,result(CURR_W_MATRIX),#h("../template_kernelrankn.f90",654)
+  V CURR_W_MATRIX,curr_w_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../template_kernelrankn.f90",658)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",656)
+ EF
+ F SECOND_PARTIAL_DX_DY,KERNEL_NEIGEN_MOD_MP_second_partial_dx_dy,result(DERIV),#h("../template_kernelrankn.f90",235)
+  V X,x,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",238)
+  V Y,y,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",239)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../template_kernelrankn.f90",242)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",237)
+  V D,d,Real(Kind=2),double,d,0,#t("../template_kernelrankn.f90",240)
+ EF
+ S SET_W_MATRIX,KERNEL_NEIGEN_MOD_MP_set_w_matrix,#h("../template_kernelrankn.f90",663)
+  V NEW_W_MATRIX,new_w_matrix,Real(Kind=2),double,d,2,d(1:*,1:*),#t("../template_kernelrankn.f90",666)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",665)
+ ES
+ F EVAL_F_ARRAY,KERNEL_NEIGEN_MOD_MP_eval_f_array,result(EVAL_RES),#h("../template_kernelrankn.f90",671)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,2,i(1:*,1:*),#t("../template_kernelrankn.f90",676)
+  V J,j,Integer,int,,0,#t("../template_kernelrankn.f90",678)
+  V EVAL_AT,eval_at,Real(Kind=2),double,d,1,d(1:*),#t("../template_kernelrankn.f90",674)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",673)
+ EF
+ F EVAL_G_ARRAY,KERNEL_NEIGEN_MOD_MP_eval_g_array,result(EVAL_RES),#h("../template_kernelrankn.f90",686)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,2,i(1:*,1:*),#t("../template_kernelrankn.f90",691)
+  V J,j,Integer,int,,0,#t("../template_kernelrankn.f90",693)
+  V EVAL_AT,eval_at,Real(Kind=2),double,d,1,d(1:*),#t("../template_kernelrankn.f90",689)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",688)
+ EF
+ S KERNEL_INTEGRAL,KERNEL_NEIGEN_MOD_MP_kernel_integral,#h("../template_kernelrankn.f90",705)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T integral_type,INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  V TEMP_COEFFS,temp_coeffs,Real(Kind=2),double,,1,i(1:*),#t("../template_kernelrankn.f90",730)
+  V TEMP_COMPFUNC_ARRAY,temp_compfunc_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,a,1,a(*:*),#t("../template_kernelrankn.f90",731)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_kernelrankn.f90",721)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_kernelrankn.f90",722)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,d,1,i(1:*),#t("../template_kernelrankn.f90",717)
+  V WEIGHTS,weights,Real(Kind=2),double,d,1,d(1:*),#t("../template_kernelrankn.f90",716)
+  V SUM_IS_OVER_X,sum_is_over_x,Logical,int,d,0,#t("../template_kernelrankn.f90",715)
+  V INTEGRAL,integral,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,da,0,#t("../template_kernelrankn.f90",718)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../template_kernelrankn.f90",724)
+  V THIS,this,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,d,0,#t("../template_kernelrankn.f90",714)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../template_kernelrankn.f90",725)
+ ES
+EM

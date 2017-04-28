@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Console Application" Version="11.0" ProjectIdGuid="{3FD898E1-6F5C-4253-96B2-B32EBFE692F4}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="x64|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFLinkerTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Debug|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" MultiProcessorCompilation="true" Optimization="optimizeDisabled" Preprocess="preprocessYes" AdditionalIncludeDirectories="..\..\..\KernelyzeLibs\KernelyzeBase\KernelyzeBase\x64\Debug" ReentrantCode="reentrancyThreaded" F2003Semantics="true" StandardWarnings="standardWarningsF08" WarnDeclarations="true" WarnUnusedVariables="true" WarnUncalled="true" WarnInterfaces="true" LocalVariableStorage="localStorageAutomatic" FloatingPointModel="precise" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL" DisableDefaultLibSearch="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" AdditionalLibraryDirectories="..\..\..\KernelyzeLibs\KernelyzeBase\KernelyzeBase\x64\Debug" GenerateDebugInformation="true" SubSystem="subSystemConsole" AdditionalDependencies="KernelyzeBase.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" MultiProcessorCompilation="true" Preprocess="preprocessYes" AdditionalIncludeDirectories="..\..\..\KernelyzeLibs\KernelyzeBase\KernelyzeBase\x64\Release" ReentrantCode="reentrancyThreaded" F2003Semantics="true" StandardWarnings="standardWarningsF08" WarnDeclarations="true" WarnUnusedVariables="true" WarnUncalled="true" LocalVariableStorage="localStorageAutomatic" FloatingPointModel="precise" RuntimeLibrary="rtMultiThreadedDLL" DisableDefaultLibSearch="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" AdditionalLibraryDirectories="..\..\..\KernelyzeLibs\KernelyzeBase\KernelyzeBase\x64\Release" SubSystem="subSystemConsole" AdditionalDependencies="KernelyzeBase.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="x64|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" MultiProcessorCompilation="true" Preprocess="preprocessYes" AdditionalIncludeDirectories="&quot;C:\Users\tknox\Documents\Kernelyze\KernelyzeLibs\KernelyzeCore\KernelyzeCore\x64\Release&quot;" ReentrantCode="reentrancyThreaded" F2003Semantics="true" StandardWarnings="standardWarningsF08" WarnDeclarations="true" WarnUnusedVariables="true" WarnUncalled="true" LocalVariableStorage="localStorageAutomatic" FloatingPointModel="precise" DisableDefaultLibSearch="true"/>
+				<Tool Name="VFLinkerTool" SuppressStartupBanner="true" AdditionalLibraryDirectories="&quot;C:\Users\tknox\Documents\Kernelyze\KernelyzeLibs\KernelyzeCore\KernelyzeCore\x64\Release&quot;" SubSystem="subSystemConsole" AdditionalDependencies="KernelyzeCore.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd;h;inc"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<File RelativePath=".\fort_approx.f90"/>
+		<File RelativePath=".\intrinsic_test_funcs.f90"/>
+		<File RelativePath=".\kernel_test_funcs.f90"/>
+		<File RelativePath=".\test_all_num_opt_mats_asymm.f90"/>
+		<File RelativePath=".\test_binomial_coeffs.f90"/>
+		<File RelativePath=".\test_borsuk_lower_bound.f90"/>
+		<File RelativePath=".\test_brent.f90"/>
+		<File RelativePath=".\test_chebyshev_points.f90"/>
+		<File RelativePath=".\test_compute_a_and_b_matrices.f90"/>
+		<File RelativePath=".\test_compute_a_matrix.f90"/>
+		<File RelativePath=".\test_constants.f90"/>
+		<File RelativePath=".\test_derivs.f90"/>
+		<File RelativePath=".\test_eigen_rankn_kernel.f90"/>
+		<File RelativePath=".\test_elemental.f90"/>
+		<File RelativePath=".\test_factorial.f90"/>
+		<File RelativePath=".\test_falling_factorial.f90"/>
+		<File RelativePath=".\test_find_all_zeros.f90"/>
+		<File RelativePath=".\test_find_rel_optima.f90"/>
+		<File RelativePath=".\test_hermite_polynomial.f90"/>
+		<File RelativePath=".\test_integral_kernel_disc.f90"/>
+		<File RelativePath=".\test_integral_rankn_disc.f90"/>
+		<File RelativePath=".\test_moore_penrose_inverse.f90"/>
+		<File RelativePath=".\test_mrgrnk.f90"/>
+		<File RelativePath=".\test_num_opt_rankn_kernel.f90"/>
+		<File RelativePath=".\test_num_opt_rankn_params.f90"/>
+		<File RelativePath=".\test_quicksort.f90"/>
+		<File RelativePath=".\test_remez_step.f90"/>
+		<File RelativePath=".\test_set_precision.f90"/>
+		<File RelativePath=".\test_singlevar_proc_ptr.f90"/>
+		<File RelativePath=".\test_taylor_series_rankn_kernel.f90"/>
+		<File RelativePath=".\test_unirnk.f90"/>
+		<File RelativePath=".\test_worst_rho_and_gamma.f90"/></Filter></Files>
+	<Globals/></VisualStudioProject>

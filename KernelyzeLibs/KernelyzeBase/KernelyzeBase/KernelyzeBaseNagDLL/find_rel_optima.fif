@@ -1,0 +1,51 @@
+M FIND_REL_OPTIMA_MOD,#h("../find_rel_optima.f90",26)
+ T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+ ET
+ T neg_abs_func_obj,FIND_REL_OPTIMA_MOD_DT_neg_abs_func_obj,#d("../find_rel_optima.f90",39)
+  C BASE_FUNC,base_func,Class(singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,16,a,0,#c("../find_rel_optima.f90",42)
+ ET
+ S INIT_NEG_ABS,FIND_REL_OPTIMA_MOD_MP_init_neg_abs,#h("../find_rel_optima.f90",85)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V THIS,this,Class(find_rel_optima_mod:neg_abs_func_obj),FIND_REL_OPTIMA_MOD_DT_neg_abs_func_obj,d,0,#t("../find_rel_optima.f90",89)
+  V FUNC_TO_USE,func_to_use,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../find_rel_optima.f90",90)
+ ES
+ F EVAL,FIND_REL_OPTIMA_MOD_MP_eval,result(EVAL_RES),#h("../find_rel_optima.f90",58)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../find_rel_optima.f90",63)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../find_rel_optima.f90",61)
+  V THIS,this,Class(find_rel_optima_mod:neg_abs_func_obj),FIND_REL_OPTIMA_MOD_DT_neg_abs_func_obj,d,0,#t("../find_rel_optima.f90",60)
+ EF
+ S NEG_ABS_ASSIGN,FIND_REL_OPTIMA_MOD_MP_neg_abs_assign,#h("../find_rel_optima.f90",70)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V LEFT,left,Class(find_rel_optima_mod:neg_abs_func_obj),FIND_REL_OPTIMA_MOD_DT_neg_abs_func_obj,d,0,#t("../find_rel_optima.f90",72)
+  V RIGHT,right,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../find_rel_optima.f90",73)
+ ES
+ S FIND_REL_OPTIMA,FIND_REL_OPTIMA_MOD_MP_find_rel_optima,#h("../find_rel_optima.f90",99)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V RESULT_OPTIMA,result_optima,Real(Kind=2),double,da,2,a(*:*,*:*),#t("../find_rel_optima.f90",107)
+  V FUNC_OBJ,func_obj,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../find_rel_optima.f90",108)
+  V GRID,grid,Real(Kind=2),double,d,1,d(1:*),#t("../find_rel_optima.f90",109)
+  V TOLER,toler,Real(Kind=2),double,d,0,#t("../find_rel_optima.f90",110)
+  V NEG_ABS_FUNC,neg_abs_func,Type(find_rel_optima_mod:neg_abs_func_obj),FIND_REL_OPTIMA_MOD_DT_neg_abs_func_obj,,0,#t("../find_rel_optima.f90",115)
+  V N_GRID_M1,n_grid_m1,Integer,int,,0,#t("../find_rel_optima.f90",117)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../find_rel_optima.f90",120)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../find_rel_optima.f90",121)
+  V XOPT,xopt,Real(Kind=2),double,,0,#t("../find_rel_optima.f90",116)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../find_rel_optima.f90",123)
+  V FOPT,fopt,Real(Kind=2),double,,0,#t("../find_rel_optima.f90",116)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../find_rel_optima.f90",112)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../find_rel_optima.f90",124)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../find_rel_optima.f90",113)
+  V J,j,Integer,int,,0,#t("../find_rel_optima.f90",117)
+ ES
+EM

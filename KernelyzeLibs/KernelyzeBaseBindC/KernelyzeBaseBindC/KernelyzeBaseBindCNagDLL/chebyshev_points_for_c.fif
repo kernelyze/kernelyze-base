@@ -1,0 +1,6 @@
+M CHEBYSHEV_POINTS_FOR_C_MOD,#h("../chebyshev_points_for_c.f90",27)
+ S CHEBYSHEV_POINTS_FOR_C,chebyshev_points,#h("../chebyshev_points_for_c.f90",38)
+  V PTS,pts,Real(Kind=2),double,d,1,i(1:*),#t("../chebyshev_points_for_c.f90",42)
+  V N,n,Integer,int,d,0,#t("../chebyshev_points_for_c.f90",41)
+ ES
+EM

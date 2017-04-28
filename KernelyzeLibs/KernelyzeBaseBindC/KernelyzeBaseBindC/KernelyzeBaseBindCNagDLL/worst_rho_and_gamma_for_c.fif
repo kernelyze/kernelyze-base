@@ -1,0 +1,44 @@
+M WORST_RHO_AND_GAMMA_FOR_C_MOD,#h("../worst_rho_and_gamma_for_c.f90",25)
+ S WORST_RHO_AND_GAMMA_FOR_C,worst_rho_and_gamma,#h("../worst_rho_and_gamma_for_c.f90",54)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  V A_MATRIX_RHO,a_matrix_rho,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../worst_rho_and_gamma_for_c.f90",98)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../worst_rho_and_gamma_for_c.f90",86)
+  V A_MATRIX_GAMMA,a_matrix_gamma,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../worst_rho_and_gamma_for_c.f90",99)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../worst_rho_and_gamma_for_c.f90",115)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../worst_rho_and_gamma_for_c.f90",121)
+  V NODES_RHO,nodes_rho,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",100)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../worst_rho_and_gamma_for_c.f90",117)
+  V NODES_GAMMA,nodes_gamma,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",101)
+  V ERRORS_AT_NODES_RHO,errors_at_nodes_rho,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",102)
+  V Y_LB,y_lb,Real(Kind=2),double,d,0,#t("../worst_rho_and_gamma_for_c.f90",89)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,d,0,#t("../worst_rho_and_gamma_for_c.f90",110)
+  V Y_UB,y_ub,Real(Kind=2),double,d,0,#t("../worst_rho_and_gamma_for_c.f90",90)
+  V ERRORS_AT_NODES_GAMMA,errors_at_nodes_gamma,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",103)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../worst_rho_and_gamma_for_c.f90",120)
+  V NUM_ITER,num_iter,Integer,int,d,0,#t("../worst_rho_and_gamma_for_c.f90",111)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",94)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../worst_rho_and_gamma_for_c.f90",122)
+  V TOLERANCE,tolerance,Real(Kind=2),double,d,0,#t("../worst_rho_and_gamma_for_c.f90",92)
+  V B_COEFFS_RHO,b_coeffs_rho,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",104)
+  V B_COEFFS_GAMMA,b_coeffs_gamma,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",105)
+  V B_NODES_RHO,b_nodes_rho,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",106)
+  V B_NODES_GAMMA,b_nodes_gamma,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",107)
+  V B_ERRORS_AT_NODES_RHO,b_errors_at_nodes_rho,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",108)
+  V B_ERRORS_AT_NODES_GAMMA,b_errors_at_nodes_gamma,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",109)
+  V KER_DISCREP,ker_discrep,Real(Kind=2),double,d,0,#t("../worst_rho_and_gamma_for_c.f90",112)
+  V GAMMA_VEC,gamma_vec,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",95)
+  V KER_NUM_ITER,ker_num_iter,Integer,int,d,0,#t("../worst_rho_and_gamma_for_c.f90",113)
+  V X_LB,x_lb,Real(Kind=2),double,d,0,#t("../worst_rho_and_gamma_for_c.f90",87)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../worst_rho_and_gamma_for_c.f90",93)
+  V NUM_TERMS,num_terms,Integer,int,d,0,#t("../worst_rho_and_gamma_for_c.f90",91)
+  V X_UB,x_ub,Real(Kind=2),double,d,0,#t("../worst_rho_and_gamma_for_c.f90",88)
+  V COEFFS_RHO,coeffs_rho,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",96)
+  V COEFFS_GAMMA,coeffs_gamma,Real(Kind=2),double,d,1,i(1:*),#t("../worst_rho_and_gamma_for_c.f90",97)
+ ES
+EM

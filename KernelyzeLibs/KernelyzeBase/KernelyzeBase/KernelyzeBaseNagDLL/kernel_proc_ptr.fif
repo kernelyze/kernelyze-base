@@ -1,0 +1,76 @@
+M KERNEL_PROC_PTR_MOD,#h("../kernel_proc_ptr.f90",31)
+ T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable
+ ET
+ T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,#d("../kernel_proc_ptr.f90",38)
+  C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0,#c("../kernel_proc_ptr.f90",39)
+  C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0,#c("../kernel_proc_ptr.f90",40)
+ ET
+ F EVAL,KERNEL_PROC_PTR_MOD_MP_eval,result(EVAL_RES),#h("../kernel_proc_ptr.f90",99)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",101)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",103)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",102)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../kernel_proc_ptr.f90",105)
+ EF
+ F MTH_NTH_PARTIAL,KERNEL_PROC_PTR_MOD_MP_mth_nth_partial,result(DERIV),#h("../kernel_proc_ptr.f90",214)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_proc_ptr.f90",223)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",216)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",220)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",221)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",219)
+  V N,n,Integer,int,d,0,#t("../kernel_proc_ptr.f90",218)
+  V M,m,Integer,int,d,0,#t("../kernel_proc_ptr.f90",217)
+ EF
+ S KERNEL_PROC_PTR_ASSIGN,KERNEL_PROC_PTR_MOD_MP_kernel_proc_ptr_assign,#h("../kernel_proc_ptr.f90",237)
+  T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable
+  ET
+  V LEFT,left,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",239)
+  V RIGHT,right,Class(kernel_summable_mod:kernel_summable),KERNEL_SUMMABLE_MOD_DT_kernel_summable,d,0,#t("../kernel_proc_ptr.f90",240)
+ ES
+ F FIRST_PARTIAL_DX,KERNEL_PROC_PTR_MOD_MP_first_partial_dx,result(DERIV),#h("../kernel_proc_ptr.f90",114)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_proc_ptr.f90",121)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",116)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",118)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",119)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",117)
+ EF
+ F FIRST_PARTIAL_DY,KERNEL_PROC_PTR_MOD_MP_first_partial_dy,result(DERIV),#h("../kernel_proc_ptr.f90",134)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_proc_ptr.f90",141)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",136)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",138)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",139)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",137)
+ EF
+ S SET_PROC_PTR,KERNEL_PROC_PTR_MOD_MP_set_proc_ptr,#h("../kernel_proc_ptr.f90",250)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",252)
+ ES
+ F SECOND_PARTIAL_DX_DX,KERNEL_PROC_PTR_MOD_MP_second_partial_dx_dx,result(DERIV),#h("../kernel_proc_ptr.f90",154)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_proc_ptr.f90",161)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",156)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",158)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",159)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",157)
+ EF
+ S GET_PROC_PTR,KERNEL_PROC_PTR_MOD_MP_get_proc_ptr,#h("../kernel_proc_ptr.f90",259)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",261)
+ ES
+ S SET_DERIV_PTR,KERNEL_PROC_PTR_MOD_MP_set_deriv_ptr,#h("../kernel_proc_ptr.f90",269)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",271)
+ ES
+ F SECOND_PARTIAL_DY_DY,KERNEL_PROC_PTR_MOD_MP_second_partial_dy_dy,result(DERIV),#h("../kernel_proc_ptr.f90",174)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_proc_ptr.f90",181)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",176)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",178)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",179)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",177)
+ EF
+ S GET_DERIV_PTR,KERNEL_PROC_PTR_MOD_MP_get_deriv_ptr,#h("../kernel_proc_ptr.f90",278)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",280)
+ ES
+ F SECOND_PARTIAL_DX_DY,KERNEL_PROC_PTR_MOD_MP_second_partial_dx_dy,result(DERIV),#h("../kernel_proc_ptr.f90",194)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../kernel_proc_ptr.f90",201)
+  V THIS,this,Class(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,d,0,#t("../kernel_proc_ptr.f90",196)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",198)
+  V D,d,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",199)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_proc_ptr.f90",197)
+ EF
+EM

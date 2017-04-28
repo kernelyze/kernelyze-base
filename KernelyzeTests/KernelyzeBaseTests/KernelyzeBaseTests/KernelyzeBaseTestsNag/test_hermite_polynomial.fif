@@ -1,0 +1,30 @@
+M TEST_HERMITE_POLYNOMIAL_MOD,#h("../test_hermite_polynomial.f90",23)
+ F TEST_HERMITE_INDEX_TWO,TEST_HERMITE_POLYNOMIAL_MOD_MP_test_hermite_index_two,result(TEST_PASS),#h("../test_hermite_polynomial.f90",51)
+  V X,x,Real(Kind=2),double,,0,#t("../test_hermite_polynomial.f90",58)
+  V TEST_ARR,test_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_hermite_polynomial.f90",57)
+  V FUNC_ARR,func_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_hermite_polynomial.f90",57)
+  V J,j,Integer,int,,0,#t("../test_hermite_polynomial.f90",59)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_hermite_polynomial.f90",53)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_hermite_polynomial.f90",55)
+ EF
+ F TEST_HERMITE_LOW_INDEX,TEST_HERMITE_POLYNOMIAL_MOD_MP_test_hermite_low_index,result(TEST_PASS),#h("../test_hermite_polynomial.f90",89)
+  V X,x,Real(Kind=2),double,,0,#t("../test_hermite_polynomial.f90",96)
+  V TEST_ARR,test_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_hermite_polynomial.f90",95)
+  V FUNC_ARR,func_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_hermite_polynomial.f90",95)
+  V J,j,Integer,int,,0,#t("../test_hermite_polynomial.f90",97)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_hermite_polynomial.f90",91)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_hermite_polynomial.f90",93)
+ EF
+ F TEST_HERMITE_HIGH_INDEX,TEST_HERMITE_POLYNOMIAL_MOD_MP_test_hermite_high_index,result(TEST_PASS),#h("../test_hermite_polynomial.f90",127)
+  V X,x,Real(Kind=2),double,,0,#t("../test_hermite_polynomial.f90",134)
+  V TEST_ARR,test_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_hermite_polynomial.f90",133)
+  V FUNC_ARR,func_arr,Real(Kind=2),double,,1,f(1:10),#t("../test_hermite_polynomial.f90",133)
+  V J,j,Integer,int,,0,#t("../test_hermite_polynomial.f90",135)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_hermite_polynomial.f90",129)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_hermite_polynomial.f90",131)
+ EF
+ F TEST_HERMITE_POLYNOMIAL,TEST_HERMITE_POLYNOMIAL_MOD_MP_test_hermite_polynomial,result(TEST_PASS),#h("../test_hermite_polynomial.f90",32)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_hermite_polynomial.f90",34)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_hermite_polynomial.f90",36)
+ EF
+EM

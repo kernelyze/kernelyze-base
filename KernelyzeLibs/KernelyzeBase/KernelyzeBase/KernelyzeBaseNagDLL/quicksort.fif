@@ -1,0 +1,62 @@
+M QUICKSORT,#h("../quicksort.f90",14)
+ S QSORT,QUICKSORT_MP_qsort,#h("../quicksort.f90",19)
+  V A,locals.a,Real(Kind=2),double,d,1,i(*:*),#t("../quicksort.f90",21)
+  V LEFT,locals.left,Integer,int,d,0,#t("../quicksort.f90",20)
+  V RIGHT,locals.right,Integer,int,d,0,#t("../quicksort.f90",20)
+  V SAVEDVAL,locals.savedval,Real(Kind=2),double,d,0,#t("../quicksort.f90",22)
+  S INSERTION,QUICKSORT_MP_qsortIP_insertion,#h("../quicksort.f90",29)
+   V LEFT,host->left,Integer,int,d,0,#t("../quicksort.f90",20)
+   V RIGHT,host->right,Integer,int,d,0,#t("../quicksort.f90",20)
+   V I,i,Integer,int,,0,#t("../quicksort.f90",30)
+   V J,j,Integer,int,,0,#t("../quicksort.f90",30)
+  ES
+  S COMPEX,QUICKSORT_MP_qsortIP_compex,#h("../qsfuns.f90",34)
+   V I,i,Integer,int,d,0,#t("../qsfuns.f90",35)
+   V J,j,Integer,int,d,0,#t("../qsfuns.f90",35)
+  ES
+  S SAVEVALUE,QUICKSORT_MP_qsortIP_savevalue,#h("../qsfuns.f90",53)
+   V A,host->a,Real(Kind=2),double,d,1,i(*:*),#t("../quicksort.f90",21)
+   V SAVEDVAL,host->savedval,Real(Kind=2),double,d,0,#t("../quicksort.f90",22)
+   V I,i,Integer,int,d,0,#t("../qsfuns.f90",54)
+  ES
+  F COMPAREVALUE,QUICKSORT_MP_qsortIP_comparevalue,#h("../qsfuns.f90",48)
+   V COMPAREVALUE,QUICKSORT_MP_qsortIP_comparevalueResult,Logical,int,,0
+   V A,host->a,Real(Kind=2),double,d,1,i(*:*),#t("../quicksort.f90",21)
+   V SAVEDVAL,host->savedval,Real(Kind=2),double,d,0,#t("../quicksort.f90",22)
+   V J,j,Integer,int,d,0,#t("../qsfuns.f90",49)
+  EF
+  S MOVEVALUE,QUICKSORT_MP_qsortIP_movevalue,#h("../qsfuns.f90",39)
+   V A,host->a,Real(Kind=2),double,d,1,i(*:*),#t("../quicksort.f90",21)
+   V I,i,Integer,int,d,0,#t("../qsfuns.f90",42)
+   V J,j,Integer,int,d,0,#t("../qsfuns.f90",42)
+  ES
+  S RESTOREVALUE,QUICKSORT_MP_qsortIP_restorevalue,#h("../qsfuns.f90",58)
+   V A,host->a,Real(Kind=2),double,d,1,i(*:*),#t("../quicksort.f90",21)
+   V SAVEDVAL,host->savedval,Real(Kind=2),double,d,0,#t("../quicksort.f90",22)
+   V I,i,Integer,int,d,0,#t("../qsfuns.f90",59)
+  ES
+  S EXCHANGE,QUICKSORT_MP_qsortIP_exchange,#h("../qsfuns.f90",17)
+   V A,host->a,Real(Kind=2),double,d,1,i(*:*),#t("../quicksort.f90",21)
+   V I,i,Integer,int,d,0,#t("../qsfuns.f90",19)
+   V J,j,Integer,int,d,0,#t("../qsfuns.f90",19)
+   V T,t,Real(Kind=2),double,,0,#t("../qsfuns.f90",20)
+  ES
+  F PARTITION,QUICKSORT_MP_qsortIP_partition,result(I),#h("../quicksort.f90",67)
+   V LEFT,left,Integer,int,d,0,#t("../quicksort.f90",68)
+   V RIGHT,right,Integer,int,d,0,#t("../quicksort.f90",68)
+   V I,i,Integer,int,,0,#t("../quicksort.f90",69)
+   V J,j,Integer,int,,0,#t("../quicksort.f90",69)
+  EF
+  F COMPARE,QUICKSORT_MP_qsortIP_compare,#h("../qsfuns.f90",26)
+   V COMPARE,QUICKSORT_MP_qsortIP_compareResult,Logical,int,,0
+   V A,host->a,Real(Kind=2),double,d,1,i(*:*),#t("../quicksort.f90",21)
+   V I,i,Integer,int,d,0,#t("../qsfuns.f90",30)
+   V J,j,Integer,int,d,0,#t("../qsfuns.f90",30)
+  EF
+  S QUICKSORT,QUICKSORT_MP_qsortIP_quicksort,#h("../quicksort.f90",49)
+   V LEFT,left,Integer,int,d,0,#t("../quicksort.f90",50)
+   V RIGHT,right,Integer,int,d,0,#t("../quicksort.f90",50)
+   V I,i,Integer,int,,0,#t("../quicksort.f90",53)
+  ES
+ ES
+EM

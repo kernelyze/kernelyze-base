@@ -1,0 +1,35 @@
+M NUM_OPT_RANKN_KERNEL_ASYMM_MOD,#h("../num_opt_rankn_kernel_asymm.f90",30)
+ S NUM_OPT_RANKN_KERNEL_ASYMM,NUM_OPT_RANKN_KERNEL_ASYMM_MOD_MP_num_opt_rankn_kernel_asymm,#h("../num_opt_rankn_kernel_asymm.f90",44)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V KERNEL_TO_APPROX,kernel_to_approx,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../num_opt_rankn_kernel_asymm.f90",54)
+  V RANK,rank,Integer,int,d,0,#t("../num_opt_rankn_kernel_asymm.f90",55)
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,d,0,#t("../num_opt_rankn_kernel_asymm.f90",60)
+  V V_MAT,v_mat,Real(Kind=2),double,,2,i(1:*,1:*),#t("../num_opt_rankn_kernel_asymm.f90",72)
+  V W_MAT,w_mat,Real(Kind=2),double,,2,i(1:*,1:*),#t("../num_opt_rankn_kernel_asymm.f90",73)
+  V TOLER,toler,Real(Kind=2),double,d,0,#t("../num_opt_rankn_kernel_asymm.f90",57)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,da,0,#t("../num_opt_rankn_kernel_asymm.f90",58)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../num_opt_rankn_kernel_asymm.f90",62)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../num_opt_rankn_kernel_asymm.f90",63)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../num_opt_rankn_kernel_asymm.f90",56)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../num_opt_rankn_kernel_asymm.f90",65)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../num_opt_rankn_kernel_asymm.f90",66)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,,1,i(1:*),#t("../num_opt_rankn_kernel_asymm.f90",70)
+  V GAMMA_VEC,gamma_vec,Real(Kind=2),double,,1,i(1:*),#t("../num_opt_rankn_kernel_asymm.f90",71)
+ ES
+EM

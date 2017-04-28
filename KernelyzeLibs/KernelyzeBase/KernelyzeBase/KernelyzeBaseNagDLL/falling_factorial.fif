@@ -1,0 +1,8 @@
+M FALLING_FACTORIAL_MOD,#h("../falling_factorial.f90",24)
+ F FALLING_FACTORIAL,FALLING_FACTORIAL_MOD_MP_falling_factorial,result(FACT),#h("../falling_factorial.f90",38)
+  V X,x,Real(Kind=2),double,d,0,#t("../falling_factorial.f90",40)
+  V FACT,fact,Real(Kind=2),double,,0,#t("../falling_factorial.f90",43)
+  V I,i,Integer,int,d,0,#t("../falling_factorial.f90",41)
+  V J,j,Integer,int,,0,#t("../falling_factorial.f90",45)
+ EF
+EM

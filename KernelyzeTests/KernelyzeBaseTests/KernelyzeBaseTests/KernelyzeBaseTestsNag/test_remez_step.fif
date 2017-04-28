@@ -1,0 +1,41 @@
+M TEST_REMEZ_STEP_MOD,#h("../test_remez_step.f90",26)
+ F TEST_REMEZ_STEP_SIMPLE,TEST_REMEZ_STEP_MOD_MP_test_remez_step_simple,result(TEST_PASS),#h("../test_remez_step.f90",57)
+  T kernel_gaussian_mod:kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_remez_step.f90",61)
+  V GAUSSIAN_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0
+  V TEST_RHO_VEC,test_rho_vec,Real(Kind=2),double,,1,f(1:1),#t("../test_remez_step.f90",63)
+  V TEST_COEFFS,test_coeffs,Real(Kind=2),double,,1,f(1:1),#t("../test_remez_step.f90",64)
+  V TEST_GRID,test_grid,Real(Kind=2),double,,1,f(1:200),#t("../test_remez_step.f90",65)
+  V TEST_NODES,test_nodes,Real(Kind=2),double,,1,f(1:1),#t("../test_remez_step.f90",66)
+  V TEST_VALS_AT_NODES,test_vals_at_nodes,Real(Kind=2),double,,1,f(1:1),#t("../test_remez_step.f90",67)
+  V TEST_TOLER,test_toler,Real(Kind=2),double,,0,#t("../test_remez_step.f90",68)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_remez_step.f90",59)
+ EF
+ F TEST_REMEZ_STEP_MANY_PTS,TEST_REMEZ_STEP_MOD_MP_test_remez_step_many_pts,result(TEST_PASS),#h("../test_remez_step.f90",97)
+  T kernel_expprod_mod:kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_remez_step.f90",101)
+  V TARGET_VEC,target_vec,Real(Kind=2),double,,1,f(1:20),#t("../test_remez_step.f90",104)
+  V FUNC_MAT,func_mat,Real(Kind=2),double,,2,f(1:20,1:20),#t("../test_remez_step.f90",109)
+  V A_MAT,a_mat,Real(Kind=2),double,,2,f(1:20,1:20),#t("../test_remez_step.f90",109)
+  V LAPACK_INFO,lapack_info,Integer,int,,0,#t("../test_remez_step.f90",112)
+  V TEST_RHO_VEC,test_rho_vec,Real(Kind=2),double,,1,f(1:20),#t("../test_remez_step.f90",103)
+  V IPIV,ipiv,Integer,int,,1,f(1:20),#t("../test_remez_step.f90",110)
+  V TEST_COEFFS,test_coeffs,Real(Kind=2),double,,1,f(1:20),#t("../test_remez_step.f90",105)
+  V I,i,Integer,int,,0,#t("../test_remez_step.f90",112)
+  V TEST_GRID,test_grid,Real(Kind=2),double,,1,f(1:200),#t("../test_remez_step.f90",106)
+  V TEST_NODES,test_nodes,Real(Kind=2),double,,1,f(1:20),#t("../test_remez_step.f90",107)
+  V J,j,Integer,int,,0,#t("../test_remez_step.f90",112)
+  V TEST_VALS_AT_NODES,test_vals_at_nodes,Real(Kind=2),double,,1,f(1:20),#t("../test_remez_step.f90",108)
+  V TEST_TOLER,test_toler,Real(Kind=2),double,,0,#t("../test_remez_step.f90",111)
+  V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_remez_step.f90",99)
+ EF
+ F TEST_REMEZ_STEP,TEST_REMEZ_STEP_MOD_MP_test_remez_step,result(TEST_PASS),#h("../test_remez_step.f90",40)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_remez_step.f90",44)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_remez_step.f90",42)
+ EF
+EM

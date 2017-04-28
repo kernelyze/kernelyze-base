@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="typeStaticLibrary" ProjectCreator="Intel Fortran" Keyword="Static Library" Version="11.0" ProjectIdGuid="{1B415342-C5CA-4EFF-BC5E-09364DBC80F5}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLibrarianTool"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration>
+		<Configuration Name="Release|Win32" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLibrarianTool"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration>
+		<Configuration Name="Debug|x64" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" MultiProcessorCompilation="true" Optimization="optimizeDisabled" Parallelization="true" Preprocess="preprocessYes" AdditionalIncludeDirectories="..\..\KernelyzeBase\KernelyzeBase\x64\Debug" ReentrantCode="reentrancyThreaded" OpenMP="OpenMPParallelCode" F2003Semantics="true" StandardWarnings="standardWarningsF08" WarnDeclarations="true" WarnUnusedVariables="true" WarnUncalled="true" WarnInterfaces="true" OptDiagLevel="odlLevel5" LocalVariableStorage="localStorageAutomatic" FloatingPointModel="precise" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLibrarianTool" AdditionalLibraryDirectories="..\..\KernelyzeBase\KernelyzeBase\x64\Debug" AdditionalDependencies="KernelyzeBase.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration>
+		<Configuration Name="Release|x64" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" MultiProcessorCompilation="true" Parallelization="true" Preprocess="preprocessYes" AdditionalIncludeDirectories="..\..\KernelyzeBase\KernelyzeBase\x64\Release" ReentrantCode="reentrancyThreaded" OpenMP="OpenMPParallelCode" F2003Semantics="true" StandardWarnings="standardWarningsF08" WarnDeclarations="true" WarnUnusedVariables="true" WarnUncalled="true" WarnInterfaces="true" OptDiagLevel="odlLevel5" LocalVariableStorage="localStorageAutomatic" FloatingPointModel="precise" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLibrarianTool" AdditionalLibraryDirectories="..\..\KernelyzeBase\KernelyzeBase\x64\Release" AdditionalDependencies="KernelyzeBase.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<File RelativePath=".\borsuk_lower_bound_for_c.f90"/>
+		<File RelativePath=".\brent_for_c.f90"/>
+		<File RelativePath=".\chebyshev_points_for_c.f90"/>
+		<File RelativePath=".\eigen_funcs_for_c.f90"/>
+		<File RelativePath=".\find_all_zeros_for_c.f90"/>
+		<File RelativePath=".\find_rel_optima_for_c.f90"/>
+		<File RelativePath=".\fort_c_interop.f90"/>
+		<File RelativePath=".\kernel_integral_eval_for_c.f90"/>
+		<File RelativePath=".\linear_solve_for_c.f90"/>
+		<File RelativePath=".\matmul_for_c.f90"/>
+		<File RelativePath=".\mp_inverse_for_c.f90"/>
+		<File RelativePath=".\num_opt_funcs_for_c.f90"/>
+		<File RelativePath=".\option_formulae_for_c.f90"/>
+		<File RelativePath=".\taylor_funcs_for_c.f90"/>
+		<File RelativePath=".\worst_rho_and_gamma_for_c.f90"/></Filter></Files>
+	<Globals/></VisualStudioProject>

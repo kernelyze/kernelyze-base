@@ -1,0 +1,136 @@
+M TEST_TAYLOR_SERIES_RANKN_KERNEL_MOD,#h("../test_taylor_series_rankn_kernel.f90",27)
+ F TEST_TAYLOR_SERIES_RANKN_KERNEL_EXPPROD,TEST_TAYLOR_SERIES_RANKN_KERNEL_MOD_MP_test_taylor_series_rankn_kernel_expprod,result(TEST_PASS),#h("../test_taylor_series_rankn_kernel.f90",68)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  T monomial_mod:monomial,MONOMIAL_MOD_DT_monomial
+   C MON_POWER,mon_power,Integer,int,24,,0
+   C CENTER,center,Real(Kind=2),double,16,,0
+  ET
+  T kernel_rankn,KERNEL_NMONOM_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_taylor_series_rankn_kernel.f90",71)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_taylor_series_rankn_kernel.f90",73)
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_taylor_series_rankn_kernel.f90",76)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",78)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_taylor_series_rankn_kernel.f90",79)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",81)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",81)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",82)
+  V EXPPROD_EVAL,expprod_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",82)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",82)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",75)
+  V TAYLOR_MATRIX,taylor_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",85)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nmonom_mod:kernel_rankn),KERNEL_NMONOM_MOD_DT_kernel_rankn,a,0,#t("../test_taylor_series_rankn_kernel.f90",77)
+  V I,i,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",80)
+  V J,j,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",80)
+  V W_MATRIX,w_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",84)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",83)
+ EF
+ F TEST_TAYLOR_SERIES_RANKN_KERNEL_GAUSSIAN,TEST_TAYLOR_SERIES_RANKN_KERNEL_MOD_MP_test_taylor_series_rankn_kernel_gaussian,result(TEST_PASS),#h("../test_taylor_series_rankn_kernel.f90",157)
+  T monomial_mod:monomial,MONOMIAL_MOD_DT_monomial
+   C MON_POWER,mon_power,Integer,int,24,,0
+   C CENTER,center,Real(Kind=2),double,16,,0
+  ET
+  T kernel_rankn,KERNEL_NMONOM_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_taylor_series_rankn_kernel.f90",160)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_taylor_series_rankn_kernel.f90",162)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",167)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_taylor_series_rankn_kernel.f90",168)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",170)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",170)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",171)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",171)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nmonom_mod:kernel_rankn),KERNEL_NMONOM_MOD_DT_kernel_rankn,a,0,#t("../test_taylor_series_rankn_kernel.f90",166)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",164)
+  V TAYLOR_MATRIX,taylor_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",174)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_taylor_series_rankn_kernel.f90",165)
+  V I,i,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",169)
+  V GAUSSIAN_EVAL,gaussian_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",171)
+  V J,j,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",169)
+  V W_MATRIX,w_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",173)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",172)
+ EF
+ F TEST_TAYLOR_SERIES_RANKN_KERNEL_CAUCHY,TEST_TAYLOR_SERIES_RANKN_KERNEL_MOD_MP_test_taylor_series_rankn_kernel_cauchy,result(TEST_PASS),#h("../test_taylor_series_rankn_kernel.f90",244)
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  T monomial_mod:monomial,MONOMIAL_MOD_DT_monomial
+   C MON_POWER,mon_power,Integer,int,24,,0
+   C CENTER,center,Real(Kind=2),double,16,,0
+  ET
+  T kernel_rankn,KERNEL_NMONOM_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V CAUCHY_EVAL,cauchy_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",258)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_taylor_series_rankn_kernel.f90",247)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_taylor_series_rankn_kernel.f90",249)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",254)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_taylor_series_rankn_kernel.f90",255)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",257)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",257)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",258)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",258)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",251)
+  V TAYLOR_MATRIX,taylor_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",261)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nmonom_mod:kernel_rankn),KERNEL_NMONOM_MOD_DT_kernel_rankn,a,0,#t("../test_taylor_series_rankn_kernel.f90",253)
+  V I,i,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",256)
+  V J,j,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",256)
+  V W_MATRIX,w_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",260)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",259)
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_taylor_series_rankn_kernel.f90",252)
+ EF
+ F TEST_TAYLOR_SERIES_RANKN_KERNEL_BACHELIER,TEST_TAYLOR_SERIES_RANKN_KERNEL_MOD_MP_test_taylor_series_rankn_kernel_bachelier,result(TEST_PASS),#h("../test_taylor_series_rankn_kernel.f90",331)
+  T monomial_mod:monomial,MONOMIAL_MOD_DT_monomial
+   C MON_POWER,mon_power,Integer,int,24,,0
+   C CENTER,center,Real(Kind=2),double,16,,0
+  ET
+  T kernel_rankn,KERNEL_NMONOM_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_bachelier,KERNEL_BACHELIER_MOD_DT_kernel_bachelier
+   C SIGMA,sigma,Real(Kind=2),double,32,,0
+   C IS_CALL,is_call,Logical,int,40,,0
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_taylor_series_rankn_kernel.f90",334)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_taylor_series_rankn_kernel.f90",336)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",341)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_taylor_series_rankn_kernel.f90",342)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",344)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",344)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",345)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",345)
+  V BACHELIER_KERNEL,bachelier_kernel,Type(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,,0,#t("../test_taylor_series_rankn_kernel.f90",339)
+  V EXPECTED_ERROR,expected_error,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",338)
+  V TAYLOR_MATRIX,taylor_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",348)
+  V BACHELIER_EVAL,bachelier_eval,Real(Kind=2),double,,0,#t("../test_taylor_series_rankn_kernel.f90",345)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nmonom_mod:kernel_rankn),KERNEL_NMONOM_MOD_DT_kernel_rankn,a,0,#t("../test_taylor_series_rankn_kernel.f90",340)
+  V I,i,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",343)
+  V J,j,Integer,int,,0,#t("../test_taylor_series_rankn_kernel.f90",343)
+  V W_MATRIX,w_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",347)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_taylor_series_rankn_kernel.f90",346)
+ EF
+ F TEST_TAYLOR_SERIES_RANKN_KERNEL,TEST_TAYLOR_SERIES_RANKN_KERNEL_MOD_MP_test_taylor_series_rankn_kernel,result(TEST_PASS),#h("../test_taylor_series_rankn_kernel.f90",44)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_taylor_series_rankn_kernel.f90",46)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_taylor_series_rankn_kernel.f90",48)
+ EF
+EM

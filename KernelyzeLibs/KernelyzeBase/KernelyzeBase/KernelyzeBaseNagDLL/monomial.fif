@@ -1,0 +1,58 @@
+M MONOMIAL_MOD,#h("../monomial.f90",40)
+ T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+ ET
+ T monomial,MONOMIAL_MOD_DT_monomial,#d("../monomial.f90",50)
+  C MON_POWER,mon_power,Integer,int,24,,0,#c("../monomial.f90",53)
+  C CENTER,center,Real(Kind=2),double,16,,0,#c("../monomial.f90",56)
+ ET
+ S MONOMIAL_ASSIGN,MONOMIAL_MOD_MP_monomial_assign,#h("../monomial.f90",156)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V LEFT,left,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",158)
+  V RIGHT,right,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../monomial.f90",159)
+ ES
+ F GET_POWER,MONOMIAL_MOD_MP_get_power,result(CURR_POWER),#h("../monomial.f90",168)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",170)
+  V CURR_POWER,curr_power,Integer,int,,0,#t("../monomial.f90",172)
+ EF
+ S SET_POWER,MONOMIAL_MOD_MP_set_power,#h("../monomial.f90",177)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",179)
+  V NEW_POWER,new_power,Integer,int,d,0,#t("../monomial.f90",180)
+ ES
+ F GET_CENTER,MONOMIAL_MOD_MP_get_center,result(CURR_CENTER),#h("../monomial.f90",185)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",187)
+  V CURR_CENTER,curr_center,Real(Kind=2),double,,0,#t("../monomial.f90",189)
+ EF
+ S SET_CENTER,MONOMIAL_MOD_MP_set_center,#h("../monomial.f90",194)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",196)
+  V NEW_CENTER,new_center,Real(Kind=2),double,d,0,#t("../monomial.f90",197)
+ ES
+ F EVAL,MONOMIAL_MOD_MP_eval,result(EVAL_RES),#h("../monomial.f90",81)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",83)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../monomial.f90",86)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../monomial.f90",84)
+ EF
+ F FIRST_DERIV,MONOMIAL_MOD_MP_first_deriv,result(DERIV),#h("../monomial.f90",98)
+  V X,x,Real(Kind=2),double,d,0,#t("../monomial.f90",101)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../monomial.f90",104)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",100)
+  V D,d,Real(Kind=2),double,d,0,#t("../monomial.f90",102)
+ EF
+ F SECOND_DERIV,MONOMIAL_MOD_MP_second_deriv,result(DERIV),#h("../monomial.f90",117)
+  V X,x,Real(Kind=2),double,d,0,#t("../monomial.f90",120)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../monomial.f90",123)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",119)
+  V D,d,Real(Kind=2),double,d,0,#t("../monomial.f90",121)
+ EF
+ F NTH_DERIV,MONOMIAL_MOD_MP_nth_deriv,result(DERIV),#h("../monomial.f90",136)
+  V X,x,Real(Kind=2),double,d,0,#t("../monomial.f90",140)
+  V N,n,Integer,int,d,0,#t("../monomial.f90",139)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../monomial.f90",143)
+  V THIS,this,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,0,#t("../monomial.f90",138)
+  V D,d,Real(Kind=2),double,d,0,#t("../monomial.f90",141)
+ EF
+EM

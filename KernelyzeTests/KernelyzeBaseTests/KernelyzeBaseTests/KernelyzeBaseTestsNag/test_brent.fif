@@ -1,0 +1,60 @@
+M TEST_BRENT_MOD,#h("../test_brent.f90",24)
+ F TEST_BRENT_NO_ZERO,TEST_BRENT_MOD_MP_test_brent_no_zero,result(TEST_PASS),#h("../test_brent.f90",75)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V TOL,tol,Real(Kind=2),double,,0,#t("../test_brent.f90",82)
+  V ZERO_X,zero_x,Real(Kind=2),double,,0,#t("../test_brent.f90",82)
+  V A,a,Real(Kind=2),double,,0,#t("../test_brent.f90",82)
+  V B,b,Real(Kind=2),double,,0,#t("../test_brent.f90",82)
+  V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_brent.f90",77)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_brent.f90",79)
+ EF
+ F TEST_BRENT_NICE_MIN,TEST_BRENT_MOD_MP_test_brent_nice_min,result(TEST_PASS),#h("../test_brent.f90",98)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V MIN_X,min_x,Real(Kind=2),double,,0,#t("../test_brent.f90",105)
+  V MIN_F,min_f,Real(Kind=2),double,,0,#t("../test_brent.f90",105)
+  V TOL,tol,Real(Kind=2),double,,0,#t("../test_brent.f90",105)
+  V A,a,Real(Kind=2),double,,0,#t("../test_brent.f90",105)
+  V B,b,Real(Kind=2),double,,0,#t("../test_brent.f90",105)
+  V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_brent.f90",100)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_brent.f90",102)
+ EF
+ F TEST_BRENT_LARGE_INTVL_MIN,TEST_BRENT_MOD_MP_test_brent_large_intvl_min,result(TEST_PASS),#h("../test_brent.f90",121)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V MIN_X,min_x,Real(Kind=2),double,,0,#t("../test_brent.f90",128)
+  V MIN_F,min_f,Real(Kind=2),double,,0,#t("../test_brent.f90",128)
+  V TOL,tol,Real(Kind=2),double,,0,#t("../test_brent.f90",128)
+  V A,a,Real(Kind=2),double,,0,#t("../test_brent.f90",128)
+  V B,b,Real(Kind=2),double,,0,#t("../test_brent.f90",128)
+  V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_brent.f90",123)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_brent.f90",125)
+ EF
+ F TEST_BRENT,TEST_BRENT_MOD_MP_test_brent,result(TEST_PASS),#h("../test_brent.f90",36)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_brent.f90",38)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_brent.f90",40)
+ EF
+ F TEST_BRENT_NICE,TEST_BRENT_MOD_MP_test_brent_nice,result(TEST_PASS),#h("../test_brent.f90",55)
+  T singlevar_proc_ptr_mod:singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V TOL,tol,Real(Kind=2),double,,0,#t("../test_brent.f90",62)
+  V ZERO_X,zero_x,Real(Kind=2),double,,0,#t("../test_brent.f90",62)
+  V A,a,Real(Kind=2),double,,0,#t("../test_brent.f90",62)
+  V B,b,Real(Kind=2),double,,0,#t("../test_brent.f90",62)
+  V SIN_FUNC,INTRINSIC_TEST_FUNCS_MOD_MP_sin_func,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_brent.f90",57)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_brent.f90",59)
+ EF
+EM

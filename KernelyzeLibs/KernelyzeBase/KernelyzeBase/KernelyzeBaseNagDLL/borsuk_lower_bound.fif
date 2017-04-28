@@ -1,0 +1,23 @@
+M BORSUK_LOWER_BOUND_MOD,#h("../borsuk_lower_bound.f90",45)
+ S BORSUK_LOWER_BOUND,BORSUK_LOWER_BOUND_MOD_MP_borsuk_lower_bound,#h("../borsuk_lower_bound.f90",52)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../borsuk_lower_bound.f90",79)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../borsuk_lower_bound.f90",80)
+  V ERRORS_AT_NODES,errors_at_nodes,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound.f90",75)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,d,0,#t("../borsuk_lower_bound.f90",76)
+  V NUM_ITER,num_iter,Integer,int,d,0,#t("../borsuk_lower_bound.f90",77)
+  V KERNEL_OBJ,kernel_obj,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../borsuk_lower_bound.f90",67)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,d,1,d(1:*),#t("../borsuk_lower_bound.f90",68)
+  V TOLERANCE,tolerance,Real(Kind=2),double,d,0,#t("../borsuk_lower_bound.f90",70)
+  V NODES,nodes,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound.f90",74)
+  V IS_OVER_X,is_over_x,Logical,int,d,0,#t("../borsuk_lower_bound.f90",69)
+  V GRID,grid,Real(Kind=2),double,d,1,d(1:*),#t("../borsuk_lower_bound.f90",72)
+  V COEFFS,coeffs,Real(Kind=2),double,d,1,i(1:*),#t("../borsuk_lower_bound.f90",73)
+  V MAX_ITER,max_iter,Integer,int,d,0,#t("../borsuk_lower_bound.f90",71)
+ ES
+EM

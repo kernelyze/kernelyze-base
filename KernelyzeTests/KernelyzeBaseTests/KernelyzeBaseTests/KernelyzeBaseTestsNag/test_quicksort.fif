@@ -1,0 +1,27 @@
+M TEST_QUICKSORT_MOD,#h("../test_quicksort.f90",23)
+ F TEST_QUICKSORT,TEST_QUICKSORT_MOD_MP_test_quicksort,result(TEST_PASS),#h("../test_quicksort.f90",32)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_quicksort.f90",34)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_quicksort.f90",36)
+ EF
+ F TEST_QUICKSORT_ALREADY_ORDERED,TEST_QUICKSORT_MOD_MP_test_quicksort_already_ordered,result(TEST_PASS),#h("../test_quicksort.f90",50)
+  V TEST_ARRAY,test_array,Real(Kind=2),double,,1,f(1:1000),#t("../test_quicksort.f90",56)
+  V TEMP_VBL,temp_vbl,Real(Kind=2),double,,0,#t("../test_quicksort.f90",57)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_quicksort.f90",52)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_quicksort.f90",54)
+  V J,j,Integer,int,,0,#t("../test_quicksort.f90",58)
+ EF
+ F TEST_QUICKSORT_REVERSE_ORDERED,TEST_QUICKSORT_MOD_MP_test_quicksort_reverse_ordered,result(TEST_PASS),#h("../test_quicksort.f90",76)
+  V TEST_ARRAY,test_array,Real(Kind=2),double,,1,f(1:5000),#t("../test_quicksort.f90",82)
+  V TEMP_VBL,temp_vbl,Real(Kind=2),double,,0,#t("../test_quicksort.f90",83)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_quicksort.f90",78)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_quicksort.f90",80)
+  V J,j,Integer,int,,0,#t("../test_quicksort.f90",84)
+ EF
+ F TEST_QUICKSORT_ONE_OUT_OF_ORDER,TEST_QUICKSORT_MOD_MP_test_quicksort_one_out_of_order,result(TEST_PASS),#h("../test_quicksort.f90",102)
+  V TEST_ARRAY,test_array,Real(Kind=2),double,,1,f(1:4321),#t("../test_quicksort.f90",108)
+  V TEMP_VBL,temp_vbl,Real(Kind=2),double,,0,#t("../test_quicksort.f90",109)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_quicksort.f90",104)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_quicksort.f90",106)
+  V J,j,Integer,int,,0,#t("../test_quicksort.f90",110)
+ EF
+EM

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mp_inverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="num_opt_funcs_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="brent_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="find_all_zeros_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="find_rel_optima_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="borsuk_lower_bound_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="worst_rho_and_gamma_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="taylor_approx_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_function_ptrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eigen_approx_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel_integral_eval_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="option_formulae_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="linear_solve_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matmul_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="num_opt_funcs_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="brent_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="find_all_zeros_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="find_rel_optima_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="borsuk_lower_bound_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="worst_rho_and_gamma_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="taylor_approx_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_function_ptrs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eigen_approx_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel_integral_eval_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="option_formulae_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="linear_solve_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matmul_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KernelyzeBaseBindCTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

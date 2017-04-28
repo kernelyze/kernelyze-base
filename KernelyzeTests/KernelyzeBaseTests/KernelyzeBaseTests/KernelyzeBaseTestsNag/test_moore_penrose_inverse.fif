@@ -1,0 +1,39 @@
+M TEST_MOORE_PENROSE_INVERSE_MOD,#h("../test_moore_penrose_inverse.f90",24)
+ F TEST_MOORE_PENROSE_INVERSE_EXP_PROD,TEST_MOORE_PENROSE_INVERSE_MOD_MP_test_moore_penrose_inverse_exp_prod,result(TEST_PASS),#h("../test_moore_penrose_inverse.f90",135)
+  T kernel_expprod_mod:kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V IDENTITY_MAT,identity_mat,Real(Kind=2),double,,2,f(1:10,1:10),#t("../test_moore_penrose_inverse.f90",142)
+  V INVERSE_RESULT,inverse_result,Real(Kind=2),double,,2,f(1:10,1:10),#t("../test_moore_penrose_inverse.f90",141)
+  V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0
+  V SHOULD_BE_EXP_PROD,should_be_exp_prod,Real(Kind=2),double,,2,f(1:10,1:10),#t("../test_moore_penrose_inverse.f90",142)
+  V EXP_PROD_MAT,exp_prod_mat,Real(Kind=2),double,,2,f(1:10,1:10),#t("../test_moore_penrose_inverse.f90",141)
+  V I,i,Integer,int,,0,#t("../test_moore_penrose_inverse.f90",143)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_moore_penrose_inverse.f90",137)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_moore_penrose_inverse.f90",139)
+  V J,j,Integer,int,,0,#t("../test_moore_penrose_inverse.f90",143)
+ EF
+ F TEST_MOORE_PENROSE_INVERSE,TEST_MOORE_PENROSE_INVERSE_MOD_MP_test_moore_penrose_inverse,result(TEST_PASS),#h("../test_moore_penrose_inverse.f90",34)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_moore_penrose_inverse.f90",36)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_moore_penrose_inverse.f90",38)
+ EF
+ F TEST_MOORE_PENROSE_INVERSE_IDENTITY,TEST_MOORE_PENROSE_INVERSE_MOD_MP_test_moore_penrose_inverse_identity,result(TEST_PASS),#h("../test_moore_penrose_inverse.f90",52)
+  V IDENTITY_MAT,identity_mat,Real(Kind=2),double,,2,f(1:5,1:5),#t("../test_moore_penrose_inverse.f90",58)
+  V INVERSE_RESULT,inverse_result,Real(Kind=2),double,,2,f(1:5,1:5),#t("../test_moore_penrose_inverse.f90",58)
+  V SHOULD_BE_IDENTITY,should_be_identity,Real(Kind=2),double,,2,f(1:5,1:5),#t("../test_moore_penrose_inverse.f90",59)
+  V TOLER,toler,Real(Kind=2),double,,0,#t("../test_moore_penrose_inverse.f90",60)
+  V I,i,Integer,int,,0,#t("../test_moore_penrose_inverse.f90",61)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_moore_penrose_inverse.f90",54)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_moore_penrose_inverse.f90",56)
+ EF
+ F TEST_MOORE_PENROSE_INVERSE_ONES,TEST_MOORE_PENROSE_INVERSE_MOD_MP_test_moore_penrose_inverse_ones,result(TEST_PASS),#h("../test_moore_penrose_inverse.f90",95)
+  V ONES_MAT,ones_mat,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_moore_penrose_inverse.f90",101)
+  V SHOULD_BE_ONES,should_be_ones,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_moore_penrose_inverse.f90",102)
+  V IDENTITY_MAT,identity_mat,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_moore_penrose_inverse.f90",102)
+  V INVERSE_RESULT,inverse_result,Real(Kind=2),double,,2,f(1:6,1:6),#t("../test_moore_penrose_inverse.f90",101)
+  V TOLER,toler,Real(Kind=2),double,,0,#t("../test_moore_penrose_inverse.f90",103)
+  V I,i,Integer,int,,0,#t("../test_moore_penrose_inverse.f90",104)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_moore_penrose_inverse.f90",97)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_moore_penrose_inverse.f90",99)
+ EF
+EM

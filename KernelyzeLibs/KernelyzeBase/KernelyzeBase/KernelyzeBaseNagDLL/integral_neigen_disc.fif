@@ -1,0 +1,74 @@
+M INTEGRAL_NEIGEN_DISC_MOD,#h("../integral_neigen_disc.f90",36)
+ T parent_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+  C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+  C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+ ET
+ T integral_rankn_disc,INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,#d("../template_integralrankn.f90",50)
+  C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*),#c("../template_integralrankn.f90",52)
+  C COMP_ARRAY,comp_array,Class(parent_type),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,424,a,1,a(*:*),#c("../template_integralrankn.f90",63)
+  C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*),#c("../template_integralrankn.f90",66)
+ ET
+ F GET_COEFF_VEC,INTEGRAL_NEIGEN_DISC_MOD_MP_get_coeff_vec,result(CURR_COEFFS),#h("../template_integralrankn.f90",132)
+  V CURR_COEFFS,curr_coeffs,Real(Kind=2),double,a,1,a(*:*),#t("../template_integralrankn.f90",136)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",134)
+ EF
+ F GET_EFFECTIVE_WEIGHTS,INTEGRAL_NEIGEN_DISC_MOD_MP_get_effective_weights,result(CURR_EFF_WEIGHTS),#h("../template_integralrankn.f90",260)
+  V CURR_EFF_WEIGHTS,curr_eff_weights,Real(Kind=2),double,a,1,a(*:*),#t("../template_integralrankn.f90",264)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",262)
+ EF
+ S SET_COEFF_VEC,INTEGRAL_NEIGEN_DISC_MOD_MP_set_coeff_vec,#h("../template_integralrankn.f90",141)
+  V NEW_COEFFS,new_coeffs,Real(Kind=2),double,d,1,d(1:*),#t("../template_integralrankn.f90",144)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",143)
+ ES
+ S GET_COMP_ARRAY,INTEGRAL_NEIGEN_DISC_MOD_MP_get_comp_array,#h("../template_integralrankn.f90",149)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_integralrankn.f90",155)
+  V CURR_COMP_ARRAY,curr_comp_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,da,1,a(*:*),#t("../template_integralrankn.f90",152)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_integralrankn.f90",156)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_integralrankn.f90",158)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_integralrankn.f90",159)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",151)
+ ES
+ S SET_COMP_ARRAY,INTEGRAL_NEIGEN_DISC_MOD_MP_set_comp_array,#h("../template_integralrankn.f90",189)
+  T singlevar_type,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_integralrankn.f90",194)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_integralrankn.f90",195)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_integralrankn.f90",197)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_integralrankn.f90",198)
+  V NEW_COMP_ARRAY,new_comp_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,d,1,d(1:*),#t("../template_integralrankn.f90",192)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",191)
+ ES
+ F GET_EFFECTIVE_EVAL_PTS,INTEGRAL_NEIGEN_DISC_MOD_MP_get_effective_eval_pts,result(CURR_EFF_EVAL_PTS),#h("../integral_neigen_disc.f90",54)
+  V EVAL_PTS_IND,eval_pts_ind,Integer,int,,0,#t("../integral_neigen_disc.f90",60)
+  V NUM_PTS,num_pts,Integer,int,,0,#t("../integral_neigen_disc.f90",60)
+  V TEMP_ARRAY,temp_array,Real(Kind=2),double,a,1,a(*:*),#t("../integral_neigen_disc.f90",61)
+  V CURR_EFF_EVAL_PTS,curr_eff_eval_pts,Real(Kind=2),double,a,1,a(*:*),#t("../integral_neigen_disc.f90",58)
+  V I,i,Integer,int,,0,#t("../integral_neigen_disc.f90",60)
+  V J,j,Integer,int,,0,#t("../integral_neigen_disc.f90",60)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../integral_neigen_disc.f90",56)
+ EF
+ F GET_V_MATRIX,INTEGRAL_NEIGEN_DISC_MOD_MP_get_v_matrix,result(CURR_V_MATRIX),#h("../template_integralrankn.f90",243)
+  V CURR_V_MATRIX,curr_v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../template_integralrankn.f90",247)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",245)
+ EF
+ S SET_V_MATRIX,INTEGRAL_NEIGEN_DISC_MOD_MP_set_v_matrix,#h("../template_integralrankn.f90",252)
+  V NEW_V_MATRIX,new_v_matrix,Real(Kind=2),double,d,2,d(1:*,1:*),#t("../template_integralrankn.f90",255)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",254)
+ ES
+ F EVAL_INTEGRAL_RANKN,INTEGRAL_NEIGEN_DISC_MOD_MP_eval_integral_rankn,result(EVAL_RES),#h("../template_integralrankn.f90",94)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../template_integralrankn.f90",99)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../template_integralrankn.f90",97)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",96)
+ EF
+ F EVAL_GIVEN_VALS,INTEGRAL_NEIGEN_DISC_MOD_MP_eval_given_vals,result(EVAL_RES),#h("../template_integralrankn.f90",108)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../template_integralrankn.f90",113)
+  V GIVEN_VALS,given_vals,Real(Kind=2),double,d,1,i(1:*),#t("../template_integralrankn.f90",111)
+  V THIS,this,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,d,0,#t("../template_integralrankn.f90",110)
+ EF
+EM

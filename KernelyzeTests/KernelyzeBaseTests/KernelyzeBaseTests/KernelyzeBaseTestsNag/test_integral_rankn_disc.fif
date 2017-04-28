@@ -1,0 +1,139 @@
+M TEST_INTEGRAL_RANKN_DISC_MOD,#h("../test_integral_rankn_disc.f90",25)
+ F TEST_INTEGRAL_RANKN_DISC_GAUSSIAN,TEST_INTEGRAL_RANKN_DISC_MOD_MP_test_integral_rankn_disc_gaussian,result(TEST_PASS),#h("../test_integral_rankn_disc.f90",160)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T integral_rankn_disc,INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",178)
+  V RANKN_INTEGRAL,rankn_integral,Class(integral_nsect_disc_mod:integral_rankn_disc),INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc,a,0,#t("../test_integral_rankn_disc.f90",173)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_integral_rankn_disc.f90",175)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_integral_rankn_disc.f90",176)
+  V I,i,Integer,int,,0,#t("../test_integral_rankn_disc.f90",177)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_rankn_disc.f90",162)
+  V EVAL_SZ,eval_sz,Integer,int,,0,#t("../test_integral_rankn_disc.f90",177)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_integral_rankn_disc.f90",172)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_rankn_disc.f90",164)
+  V TEST_SZ,test_sz,Integer,int,,0,#t("../test_integral_rankn_disc.f90",177)
+  V TEST_RES,test_res,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",178)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_integral_rankn_disc.f90",171)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_integral_rankn_disc.f90",181)
+  V REFERENCE_RES,reference_res,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",178)
+  V TEST_PTS,test_pts,Real(Kind=2),double,,1,f(1:21),#t("../test_integral_rankn_disc.f90",179)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_rankn_disc.f90",180)
+  V WEIGHTS,weights,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_rankn_disc.f90",180)
+ EF
+ F TEST_INTEGRAL_RANKN_DISC_CAUCHY,TEST_INTEGRAL_RANKN_DISC_MOD_MP_test_integral_rankn_disc_cauchy,result(TEST_PASS),#h("../test_integral_rankn_disc.f90",260)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T integral_rankn_disc,INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",278)
+  V RANKN_INTEGRAL,rankn_integral,Class(integral_nsect_disc_mod:integral_rankn_disc),INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc,a,0,#t("../test_integral_rankn_disc.f90",273)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_integral_rankn_disc.f90",275)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_integral_rankn_disc.f90",276)
+  V I,i,Integer,int,,0,#t("../test_integral_rankn_disc.f90",277)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_rankn_disc.f90",262)
+  V EVAL_SZ,eval_sz,Integer,int,,0,#t("../test_integral_rankn_disc.f90",277)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_integral_rankn_disc.f90",272)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_rankn_disc.f90",264)
+  V TEST_SZ,test_sz,Integer,int,,0,#t("../test_integral_rankn_disc.f90",277)
+  V TEST_RES,test_res,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",278)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_integral_rankn_disc.f90",281)
+  V REFERENCE_RES,reference_res,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",278)
+  V TEST_PTS,test_pts,Real(Kind=2),double,,1,f(1:21),#t("../test_integral_rankn_disc.f90",279)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_rankn_disc.f90",280)
+  V WEIGHTS,weights,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_rankn_disc.f90",280)
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_integral_rankn_disc.f90",271)
+ EF
+ F TEST_INTEGRAL_RANKN_DISC,TEST_INTEGRAL_RANKN_DISC_MOD_MP_test_integral_rankn_disc,result(TEST_PASS),#h("../test_integral_rankn_disc.f90",41)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_rankn_disc.f90",43)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_rankn_disc.f90",45)
+ EF
+ F TEST_INTEGRAL_RANKN_DISC_EXPPROD,TEST_INTEGRAL_RANKN_DISC_MOD_MP_test_integral_rankn_disc_expprod,result(TEST_PASS),#h("../test_integral_rankn_disc.f90",60)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T integral_rankn_disc,INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_integral_rankn_disc.f90",71)
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",78)
+  V RANKN_INTEGRAL,rankn_integral,Class(integral_nsect_disc_mod:integral_rankn_disc),INTEGRAL_NSECT_DISC_MOD_DT_integral_rankn_disc,a,0,#t("../test_integral_rankn_disc.f90",73)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_integral_rankn_disc.f90",75)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_integral_rankn_disc.f90",76)
+  V I,i,Integer,int,,0,#t("../test_integral_rankn_disc.f90",77)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_integral_rankn_disc.f90",62)
+  V EVAL_SZ,eval_sz,Integer,int,,0,#t("../test_integral_rankn_disc.f90",77)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_integral_rankn_disc.f90",72)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_integral_rankn_disc.f90",64)
+  V TEST_SZ,test_sz,Integer,int,,0,#t("../test_integral_rankn_disc.f90",77)
+  V TEST_RES,test_res,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",78)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_integral_rankn_disc.f90",81)
+  V REFERENCE_RES,reference_res,Real(Kind=2),double,,0,#t("../test_integral_rankn_disc.f90",78)
+  V TEST_PTS,test_pts,Real(Kind=2),double,,1,f(1:21),#t("../test_integral_rankn_disc.f90",79)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_rankn_disc.f90",80)
+  V WEIGHTS,weights,Real(Kind=2),double,,1,f(1:11),#t("../test_integral_rankn_disc.f90",80)
+ EF
+EM

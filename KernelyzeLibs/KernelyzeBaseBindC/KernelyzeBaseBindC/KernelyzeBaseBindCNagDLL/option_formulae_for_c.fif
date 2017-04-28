@@ -1,0 +1,18 @@
+M OPTION_FORMULAE_FOR_C_MOD,#h("../option_formulae_for_c.f90",24)
+ F NORMOPT_FORMULA_FOR_C,normopt_formula,result(PRICE),#h("../option_formulae_for_c.f90",61)
+  V C_STRIKE,c_strike,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",71)
+  V C_FORWARD,c_forward,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",72)
+  V C_VOL,c_vol,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",73)
+  V C_DISC_FAC,c_disc_fac,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",74)
+  V PRICE,price,Real(Kind=2),double,,0,#t("../option_formulae_for_c.f90",76)
+  V C_IS_CALL,c_is_call,Logical(Kind=1),signed char,d,0,#t("../option_formulae_for_c.f90",70)
+ EF
+ F BLACK_FORMULA_FOR_C,black_formula,result(PRICE),#h("../option_formulae_for_c.f90",36)
+  V C_STRIKE,c_strike,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",46)
+  V C_FORWARD,c_forward,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",47)
+  V C_VOL,c_vol,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",48)
+  V C_DISC_FAC,c_disc_fac,Real(Kind=2),double,d,0,#t("../option_formulae_for_c.f90",49)
+  V PRICE,price,Real(Kind=2),double,,0,#t("../option_formulae_for_c.f90",51)
+  V C_IS_CALL,c_is_call,Logical(Kind=1),signed char,d,0,#t("../option_formulae_for_c.f90",45)
+ EF
+EM

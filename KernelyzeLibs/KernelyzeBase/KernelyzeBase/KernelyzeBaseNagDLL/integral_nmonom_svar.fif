@@ -1,0 +1,67 @@
+M INTEGRAL_NMONOM_SVAR_MOD,#h("../integral_nmonom_svar.f90",30)
+ T parent_type,INTEGRAL_RANKN_SVAR_MOD_DT_integral_rankn_svar
+ ET
+ T integral_nmonom_svar,INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,#d("../template_integralrankn.f90",50)
+  C COEFF_VEC,coeff_vec,Real(Kind=2),double,328,a,1,a(*:*),#c("../template_integralrankn.f90",52)
+  C COMP_ARRAY,comp_array,Class(singlevar_type),MONOMIAL_MOD_DT_monomial,368,a,1,a(*:*),#c("../template_integralrankn.f90",63)
+  C V_MATRIX,v_matrix,Real(Kind=2),double,424,a,2,a(*:*,*:*),#c("../template_integralrankn.f90",66)
+ ET
+ S SET_COMP_ARRAY,INTEGRAL_NMONOM_SVAR_MOD_MP_set_comp_array,#h("../template_integralrankn.f90",189)
+  T singlevar_type,MONOMIAL_MOD_DT_monomial
+   C MON_POWER,mon_power,Integer,int,24,,0
+   C CENTER,center,Real(Kind=2),double,16,,0
+  ET
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",191)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_integralrankn.f90",194)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_integralrankn.f90",197)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_integralrankn.f90",195)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_integralrankn.f90",198)
+  V NEW_COMP_ARRAY,new_comp_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,d,1,d(1:*),#t("../template_integralrankn.f90",192)
+ ES
+ F GET_V_MATRIX,INTEGRAL_NMONOM_SVAR_MOD_MP_get_v_matrix,result(CURR_V_MATRIX),#h("../template_integralrankn.f90",243)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",245)
+  V CURR_V_MATRIX,curr_v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../template_integralrankn.f90",247)
+ EF
+ F GET_EFFECTIVE_EVAL_PTS,INTEGRAL_NMONOM_SVAR_MOD_MP_get_effective_eval_pts,result(CURR_EFF_EVAL_PTS),#h("../integral_nmonom_svar.f90",51)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../integral_nmonom_svar.f90",53)
+  V CURR_EFF_EVAL_PTS,curr_eff_eval_pts,Real(Kind=2),double,a,1,a(*:*),#t("../integral_nmonom_svar.f90",55)
+ EF
+ S SET_V_MATRIX,INTEGRAL_NMONOM_SVAR_MOD_MP_set_v_matrix,#h("../template_integralrankn.f90",252)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",254)
+  V NEW_V_MATRIX,new_v_matrix,Real(Kind=2),double,d,2,d(1:*,1:*),#t("../template_integralrankn.f90",255)
+ ES
+ F GET_EFFECTIVE_WEIGHTS,INTEGRAL_NMONOM_SVAR_MOD_MP_get_effective_weights,result(CURR_EFF_WEIGHTS),#h("../template_integralrankn.f90",260)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",262)
+  V CURR_EFF_WEIGHTS,curr_eff_weights,Real(Kind=2),double,a,1,a(*:*),#t("../template_integralrankn.f90",264)
+ EF
+ S GET_COMP_ARRAY,INTEGRAL_NMONOM_SVAR_MOD_MP_get_comp_array,#h("../template_integralrankn.f90",149)
+  T singlevar_type,MONOMIAL_MOD_DT_monomial
+   C MON_POWER,mon_power,Integer,int,24,,0
+   C CENTER,center,Real(Kind=2),double,16,,0
+  ET
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",151)
+  V CURR_COMP_ARRAY,curr_comp_array,Class(monomial_mod:monomial),MONOMIAL_MOD_DT_monomial,da,1,a(*:*),#t("../template_integralrankn.f90",152)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../template_integralrankn.f90",155)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../template_integralrankn.f90",158)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../template_integralrankn.f90",156)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../template_integralrankn.f90",159)
+ ES
+ F EVAL_INTEGRAL_RANKN,INTEGRAL_NMONOM_SVAR_MOD_MP_eval_integral_rankn,result(EVAL_RES),#h("../template_integralrankn.f90",94)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",96)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../template_integralrankn.f90",99)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../template_integralrankn.f90",97)
+ EF
+ F GET_COEFF_VEC,INTEGRAL_NMONOM_SVAR_MOD_MP_get_coeff_vec,result(CURR_COEFFS),#h("../template_integralrankn.f90",132)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",134)
+  V CURR_COEFFS,curr_coeffs,Real(Kind=2),double,a,1,a(*:*),#t("../template_integralrankn.f90",136)
+ EF
+ F EVAL_GIVEN_VALS,INTEGRAL_NMONOM_SVAR_MOD_MP_eval_given_vals,result(EVAL_RES),#h("../template_integralrankn.f90",108)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",110)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../template_integralrankn.f90",113)
+  V GIVEN_VALS,given_vals,Real(Kind=2),double,d,1,i(1:*),#t("../template_integralrankn.f90",111)
+ EF
+ S SET_COEFF_VEC,INTEGRAL_NMONOM_SVAR_MOD_MP_set_coeff_vec,#h("../template_integralrankn.f90",141)
+  V THIS,this,Class(integral_nmonom_svar_mod:integral_nmonom_svar),INTEGRAL_NMONOM_SVAR_MOD_DT_integral_nmonom_svar,d,0,#t("../template_integralrankn.f90",143)
+  V NEW_COEFFS,new_coeffs,Real(Kind=2),double,d,1,d(1:*),#t("../template_integralrankn.f90",144)
+ ES
+EM

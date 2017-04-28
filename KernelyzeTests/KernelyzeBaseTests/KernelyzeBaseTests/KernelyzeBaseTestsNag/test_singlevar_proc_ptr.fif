@@ -1,0 +1,51 @@
+M TEST_SINGLEVAR_PROC_PTR_MOD,#h("../test_singlevar_proc_ptr.f90",25)
+ F TEST_SINGLEVAR_PROC_PTR_SIN,TEST_SINGLEVAR_PROC_PTR_MOD_MP_test_singlevar_proc_ptr_sin,result(TEST_PASS),#h("../test_singlevar_proc_ptr.f90",89)
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V PTR_EVAL,ptr_eval,Real(Kind=2),double,,0,#t("../test_singlevar_proc_ptr.f90",96)
+  V SIN_EVAL,sin_eval,Real(Kind=2),double,,0,#t("../test_singlevar_proc_ptr.f90",96)
+  V SVAR_PPTR,svar_pptr,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../test_singlevar_proc_ptr.f90",97)
+  V I,i,Integer,int,,0,#t("../test_singlevar_proc_ptr.f90",95)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_singlevar_proc_ptr.f90",91)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_singlevar_proc_ptr.f90",93)
+ EF
+ F TEST_SVAR_PPTR_FIND_ALL_ZEROS,TEST_SINGLEVAR_PROC_PTR_MOD_MP_test_svar_pptr_find_all_zeros,result(TEST_PASS),#h("../test_singlevar_proc_ptr.f90",119)
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V GRID,grid,Real(Kind=2),double,,1,f(1:200),#t("../test_singlevar_proc_ptr.f90",127)
+  V SVAR_PPTR,svar_pptr,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../test_singlevar_proc_ptr.f90",128)
+  V I,i,Integer,int,,0,#t("../test_singlevar_proc_ptr.f90",125)
+  V ZEROS_FOUND,zeros_found,Real(Kind=2),double,a,1,a(*:*),#t("../test_singlevar_proc_ptr.f90",126)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_singlevar_proc_ptr.f90",121)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../test_singlevar_proc_ptr.f90",130)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_singlevar_proc_ptr.f90",123)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../test_singlevar_proc_ptr.f90",131)
+ EF
+ F TEST_SVAR_PPTR_FIND_REL_OPTIMA,TEST_SINGLEVAR_PROC_PTR_MOD_MP_test_svar_pptr_find_rel_optima,result(TEST_PASS),#h("../test_singlevar_proc_ptr.f90",169)
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V GRID,grid,Real(Kind=2),double,,1,f(1:200),#t("../test_singlevar_proc_ptr.f90",178)
+  V SVAR_PPTR,svar_pptr,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../test_singlevar_proc_ptr.f90",179)
+  V I,i,Integer,int,,0,#t("../test_singlevar_proc_ptr.f90",175)
+  V ZEROS_FOUND,zeros_found,Real(Kind=2),double,a,1,a(*:*),#t("../test_singlevar_proc_ptr.f90",176)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_singlevar_proc_ptr.f90",171)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../test_singlevar_proc_ptr.f90",181)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_singlevar_proc_ptr.f90",173)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../test_singlevar_proc_ptr.f90",182)
+  V OPTIMA_FOUND,optima_found,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_singlevar_proc_ptr.f90",177)
+ EF
+ F SINFUNC,TEST_SINGLEVAR_PROC_PTR_MOD_MP_sinfunc,result(Y),#h("../test_singlevar_proc_ptr.f90",80)
+  V X,x,Real(Kind=2),double,d,0,#t("../test_singlevar_proc_ptr.f90",82)
+  V Y,y,Real(Kind=2),double,,0,#t("../test_singlevar_proc_ptr.f90",84)
+ EF
+ F TEST_SINGLEVAR_PROC_PTR,TEST_SINGLEVAR_PROC_PTR_MOD_MP_test_singlevar_proc_ptr,result(TEST_PASS),#h("../test_singlevar_proc_ptr.f90",58)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_singlevar_proc_ptr.f90",60)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_singlevar_proc_ptr.f90",62)
+ EF
+EM

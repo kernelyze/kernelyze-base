@@ -1,0 +1,48 @@
+M REMEZ_STEP_MOD,#h("../remez_step.f90",39)
+ S REMEZ_STEP,REMEZ_STEP_MOD_MP_remez_step,#h("../remez_step.f90",55)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T linear_combo_kernel,LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel
+   C IS_FUNC_OF_X,is_func_of_x,Logical,int,184,,0
+   C COMBO_RHO_VEC,combo_rho_vec,Real(Kind=2),double,16,a,1,a(*:*)
+   C COMBO_A_MATRIX,combo_a_matrix,Real(Kind=2),double,56,a,2,a(*:*,*:*)
+   C COMBO_COEFFS,combo_coeffs,Real(Kind=2),double,120,a,1,a(*:*)
+   C COMBO_KERNEL,combo_kernel,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,160,a,0
+  ET
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../remez_step.f90",105)
+  V UMAT,umat,Real(Kind=2),double,,2,i(1:*,1:*),#t("../remez_step.f90",98)
+  V KERNEL_OBJ,kernel_obj,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../remez_step.f90",68)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../remez_step.f90",106)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,d,1,d(1:*),#t("../remez_step.f90",69)
+  V TOLERANCE,tolerance,Real(Kind=2),double,d,0,#t("../remez_step.f90",71)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../remez_step.f90",108)
+  V A_MATRIX_IN,a_matrix_in,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../remez_step.f90",72)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../remez_step.f90",109)
+  V NODES,nodes,Real(Kind=2),double,d,1,i(1:*),#t("../remez_step.f90",75)
+  V GRID,grid,Real(Kind=2),double,d,1,d(1:*),#t("../remez_step.f90",74)
+  V VALUES_AT_NODES,values_at_nodes,Real(Kind=2),double,d,1,i(1:*),#t("../remez_step.f90",76)
+  V IS_OVER_X,is_over_x,Logical,int,d,0,#t("../remez_step.f90",80)
+  V DEVIATION,deviation,Type(linear_combo_kernel_mod:linear_combo_kernel),LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel,,0,#t("../remez_step.f90",85)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../remez_step.f90",82)
+  V DEVIATION_ZEROS,deviation_zeros,Real(Kind=2),double,a,1,a(*:*),#t("../remez_step.f90",86)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../remez_step.f90",83)
+  V INFO,info,Integer,int,,0,#t("../remez_step.f90",96)
+  V FINER_GRID,finer_grid,Real(Kind=2),double,a,1,a(*:*),#t("../remez_step.f90",87)
+  V OPTIMA_GRID,optima_grid,Real(Kind=2),double,a,1,a(*:*),#t("../remez_step.f90",88)
+  V CHECK_GRID_POINTS,check_grid_points,Real(Kind=2),double,,1,i(1:*),#t("../remez_step.f90",90)
+  V A_MATRIX,a_matrix,Real(Kind=2),double,,2,i(1:*,1:*),#t("../remez_step.f90",91)
+  V J,j,Integer,int,,0,#t("../remez_step.f90",94)
+  V A_MATRIX_COPY,a_matrix_copy,Real(Kind=2),double,,2,i(1:*,1:*),#t("../remez_step.f90",91)
+  V RESULT_OPTIMA,result_optima,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../remez_step.f90",89)
+  V CONDITION_NUMBER,condition_number,Real(Kind=2),double,,0,#t("../remez_step.f90",93)
+  V COEFFS,coeffs,Real(Kind=2),double,d,1,i(1:*),#t("../remez_step.f90",70)
+  V SVEC,svec,Real(Kind=2),double,,1,i(1:*),#t("../remez_step.f90",97)
+  V CURR_NUM_GRID_PTS,curr_num_grid_pts,Integer,int,,0,#t("../remez_step.f90",94)
+  V VMAT_T,vmat_t,Real(Kind=2),double,,2,i(1:*,1:*),#t("../remez_step.f90",100)
+  V WWVEC,wwvec,Real(Kind=2),double,,1,i(1:*),#t("../remez_step.f90",102)
+ ES
+EM

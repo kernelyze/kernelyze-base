@@ -1,0 +1,108 @@
+M INTEGRAL_KERNEL_MEASURE_MOD,#h("../integral_kernel_measure.f90",44)
+ T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+ ET
+ T integral_kernel_measure,INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,#d("../integral_kernel_measure.f90",54)
+  C INTEGRAL_IS_OVER_X,integral_is_over_x,Logical,int,40,,0,#c("../integral_kernel_measure.f90",57)
+  C DESCRIPTION,description,Character(Len=255),Char[255],44,,0,#c("../integral_kernel_measure.f90",61)
+  C KERNEL_TO_USE,kernel_to_use,Class(kernel),KERNEL_MOD_DT_kernel,16,a,0,#c("../integral_kernel_measure.f90",66)
+ ET
+ F GET_INTEGRAL_VBL,INTEGRAL_KERNEL_MEASURE_MOD_MP_get_integral_vbl,#h("../integral_kernel_measure.f90",146)
+  V GET_INTEGRAL_VBL,INTEGRAL_KERNEL_MEASURE_MOD_MP_get_integral_vblResult,Logical,int,,0
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",147)
+ EF
+ S SET_INTEGRAL_VBL,INTEGRAL_KERNEL_MEASURE_MOD_MP_set_integral_vbl,#h("../integral_kernel_measure.f90",153)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",154)
+  V NEW_INTEGRAL_DIR,new_integral_dir,Logical,int,d,0,#t("../integral_kernel_measure.f90",155)
+ ES
+ F EVAL_KERNEL,INTEGRAL_KERNEL_MEASURE_MOD_MP_eval_kernel,result(KERNEL_RES),#h("../integral_kernel_measure.f90",159)
+  V KERNEL_RES,kernel_res,Real(Kind=2),double,,0,#t("../integral_kernel_measure.f90",165)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",161)
+  V EVAL_AT_X,eval_at_x,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",162)
+  V EVAL_AT_Y,eval_at_y,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",163)
+ EF
+ F EVAL_DKERNEL_DX,INTEGRAL_KERNEL_MEASURE_MOD_MP_eval_dkernel_dx,result(DERIV),#h("../integral_kernel_measure.f90",170)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",173)
+  V Y,y,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",174)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_measure.f90",177)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",172)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",175)
+ EF
+ F EVAL_DKERNEL_DY,INTEGRAL_KERNEL_MEASURE_MOD_MP_eval_dkernel_dy,result(DERIV),#h("../integral_kernel_measure.f90",186)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",189)
+  V Y,y,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",190)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_measure.f90",193)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",188)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",191)
+ EF
+ F EVAL_D2KERNEL_DX_DX,INTEGRAL_KERNEL_MEASURE_MOD_MP_eval_d2kernel_dx_dx,result(DERIV),#h("../integral_kernel_measure.f90",202)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",205)
+  V Y,y,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",206)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_measure.f90",209)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",204)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",207)
+ EF
+ F EVAL_D2KERNEL_DY_DY,INTEGRAL_KERNEL_MEASURE_MOD_MP_eval_d2kernel_dy_dy,result(DERIV),#h("../integral_kernel_measure.f90",218)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",221)
+  V Y,y,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",222)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_measure.f90",225)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",220)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",223)
+ EF
+ F EVAL_MTH_NTH_PARTIAL_KERNEL,INTEGRAL_KERNEL_MEASURE_MOD_MP_eval_mth_nth_partial_kernel,result(DERIV),#h("../integral_kernel_measure.f90",234)
+  V X,x,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",240)
+  V Y,y,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",241)
+  V M,m,Integer,int,d,0,#t("../integral_kernel_measure.f90",238)
+  V N,n,Integer,int,d,0,#t("../integral_kernel_measure.f90",239)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../integral_kernel_measure.f90",244)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",237)
+  V D,d,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",242)
+ EF
+ F INTEGRATE_KERNEL_SINGLEVAR,INTEGRAL_KERNEL_MEASURE_MOD_MP_integrate_kernel_singlevar,result(RES),#h("../integral_kernel_measure.f90",253)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../integral_kernel_measure.f90",257)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",256)
+  V RES,res,Real(Kind=2),double,,0,#t("../integral_kernel_measure.f90",260)
+  V SVAR,svar,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../integral_kernel_measure.f90",258)
+ EF
+ S GET_KERNEL,INTEGRAL_KERNEL_MEASURE_MOD_MP_get_kernel,#h("../integral_kernel_measure.f90",270)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V KERNEL_USED,kernel_used,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,da,0,#t("../integral_kernel_measure.f90",273)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../integral_kernel_measure.f90",275)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../integral_kernel_measure.f90",276)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../integral_kernel_measure.f90",278)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../integral_kernel_measure.f90",279)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",272)
+ ES
+ F GET_DESCRIPTION,INTEGRAL_KERNEL_MEASURE_MOD_MP_get_description,result(DESC),#h("../integral_kernel_measure.f90",120)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",122)
+  V DESC,desc,Character(Len=255),Char[255],,0,#t("../integral_kernel_measure.f90",124)
+ EF
+ S SET_KERNEL,INTEGRAL_KERNEL_MEASURE_MOD_MP_set_kernel,#h("../integral_kernel_measure.f90",312)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../integral_kernel_measure.f90",317)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../integral_kernel_measure.f90",318)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../integral_kernel_measure.f90",320)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../integral_kernel_measure.f90",321)
+  V NEW_KERNEL,new_kernel,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../integral_kernel_measure.f90",315)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",314)
+ ES
+ S SET_DESCRIPTION,INTEGRAL_KERNEL_MEASURE_MOD_MP_set_description,#h("../integral_kernel_measure.f90",130)
+  V THIS,this,Class(integral_kernel_measure_mod:integral_kernel_measure),INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure,d,0,#t("../integral_kernel_measure.f90",132)
+  V NEW_DESC,new_desc,Character(Len=*),Char[*],d,0,#t("../integral_kernel_measure.f90",138)
+ ES
+EM

@@ -1,0 +1,162 @@
+M EIGEN_FUNCS_FOR_C_MOD,#h("../eigen_funcs_for_c.f90",25)
+ S EIGEN_RANKN_PARAMS_FOR_C,eigen_rankn_params,#h("../eigen_funcs_for_c.f90",55)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../eigen_funcs_for_c.f90",88)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",72)
+  V C_NUM_X_PTS,c_num_x_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",73)
+  V C_NUM_Y_PTS,c_num_y_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",74)
+  V C_X_POINTS,c_x_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",75)
+  V C_Y_POINTS,c_y_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",76)
+  V C_X_WEIGHTS,c_x_weights,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",77)
+  V C_Y_WEIGHTS,c_y_weights,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",78)
+  V C_X_FUNC_WTS,c_x_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",79)
+  V C_Y_FUNC_WTS,c_y_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",80)
+  V C_TRUNC_SING_VALS,c_trunc_sing_vals,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",81)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",83)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../eigen_funcs_for_c.f90",84)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../eigen_funcs_for_c.f90",87)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../eigen_funcs_for_c.f90",89)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../eigen_funcs_for_c.f90",71)
+ ES
+ S EIGEN_RANKN_INTEGRAL_EVAL_FOR_C,eigen_rankn_integral_eval,#h("../eigen_funcs_for_c.f90",182)
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T integral_kernel_disc_mod:integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T integral_rankn_disc,INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../eigen_funcs_for_c.f90",225)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",204)
+  V C_RESULTS_OF_EVAL,c_results_of_eval,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",218)
+  V C_NUM_X_PTS,c_num_x_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",205)
+  V C_NUM_Y_PTS,c_num_y_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",206)
+  V C_X_POINTS,c_x_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",207)
+  V C_Y_POINTS,c_y_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",208)
+  V C_INTEGRAL_IS_OVER_X,c_integral_is_over_x,Logical(Kind=1),signed char,d,0,#t("../eigen_funcs_for_c.f90",212)
+  V C_X_FUNC_WTS,c_x_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",209)
+  V C_Y_FUNC_WTS,c_y_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",210)
+  V C_NUM_INTEGRAL_PTS,c_num_integral_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",213)
+  V C_TRUNC_SING_VALS,c_trunc_sing_vals,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",211)
+  V C_INTEGRAL_PTS,c_integral_pts,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",214)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",220)
+  V C_INTEGRAL_WTS,c_integral_wts,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",215)
+  V I,i,Integer,int,,0,#t("../eigen_funcs_for_c.f90",227)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../eigen_funcs_for_c.f90",221)
+  V C_EVAL_PTS,c_eval_pts,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",217)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../eigen_funcs_for_c.f90",224)
+  V RANKN_INTEGRAL,rankn_integral,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,a,0,#t("../eigen_funcs_for_c.f90",229)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../eigen_funcs_for_c.f90",226)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,a,0,#t("../eigen_funcs_for_c.f90",228)
+  V C_NUM_EVAL_PTS,c_num_eval_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",216)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../eigen_funcs_for_c.f90",203)
+ ES
+ S EIGEN_RANKN_EVAL_FOR_C,eigen_rankn_eval,#h("../eigen_funcs_for_c.f90",113)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  T integral_kernel_disc_mod:integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../eigen_funcs_for_c.f90",150)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",132)
+  V C_RESULTS_OF_EVAL,c_results_of_eval,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",143)
+  V C_NUM_X_PTS,c_num_x_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",133)
+  V C_NUM_Y_PTS,c_num_y_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",134)
+  V C_X_POINTS,c_x_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",135)
+  V C_Y_POINTS,c_y_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",136)
+  V C_X_FUNC_WTS,c_x_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",137)
+  V C_Y_FUNC_WTS,c_y_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",138)
+  V C_TRUNC_SING_VALS,c_trunc_sing_vals,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",139)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",145)
+  V I,i,Integer,int,,0,#t("../eigen_funcs_for_c.f90",152)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../eigen_funcs_for_c.f90",146)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../eigen_funcs_for_c.f90",149)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../eigen_funcs_for_c.f90",151)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,a,0,#t("../eigen_funcs_for_c.f90",153)
+  V C_NUM_EVAL_PTS,c_num_eval_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",140)
+  V C_EVAL_X_PTS,c_eval_x_pts,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",141)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../eigen_funcs_for_c.f90",131)
+  V C_EVAL_Y_PTS,c_eval_y_pts,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",142)
+ ES
+ S EIGEN_RANKN_INTEGRAL_COEFFS_FOR_C,eigen_rankn_integral_coeffs,#h("../eigen_funcs_for_c.f90",272)
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T integral_kernel_disc_mod:integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T integral_rankn_disc,INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc
+   C COEFF_VEC,coeff_vec,Real(Kind=2),double,384,a,1,a(*:*)
+   C COMP_ARRAY,comp_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,424,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,480,a,2,a(*:*,*:*)
+  ET
+  T kernel_rankn,KERNEL_NEIGEN_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../eigen_funcs_for_c.f90",313)
+  V C_APPROX_RANK,c_approx_rank,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",293)
+  V C_NUM_X_PTS,c_num_x_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",294)
+  V C_NUM_Y_PTS,c_num_y_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",295)
+  V C_X_POINTS,c_x_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",296)
+  V C_Y_POINTS,c_y_points,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",297)
+  V C_INTEGRAL_IS_OVER_X,c_integral_is_over_x,Logical(Kind=1),signed char,d,0,#t("../eigen_funcs_for_c.f90",301)
+  V C_X_FUNC_WTS,c_x_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",298)
+  V C_Y_FUNC_WTS,c_y_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_funcs_for_c.f90",299)
+  V C_NUM_INTEGRAL_PTS,c_num_integral_pts,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",302)
+  V C_TRUNC_SING_VALS,c_trunc_sing_vals,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",300)
+  V C_INTEGRAL_PTS,c_integral_pts,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",303)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",308)
+  V C_INTEGRAL_WTS,c_integral_wts,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",304)
+  V I,i,Integer,int,,0,#t("../eigen_funcs_for_c.f90",315)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../eigen_funcs_for_c.f90",309)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../eigen_funcs_for_c.f90",312)
+  V RANKN_INTEGRAL,rankn_integral,Class(integral_neigen_disc_mod:integral_rankn_disc),INTEGRAL_NEIGEN_DISC_MOD_DT_integral_rankn_disc,a,0,#t("../eigen_funcs_for_c.f90",317)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../eigen_funcs_for_c.f90",314)
+  V COEFF_VEC,coeff_vec,Real(Kind=2),double,a,1,a(*:*),#t("../eigen_funcs_for_c.f90",318)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_neigen_mod:kernel_rankn),KERNEL_NEIGEN_MOD_DT_kernel_rankn,a,0,#t("../eigen_funcs_for_c.f90",316)
+  V C_NUM_COEFFS,c_num_coeffs,Integer,int,d,0,#t("../eigen_funcs_for_c.f90",305)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../eigen_funcs_for_c.f90",292)
+  V C_COEFFS,c_coeffs,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_funcs_for_c.f90",306)
+ ES
+EM

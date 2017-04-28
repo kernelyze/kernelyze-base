@@ -1,0 +1,189 @@
+M TEST_DERIVS_MOD,#h("../test_derivs.f90",32)
+ F TEST_GAUSSIAN_DERIVS,TEST_DERIVS_MOD_MP_test_gaussian_derivs,result(TEST_PASS),#h("../test_derivs.f90",152)
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V FINDIFF_DX_DY_DY,findiff_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",178)
+  V X,x,Real(Kind=2),double,,0,#t("../test_derivs.f90",161)
+  V D2KERNEL_DY_DY,d2kernel_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",168)
+  V DKERNEL_DX,dkernel_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",165)
+  V DKERNEL_DY,dkernel_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",166)
+  V D2KERNEL_DX_DX,d2kernel_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",167)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_derivs.f90",154)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_derivs.f90",156)
+  V D2KERNEL_DX_DY,d2kernel_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",169)
+  V I,i,Integer,int,,0,#t("../test_derivs.f90",163)
+  V D3KERNEL_DX_DX_DY,d3kernel_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",170)
+  V Y,y,Real(Kind=2),double,,0,#t("../test_derivs.f90",162)
+  V J,j,Integer,int,,0,#t("../test_derivs.f90",164)
+  V D3KERNEL_DX_DY_DY,d3kernel_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",171)
+  V FINDIFF_DX,findiff_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",172)
+  V FINDIFF_DY,findiff_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",173)
+  V FINDIFF_DX_DX,findiff_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",174)
+  V FINDIFF_DY_DY,findiff_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",175)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_derivs.f90",160)
+  V FINDIFF_DX_DY,findiff_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",176)
+  V FINDIFF_DX_DX_DY,findiff_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",177)
+ EF
+ F TEST_COMPFUNC_DERIVS,TEST_DERIVS_MOD_MP_test_compfunc_derivs,result(TEST_PASS),#h("../test_derivs.f90",419)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  V TESTFUNC,testfunc,Type(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,,0,#t("../test_derivs.f90",427)
+  V X,x,Real(Kind=2),double,,0,#t("../test_derivs.f90",429)
+  V DFUNC_DX,dfunc_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",431)
+  V D2FUNC_DX_DX,d2func_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",432)
+  V D3FUNC_DX_DX_DX,d3func_dx_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",433)
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_derivs.f90",428)
+  V FINDIFF_DX_DX_DX,findiff_dx_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",436)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_derivs.f90",421)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_derivs.f90",423)
+  V I,i,Integer,int,,0,#t("../test_derivs.f90",430)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../test_derivs.f90",437)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../test_derivs.f90",438)
+  V FINDIFF_DX,findiff_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",434)
+  V FINDIFF_DX_DX,findiff_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",435)
+ EF
+ F TEST_INTEGRAL_DERIVS,TEST_DERIVS_MOD_MP_test_integral_derivs,result(TEST_PASS),#h("../test_derivs.f90",477)
+  T integral_kernel_disc,INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc
+   C EVAL_PTS,eval_pts,Real(Kind=2),double,304,a,1,a(*:*)
+   C WEIGHTS,weights,Real(Kind=2),double,344,a,1,a(*:*)
+  ET
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V X,x,Real(Kind=2),double,,0,#t("../test_derivs.f90",487)
+  V DFUNC_DX,dfunc_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",490)
+  V KERNEL_INTEGRAL,kernel_integral,Type(integral_kernel_disc_mod:integral_kernel_disc),INTEGRAL_KERNEL_DISC_MOD_DT_integral_kernel_disc,,0,#t("../test_derivs.f90",485)
+  V EVAL_PTS,eval_pts,Real(Kind=2),double,,1,f(1:11),#t("../test_derivs.f90",496)
+  V D2FUNC_DX_DX,d2func_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",491)
+  V WEIGHTS,weights,Real(Kind=2),double,,1,f(1:11),#t("../test_derivs.f90",497)
+  V D3FUNC_DX_DX_DX,d3func_dx_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",492)
+  V EVAL_SZ,eval_sz,Integer,int,,0,#t("../test_derivs.f90",489)
+  V FINDIFF_DX_DX_DX,findiff_dx_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",495)
+  V DESCRIP_STR,descrip_str,Character(Len=255),Char[255],,0,#t("../test_derivs.f90",500)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_derivs.f90",479)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_derivs.f90",481)
+  V I,i,Integer,int,,0,#t("../test_derivs.f90",488)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../test_derivs.f90",498)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../test_derivs.f90",499)
+  V FINDIFF_DX,findiff_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",493)
+  V FINDIFF_DX_DX,findiff_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",494)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_derivs.f90",486)
+ EF
+ F TEST_DERIVS,TEST_DERIVS_MOD_MP_test_derivs,result(TEST_PASS),#h("../test_derivs.f90",48)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_derivs.f90",50)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_derivs.f90",52)
+ EF
+ F TEST_EXPPROD_DERIVS,TEST_DERIVS_MOD_MP_test_expprod_derivs,result(TEST_PASS),#h("../test_derivs.f90",69)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V FINDIFF_DX_DY_DY,findiff_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",95)
+  V X,x,Real(Kind=2),double,,0,#t("../test_derivs.f90",78)
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_derivs.f90",77)
+  V D2KERNEL_DY_DY,d2kernel_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",85)
+  V DKERNEL_DX,dkernel_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",82)
+  V DKERNEL_DY,dkernel_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",83)
+  V D2KERNEL_DX_DX,d2kernel_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",84)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_derivs.f90",71)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_derivs.f90",73)
+  V D2KERNEL_DX_DY,d2kernel_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",86)
+  V I,i,Integer,int,,0,#t("../test_derivs.f90",80)
+  V D3KERNEL_DX_DX_DY,d3kernel_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",87)
+  V Y,y,Real(Kind=2),double,,0,#t("../test_derivs.f90",79)
+  V J,j,Integer,int,,0,#t("../test_derivs.f90",81)
+  V D3KERNEL_DX_DY_DY,d3kernel_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",88)
+  V FINDIFF_DX,findiff_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",89)
+  V FINDIFF_DY,findiff_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",90)
+  V FINDIFF_DX_DX,findiff_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",91)
+  V FINDIFF_DY_DY,findiff_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",92)
+  V FINDIFF_DX_DY,findiff_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",93)
+  V FINDIFF_DX_DX_DY,findiff_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",94)
+ EF
+ F TEST_CAUCHY_DERIVS,TEST_DERIVS_MOD_MP_test_cauchy_derivs,result(TEST_PASS),#h("../test_derivs.f90",235)
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  V FINDIFF_DX_DY_DY,findiff_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",261)
+  V X,x,Real(Kind=2),double,,0,#t("../test_derivs.f90",244)
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_derivs.f90",243)
+  V D2KERNEL_DY_DY,d2kernel_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",251)
+  V DKERNEL_DX,dkernel_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",248)
+  V DKERNEL_DY,dkernel_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",249)
+  V D2KERNEL_DX_DX,d2kernel_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",250)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_derivs.f90",237)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_derivs.f90",239)
+  V D2KERNEL_DX_DY,d2kernel_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",252)
+  V I,i,Integer,int,,0,#t("../test_derivs.f90",246)
+  V D3KERNEL_DX_DX_DY,d3kernel_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",253)
+  V Y,y,Real(Kind=2),double,,0,#t("../test_derivs.f90",245)
+  V J,j,Integer,int,,0,#t("../test_derivs.f90",247)
+  V D3KERNEL_DX_DY_DY,d3kernel_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",254)
+  V FINDIFF_DX,findiff_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",255)
+  V FINDIFF_DY,findiff_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",256)
+  V FINDIFF_DX_DX,findiff_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",257)
+  V FINDIFF_DY_DY,findiff_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",258)
+  V FINDIFF_DX_DY,findiff_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",259)
+  V FINDIFF_DX_DX_DY,findiff_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",260)
+ EF
+ F TEST_RANKN_DERIVS,TEST_DERIVS_MOD_MP_test_rankn_derivs,result(TEST_PASS),#h("../test_derivs.f90",319)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V FINDIFF_DX_DY_DY,findiff_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",350)
+  V X,x,Real(Kind=2),double,,0,#t("../test_derivs.f90",333)
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_derivs.f90",327)
+  V D2KERNEL_DY_DY,d2kernel_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",340)
+  V DKERNEL_DX,dkernel_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",337)
+  V DKERNEL_DY,dkernel_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",338)
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_derivs.f90",330)
+  V D2KERNEL_DX_DX,d2kernel_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",339)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_derivs.f90",321)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_derivs.f90",323)
+  V D2KERNEL_DX_DY,d2kernel_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",341)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_derivs.f90",328)
+  V I,i,Integer,int,,0,#t("../test_derivs.f90",335)
+  V D3KERNEL_DX_DX_DY,d3kernel_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",342)
+  V Y,y,Real(Kind=2),double,,0,#t("../test_derivs.f90",334)
+  V J,j,Integer,int,,0,#t("../test_derivs.f90",336)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../test_derivs.f90",331)
+  V D3KERNEL_DX_DY_DY,d3kernel_dx_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",343)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../test_derivs.f90",332)
+  V FINDIFF_DX,findiff_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",344)
+  V FINDIFF_DY,findiff_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",345)
+  V FINDIFF_DX_DX,findiff_dx_dx,Real(Kind=2),double,,0,#t("../test_derivs.f90",346)
+  V FINDIFF_DY_DY,findiff_dy_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",347)
+  V FINDIFF_DX_DY,findiff_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",348)
+  V FINDIFF_DX_DX_DY,findiff_dx_dx_dy,Real(Kind=2),double,,0,#t("../test_derivs.f90",349)
+ EF
+EM

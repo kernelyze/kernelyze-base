@@ -1,0 +1,12 @@
+M TEST_SET_PRECISION_MOD,#h("../test_set_precision.f90",23)
+ F TEST_SET_PRECISION,TEST_SET_PRECISION_MOD_MP_test_set_precision,result(TEST_PASS),#h("../test_set_precision.f90",31)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_set_precision.f90",33)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_set_precision.f90",35)
+ EF
+ F TEST_SET_PRECISION_WP,TEST_SET_PRECISION_MOD_MP_test_set_precision_wp,result(TEST_PASS),#h("../test_set_precision.f90",47)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_set_precision.f90",49)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_set_precision.f90",51)
+  V VBL_WP_PRECISION,vbl_wp_precision,Real(Kind=2),double,,0,#t("../test_set_precision.f90",53)
+  V KIND_OF_VBL,kind_of_vbl,Integer,int,,0,#t("../test_set_precision.f90",54)
+ EF
+EM

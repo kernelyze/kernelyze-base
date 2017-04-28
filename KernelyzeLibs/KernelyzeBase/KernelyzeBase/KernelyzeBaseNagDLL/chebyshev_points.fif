@@ -1,0 +1,8 @@
+M CHEBYSHEV_POINTS_MOD,#h("../chebyshev_points.f90",27)
+ F CHEBYSHEV_POINTS,CHEBYSHEV_POINTS_MOD_MP_chebyshev_points,result(C_POINTS),#h("../chebyshev_points.f90",33)
+  V C_POINTS,c_points,Real(Kind=2),double,,1,i(1:*),#t("../chebyshev_points.f90",35)
+  V GRID,grid,Real(Kind=2),double,,1,i(1:*),#t("../chebyshev_points.f90",36)
+  V J,j,Integer,int,,0,#t("../chebyshev_points.f90",37)
+  V N,n,Integer,int,d,0,#t("../chebyshev_points.f90",34)
+ EF
+EM

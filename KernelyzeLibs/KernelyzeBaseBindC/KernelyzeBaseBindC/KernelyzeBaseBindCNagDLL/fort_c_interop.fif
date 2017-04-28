@@ -1,0 +1,34 @@
+M FORT_C_INTEROP_MOD,#h("../fort_c_interop.f90",41)
+ S C_STR_TO_F_STR,FORT_C_INTEROP_MOD_MP_c_str_to_f_str,#h("../fort_c_interop.f90",78)
+  V I,i,Integer,int,,0,#t("../fort_c_interop.f90",87)
+  V CSTRING,cstring,Character,Char[1],d,1,f(1:?),#t("../fort_c_interop.f90",82)
+  V FSTRING,fstring,Character(Len=:),Char[:],da,0,#t("../fort_c_interop.f90",83)
+  V CLEN,clen,Integer,int,,0,#t("../fort_c_interop.f90",86)
+ ES
+ S C_F_STRING,FORT_C_INTEROP_MOD_MP_c_f_string,#h("../fort_c_interop.f90",107)
+  T c_ptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_ptr
+   C OP,op,Class(*),,0,p,0
+  ET
+  V C_STRING,c_string,Type(c_ptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_ptr,d,0,#t("../fort_c_interop.f90",111)
+  V F_STRING,f_string,Character(Len=:),Char[:],da,0,#t("../fort_c_interop.f90",112)
+  V STRING_PTR,string_ptr,Character,Char[1],p,1,d(*:*),#t("../fort_c_interop.f90",115)
+  V I,i,Integer,int,,0,#t("../fort_c_interop.f90",117)
+ ES
+ S F_C_STRING,FORT_C_INTEROP_MOD_MP_f_c_string,#h("../fort_c_interop.f90",154)
+  T c_ptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_ptr
+   C OP,op,Class(*),,0,p,0
+  ET
+  V C_STRING,c_string,Type(c_ptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_ptr,d,0,#t("../fort_c_interop.f90",161)
+  V F_STRING,f_string,Character(Len=*),Char[*],d,0,#t("../fort_c_interop.f90",159)
+  V STRING_PTR,string_ptr,Character,Char[1],p,1,d(*:*),#t("../fort_c_interop.f90",165)
+  V I,i,Integer,int,,0,#t("../fort_c_interop.f90",167)
+  V C_STR_SIZE,c_str_size,Integer,int,d,0,#t("../fort_c_interop.f90",160)
+  V C_SIZE_TOO_SMALL,c_size_too_small,Logical(Kind=1),signed char,d,0,#t("../fort_c_interop.f90",162)
+ ES
+ S COPY_STRING,copy_string,#h("../fort_c_interop.f90",47)
+  V CSTRING,cstring,Character,Char[1],d,1,f(1:?),#t("../fort_c_interop.f90",51)
+  V FSTRING,fstring,Character,Char[1],d,1,f(1:?),#t("../fort_c_interop.f90",51)
+  V CLEN,clen,Integer,int,d,0,#t("../fort_c_interop.f90",52)
+  V FTOC,ftoc,Integer,int,d,0,#t("../fort_c_interop.f90",53)
+ ES
+EM

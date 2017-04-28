@@ -1,0 +1,4 @@
+P FORT_APPROX:main,#h("../fort_approx.f90",64)
+ V TEST_UNIT,test_unit,Integer,int,,0,#t("../fort_approx.f90",105)
+ V TEST_PASS,test_pass,Logical,int,,0,#t("../fort_approx.f90",103)
+EP

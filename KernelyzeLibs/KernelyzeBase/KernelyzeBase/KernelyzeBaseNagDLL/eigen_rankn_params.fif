@@ -1,0 +1,29 @@
+M EIGEN_RANKN_PARAMS_MOD,#h("../eigen_rankn_params.f90",59)
+ S EIGEN_RANKN_PARAMS,EIGEN_RANKN_PARAMS_MOD_MP_eigen_rankn_params,#h("../eigen_rankn_params.f90",70)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../eigen_rankn_params.f90",98)
+  V SINGULAR_VALS,singular_vals,Real(Kind=2),double,,1,i(1:*),#t("../eigen_rankn_params.f90",105)
+  V LEFT_SINGULAR_VECS,left_singular_vecs,Real(Kind=2),double,,2,i(1:*,1:*),#t("../eigen_rankn_params.f90",106)
+  V RIGHT_SINGULAR_VECS_T,right_singular_vecs_t,Real(Kind=2),double,,2,i(1:*,1:*),#t("../eigen_rankn_params.f90",107)
+  V J,j,Integer,int,,0,#t("../eigen_rankn_params.f90",102)
+  V WWVEC,wwvec,Real(Kind=2),double,,1,i(1:*),#t("../eigen_rankn_params.f90",108)
+  V COEFF_MAT,coeff_mat,Real(Kind=2),double,,2,i(1:*,1:*),#t("../eigen_rankn_params.f90",110)
+  V I,i,Integer,int,,0,#t("../eigen_rankn_params.f90",102)
+  V KERNEL_TO_APPROX,kernel_to_approx,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../eigen_rankn_params.f90",83)
+  V RANK,rank,Integer,int,d,0,#t("../eigen_rankn_params.f90",84)
+  V X_POINTS,x_points,Real(Kind=2),double,d,1,d(1:*),#t("../eigen_rankn_params.f90",85)
+  V Y_POINTS,y_points,Real(Kind=2),double,d,1,d(1:*),#t("../eigen_rankn_params.f90",86)
+  V X_WEIGHTS,x_weights,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_rankn_params.f90",87)
+  V Y_WEIGHTS,y_weights,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_rankn_params.f90",88)
+  V X_FUNC_WTS,x_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_rankn_params.f90",93)
+  V Y_FUNC_WTS,y_func_wts,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../eigen_rankn_params.f90",94)
+  V TRUNC_SING_VALS,trunc_sing_vals,Real(Kind=2),double,d,1,i(1:*),#t("../eigen_rankn_params.f90",95)
+  V INFO,info,Integer,int,,0,#t("../eigen_rankn_params.f90",103)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../eigen_rankn_params.f90",97)
+ ES
+EM

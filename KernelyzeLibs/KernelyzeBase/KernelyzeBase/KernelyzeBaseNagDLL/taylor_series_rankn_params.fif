@@ -1,0 +1,27 @@
+M TAYLOR_SERIES_RANKN_PARAMS_MOD,#h("../taylor_series_rankn_params.f90",37)
+ S TAYLOR_SERIES_RANKN_PARAMS,TAYLOR_SERIES_RANKN_PARAMS_MOD_MP_taylor_series_rankn_params,#h("../taylor_series_rankn_params.f90",49)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V W_MATRIX,w_matrix,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../taylor_series_rankn_params.f90",65)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../taylor_series_rankn_params.f90",67)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../taylor_series_rankn_params.f90",68)
+  V FIN_DIFF_DELTA,fin_diff_delta,Real(Kind=2),double,d,0,#t("../taylor_series_rankn_params.f90",70)
+  V INFO,info,Integer,int,,0,#t("../taylor_series_rankn_params.f90",74)
+  V SINGULAR_VALS,singular_vals,Real(Kind=2),double,,1,i(1:*),#t("../taylor_series_rankn_params.f90",76)
+  V LEFT_SINGULAR_VECS,left_singular_vecs,Real(Kind=2),double,,2,i(1:*,1:*),#t("../taylor_series_rankn_params.f90",77)
+  V RIGHT_SINGULAR_VECS_T,right_singular_vecs_t,Real(Kind=2),double,,2,i(1:*,1:*),#t("../taylor_series_rankn_params.f90",78)
+  V I,i,Integer,int,,0,#t("../taylor_series_rankn_params.f90",73)
+  V WWVEC,wwvec,Real(Kind=2),double,,1,i(1:*),#t("../taylor_series_rankn_params.f90",79)
+  V COEFF_MAT,coeff_mat,Real(Kind=2),double,,2,i(1:*,1:*),#t("../taylor_series_rankn_params.f90",81)
+  V J,j,Integer,int,,0,#t("../taylor_series_rankn_params.f90",73)
+  V KERNEL_TO_APPROX,kernel_to_approx,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../taylor_series_rankn_params.f90",60)
+  V X_CENTER,x_center,Real(Kind=2),double,d,0,#t("../taylor_series_rankn_params.f90",61)
+  V Y_CENTER,y_center,Real(Kind=2),double,d,0,#t("../taylor_series_rankn_params.f90",62)
+  V RANK,rank,Integer,int,d,0,#t("../taylor_series_rankn_params.f90",63)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,d,2,i(1:*,1:*),#t("../taylor_series_rankn_params.f90",64)
+ ES
+EM

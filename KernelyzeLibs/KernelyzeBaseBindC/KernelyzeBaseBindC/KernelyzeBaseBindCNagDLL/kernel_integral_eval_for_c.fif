@@ -1,0 +1,21 @@
+M KERNEL_INTEGRAL_EVAL_FOR_C_MOD,#h("../kernel_integral_eval_for_c.f90",24)
+ S KERNEL_INTEGRAL_EVAL_FOR_C,kernel_integral_eval,#h("../kernel_integral_eval_for_c.f90",53)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T kernel_proc_ptr,KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,32,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,40,P,0
+  ET
+  V C_INTEGRAL_PTS,c_integral_pts,Real(Kind=2),double,d,1,i(1:*),#t("../kernel_integral_eval_for_c.f90",67)
+  V C_INTEGRAL_WTS,c_integral_wts,Real(Kind=2),double,d,1,i(1:*),#t("../kernel_integral_eval_for_c.f90",68)
+  V C_NUM_EVAL_PTS,c_num_eval_pts,Integer,int,d,0,#t("../kernel_integral_eval_for_c.f90",69)
+  V C_EVAL_PTS,c_eval_pts,Real(Kind=2),double,d,1,i(1:*),#t("../kernel_integral_eval_for_c.f90",70)
+  V C_RESULTS_OF_EVAL,c_results_of_eval,Real(Kind=2),double,d,1,i(1:*),#t("../kernel_integral_eval_for_c.f90",71)
+  V F_KERNEL,f_kernel,Type(kernel_proc_ptr_mod:kernel_proc_ptr),KERNEL_PROC_PTR_MOD_DT_kernel_proc_ptr,,0,#t("../kernel_integral_eval_for_c.f90",74)
+  V I,i,Integer,int,,0,#t("../kernel_integral_eval_for_c.f90",75)
+  V C_KER_FUNC,c_ker_func,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../kernel_integral_eval_for_c.f90",64)
+  V C_INTEGRAL_IS_OVER_X,c_integral_is_over_x,Logical(Kind=1),signed char,d,0,#t("../kernel_integral_eval_for_c.f90",65)
+  V C_NUM_INTEGRAL_PTS,c_num_integral_pts,Integer,int,d,0,#t("../kernel_integral_eval_for_c.f90",66)
+ ES
+EM

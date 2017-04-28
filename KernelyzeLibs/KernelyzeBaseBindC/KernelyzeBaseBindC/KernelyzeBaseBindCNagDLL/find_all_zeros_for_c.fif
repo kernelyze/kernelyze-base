@@ -1,0 +1,25 @@
+M FIND_ALL_ZEROS_FOR_C_MOD,#h("../find_all_zeros_for_c.f90",23)
+ S FIND_ALL_ZEROS_FOR_C,find_all_zeros,#h("../find_all_zeros_for_c.f90",56)
+  T c_funptr,__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr
+   C IPFUN,ipfun,Class(*),,0,p,0
+  ET
+  T singlevar_proc_ptr,SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr
+   C MY_FUNPTR,my_funptr,Real(Kind=2),double,16,P,0
+   C MY_DERIVPTR,my_derivptr,Real(Kind=2),double,24,P,0
+  ET
+  V RESULT_ZEROS,result_zeros,Real(Kind=2),double,d,1,i(1:*),#t("../find_all_zeros_for_c.f90",69)
+  V C_STR_LEN,c_str_len,Integer,int,,0,#t("../find_all_zeros_for_c.f90",83)
+  V RES_ZEROS,res_zeros,Real(Kind=2),double,a,1,a(*:*),#t("../find_all_zeros_for_c.f90",84)
+  V GRID,grid,Real(Kind=2),double,d,1,i(1:*),#t("../find_all_zeros_for_c.f90",72)
+  V TOLER,toler,Real(Kind=2),double,d,0,#t("../find_all_zeros_for_c.f90",73)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../find_all_zeros_for_c.f90",82)
+  V I,i,Integer,int,,0,#t("../find_all_zeros_for_c.f90",79)
+  V F,f,Type(iso_c_binding:c_funptr),__NAGf90_MODULE_ISO_C_BINDING_DT_c_funptr,v,0,#t("../find_all_zeros_for_c.f90",70)
+  V MAX_NUM_ZEROS,max_num_zeros,Integer,int,d,0,#t("../find_all_zeros_for_c.f90",67)
+  V NUM_ZEROS,num_zeros,Integer,int,d,0,#t("../find_all_zeros_for_c.f90",68)
+  V SVAR,svar,Type(singlevar_proc_ptr_mod:singlevar_proc_ptr),SINGLEVAR_PROC_PTR_MOD_DT_singlevar_proc_ptr,,0,#t("../find_all_zeros_for_c.f90",81)
+  V N_GRID_PTS,n_grid_pts,Integer,int,d,0,#t("../find_all_zeros_for_c.f90",71)
+  V C_ERR_STAT,c_err_stat,Integer,int,d,0,#t("../find_all_zeros_for_c.f90",75)
+  V C_ERR_MSG,c_err_msg,Character,Char[1],d,1,f(1:?),#t("../find_all_zeros_for_c.f90",77)
+ ES
+EM

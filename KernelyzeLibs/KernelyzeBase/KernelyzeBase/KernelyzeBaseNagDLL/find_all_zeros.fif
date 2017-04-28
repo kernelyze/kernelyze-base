@@ -1,0 +1,28 @@
+M FIND_ALL_ZEROS_MOD,#h("../find_all_zeros.f90",25)
+ S FIND_ALL_ZEROS,FIND_ALL_ZEROS_MOD_MP_find_all_zeros,#h("../find_all_zeros.f90",38)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V RESULT_ZEROS,result_zeros,Real(Kind=2),double,da,1,a(*:*),#t("../find_all_zeros.f90",46)
+  V FUNC_OBJ,func_obj,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../find_all_zeros.f90",47)
+  V GRID,grid,Real(Kind=2),double,d,1,d(1:*),#t("../find_all_zeros.f90",48)
+  V TOLER,toler,Real(Kind=2),double,d,0,#t("../find_all_zeros.f90",49)
+  V N_GRID_M1,n_grid_m1,Integer,int,,0,#t("../find_all_zeros.f90",54)
+  V ZEROS_J,zeros_j,Integer,int,,0,#t("../find_all_zeros.f90",54)
+  V NUNIQUE,nunique,Integer,int,,0,#t("../find_all_zeros.f90",54)
+  V TOLER_SQ,toler_sq,Real(Kind=2),double,,0,#t("../find_all_zeros.f90",55)
+  V FUN_AT_J,fun_at_j,Real(Kind=2),double,,0,#t("../find_all_zeros.f90",55)
+  V FUN_AT_J_PLUS1,fun_at_j_plus1,Real(Kind=2),double,,0,#t("../find_all_zeros.f90",55)
+  V PROD_FUN_EVALS,prod_fun_evals,Real(Kind=2),double,,0,#t("../find_all_zeros.f90",55)
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../find_all_zeros.f90",51)
+  V TEMP,temp,Real(Kind=2),double,a,1,a(*:*),#t("../find_all_zeros.f90",56)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../find_all_zeros.f90",52)
+  V INDICES_OF_UNIQUE,indices_of_unique,Integer,int,a,1,a(*:*),#t("../find_all_zeros.f90",57)
+  V J,j,Integer,int,,0,#t("../find_all_zeros.f90",54)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../find_all_zeros.f90",60)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../find_all_zeros.f90",61)
+  V LOCAL_ERR_STAT,local_err_stat,Integer,int,,0,#t("../find_all_zeros.f90",63)
+  V LOCAL_ERR_MSG,local_err_msg,Character(Len=255),Char[255],,0,#t("../find_all_zeros.f90",64)
+ ES
+EM

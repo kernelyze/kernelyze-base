@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="typeStaticLibrary" ProjectCreator="Intel Fortran" Keyword="Static Library" Version="11.0" ProjectIdGuid="{467E280E-69C9-4D75-B500-98EBB29F6FDA}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLibrarianTool"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration>
+		<Configuration Name="Release|Win32" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLibrarianTool"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration>
+		<Configuration Name="Debug|x64" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" MultiProcessorCompilation="true" Optimization="optimizeDisabled" Preprocess="preprocessYes" AdditionalIncludeDirectories="&quot;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\mkl\include&quot;" ReentrantCode="reentrancyThreaded" OpenMP="OpenMPParallelCode" F2003Semantics="true" StandardWarnings="standardWarningsF08" WarnDeclarations="true" WarnUnusedVariables="true" WarnUncalled="true" WarnInterfaces="true" OptDiagLevel="odlLevel5" LocalVariableStorage="localStorageAutomatic" FloatingPointModel="precise" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLibrarianTool" AdditionalLibraryDirectories="&quot;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\mkl\include&quot;" LinkLibraryDependencies="true" AdditionalDependencies="mkl_intel_lp64.lib mkl_intel_thread.lib mkl_core.lib mkl_lapack95_lp64.lib libiomp5md.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration>
+		<Configuration Name="Release|x64" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" MultiProcessorCompilation="true" Preprocess="preprocessYes" AdditionalIncludeDirectories="&quot;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\mkl\include&quot;" ReentrantCode="reentrancyThreaded" OpenMP="OpenMPParallelCode" F2003Semantics="true" StandardWarnings="standardWarningsF08" WarnDeclarations="true" WarnUnusedVariables="true" WarnUncalled="true" OptDiagLevel="odlLevel5" LocalVariableStorage="localStorageAutomatic" FloatingPointModel="precise" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLibrarianTool" AdditionalLibraryDirectories="&quot;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2016\windows\mkl\include&quot;" LinkLibraryDependencies="true" AdditionalDependencies="mkl_intel_lp64.lib mkl_intel_thread.lib mkl_core.lib mkl_lapack95_lp64.lib libiomp5md.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<File RelativePath=".\all_num_opt_mats_asymm.f90"/>
+		<File RelativePath=".\binomial_coeffs.f90"/>
+		<File RelativePath=".\borsuk_lower_bound.f90"/>
+		<File RelativePath=".\brent.f90"/>
+		<File RelativePath=".\chebyshev_points.f90"/>
+		<File RelativePath=".\compfunc_kernel.f90"/>
+		<File RelativePath=".\compute_a_and_b_matrices.f90"/>
+		<File RelativePath=".\compute_a_matrix.f90"/>
+		<File RelativePath=".\constants.f90"/>
+		<File RelativePath=".\eigen_rankn_kernel.f90"/>
+		<File RelativePath=".\eigen_rankn_kernel_of_params.f90"/>
+		<File RelativePath=".\eigen_rankn_params.f90"/>
+		<File RelativePath=".\factorial.f90"/>
+		<File RelativePath=".\falling_factorial.f90"/>
+		<File RelativePath=".\find_all_zeros.f90"/>
+		<File RelativePath=".\find_rel_optima.f90"/>
+		<File RelativePath=".\hermite_polynomial.f90"/>
+		<File RelativePath=".\integral_kernel_disc.f90"/>
+		<File RelativePath=".\integral_kernel_measure.f90"/>
+		<File RelativePath=".\integral_kernel_singlevar.f90"/>
+		<File RelativePath=".\integral_neigen_disc.f90"/>
+		<File RelativePath=".\integral_neigen_svar.f90"/>
+		<File RelativePath=".\integral_nmonom_disc.f90"/>
+		<File RelativePath=".\integral_nmonom_svar.f90"/>
+		<File RelativePath=".\integral_nsect_disc.f90"/>
+		<File RelativePath=".\integral_nsect_svar.f90"/>
+		<File RelativePath=".\integral_rankn_svar.f90"/>
+		<File RelativePath=".\itoa.f90"/>
+		<File RelativePath=".\kernel.f90"/>
+		<File RelativePath=".\kernel_bachelier.f90"/>
+		<File RelativePath=".\kernel_blackscholes.f90"/>
+		<File RelativePath=".\kernel_cauchy.f90"/>
+		<File RelativePath=".\kernel_expprod.f90"/>
+		<File RelativePath=".\kernel_gaussian.f90"/>
+		<File RelativePath=".\kernel_neigen.f90"/>
+		<File RelativePath=".\kernel_nmonom.f90"/>
+		<File RelativePath=".\kernel_nsect.f90"/>
+		<File RelativePath=".\kernel_proc_ptr.f90"/>
+		<File RelativePath=".\kernel_summable.f90"/>
+		<File RelativePath=".\linear_combo_kernel.f90"/>
+		<File RelativePath=".\monomial.f90"/>
+		<File RelativePath=".\moore_penrose_inverse.f90"/>
+		<File RelativePath=".\mrgrnk.f90"/>
+		<File RelativePath=".\normal_distn.f90"/>
+		<File RelativePath=".\num_opt_rankn_kernel_asymm.f90"/>
+		<File RelativePath=".\num_opt_rankn_kernel_of_params.f90"/>
+		<File RelativePath=".\num_opt_rankn_params.f90"/>
+		<File RelativePath=".\option_formulae.f90"/>
+		<File RelativePath=".\qsfuns.f90"/>
+		<File RelativePath=".\quicksort.f90"/>
+		<File RelativePath=".\remez_step.f90"/>
+		<File RelativePath=".\remez_variant.f90"/>
+		<File RelativePath=".\set_precision.f90"/>
+		<File RelativePath=".\singlevar_func.f90"/>
+		<File RelativePath=".\singlevar_proc_ptr.f90"/>
+		<File RelativePath=".\taylor_series_rankn_kernel.f90"/>
+		<File RelativePath=".\taylor_series_rankn_kernel_of_params.f90"/>
+		<File RelativePath=".\taylor_series_rankn_params.f90"/>
+		<File RelativePath=".\tk_simple_lapack.f90"/>
+		<File RelativePath=".\unirnk.f90"/>
+		<File RelativePath=".\worst_rho_and_gamma.f90"/></Filter></Files>
+	<Globals/></VisualStudioProject>

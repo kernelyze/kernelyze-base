@@ -1,0 +1,86 @@
+M TEST_BORSUK_LOWER_BOUND_MOD,#h("../test_borsuk_lower_bound.f90",26)
+ F TEST_BORSUK_LOWER_BOUND_KERNEL_ONE,TEST_BORSUK_LOWER_BOUND_MOD_MP_test_borsuk_lower_bound_kernel_one,result(TEST_PASS),#h("../test_borsuk_lower_bound.f90",58)
+  T kernel_expprod_mod:kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V NODES,nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",68)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_borsuk_lower_bound.f90",61)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_borsuk_lower_bound.f90",63)
+  V COEFFS,coeffs,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",68)
+  V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0
+  V J,j,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",69)
+  V ERRORS_AT_NODES,errors_at_nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",68)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,,0,#t("../test_borsuk_lower_bound.f90",66)
+  V NUM_ITER,num_iter,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",69)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",68)
+  V CHEB_PTS,cheb_pts,Real(Kind=2),double,,1,f(1:40),#t("../test_borsuk_lower_bound.f90",67)
+ EF
+ F TEST_BORSUK_LOWER_BOUND_KERNEL_TWO,TEST_BORSUK_LOWER_BOUND_MOD_MP_test_borsuk_lower_bound_kernel_two,result(TEST_PASS),#h("../test_borsuk_lower_bound.f90",96)
+  T kernel_gaussian_mod:kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V NODES,nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",106)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_borsuk_lower_bound.f90",99)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_borsuk_lower_bound.f90",101)
+  V GAUSSIAN_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0
+  V COEFFS,coeffs,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",106)
+  V J,j,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",107)
+  V ERRORS_AT_NODES,errors_at_nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",106)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,,0,#t("../test_borsuk_lower_bound.f90",104)
+  V NUM_ITER,num_iter,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",107)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",106)
+  V CHEB_PTS,cheb_pts,Real(Kind=2),double,,1,f(1:40),#t("../test_borsuk_lower_bound.f90",105)
+ EF
+ F TEST_BORSUK_LOWER_BOUND_KERNEL_THREE,TEST_BORSUK_LOWER_BOUND_MOD_MP_test_borsuk_lower_bound_kernel_three,result(TEST_PASS),#h("../test_borsuk_lower_bound.f90",134)
+  T kernel_cauchy_mod:kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  V NODES,nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",144)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_borsuk_lower_bound.f90",137)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_borsuk_lower_bound.f90",139)
+  V COEFFS,coeffs,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",144)
+  V CAUCHY_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0
+  V J,j,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",145)
+  V ERRORS_AT_NODES,errors_at_nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",144)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,,0,#t("../test_borsuk_lower_bound.f90",142)
+  V NUM_ITER,num_iter,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",145)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",144)
+  V CHEB_PTS,cheb_pts,Real(Kind=2),double,,1,f(1:40),#t("../test_borsuk_lower_bound.f90",143)
+ EF
+ F TEST_BORSUK_LOWER_BOUND_DUPLICATES,TEST_BORSUK_LOWER_BOUND_MOD_MP_test_borsuk_lower_bound_duplicates,result(TEST_PASS),#h("../test_borsuk_lower_bound.f90",172)
+  T kernel_expprod_mod:kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V NODES,nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",182)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_borsuk_lower_bound.f90",175)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_borsuk_lower_bound.f90",177)
+  V COEFFS,coeffs,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",182)
+  V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0
+  V J,j,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",183)
+  V ERRORS_AT_NODES,errors_at_nodes,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",182)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,,0,#t("../test_borsuk_lower_bound.f90",180)
+  V NUM_ITER,num_iter,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",183)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,,1,f(1:5),#t("../test_borsuk_lower_bound.f90",182)
+  V CHEB_PTS,cheb_pts,Real(Kind=2),double,,1,f(1:40),#t("../test_borsuk_lower_bound.f90",181)
+ EF
+ F TEST_BORSUK_LOWER_BOUND_TINY,TEST_BORSUK_LOWER_BOUND_MOD_MP_test_borsuk_lower_bound_tiny,result(TEST_PASS),#h("../test_borsuk_lower_bound.f90",212)
+  T kernel_expprod_mod:kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_borsuk_lower_bound.f90",215)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_borsuk_lower_bound.f90",217)
+  V RHO_VEC_LARGE,rho_vec_large,Real(Kind=2),double,,1,f(1:15),#t("../test_borsuk_lower_bound.f90",221)
+  V COEFFS_LARGE,coeffs_large,Real(Kind=2),double,,1,f(1:15),#t("../test_borsuk_lower_bound.f90",221)
+  V NODES_LARGE,nodes_large,Real(Kind=2),double,,1,f(1:15),#t("../test_borsuk_lower_bound.f90",221)
+  V ERRORS_AT_NODES_LARGE,errors_at_nodes_large,Real(Kind=2),double,,1,f(1:15),#t("../test_borsuk_lower_bound.f90",221)
+  V EXP_PROD_KERNEL,KERNEL_TEST_FUNCS_MOD_MP_exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0
+  V J,j,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",222)
+  V DISCREPANCY,discrepancy,Real(Kind=2),double,,0,#t("../test_borsuk_lower_bound.f90",220)
+  V NUM_ITER,num_iter,Integer,int,,0,#t("../test_borsuk_lower_bound.f90",222)
+ EF
+ F TEST_BORSUK_LOWER_BOUND,TEST_BORSUK_LOWER_BOUND_MOD_MP_test_borsuk_lower_bound,result(TEST_PASS),#h("../test_borsuk_lower_bound.f90",38)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_borsuk_lower_bound.f90",40)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_borsuk_lower_bound.f90",42)
+ EF
+EM

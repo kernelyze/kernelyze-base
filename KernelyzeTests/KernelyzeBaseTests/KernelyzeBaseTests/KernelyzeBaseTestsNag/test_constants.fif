@@ -1,0 +1,20 @@
+M TEST_CONSTANTS_MOD,#h("../test_constants.f90",23)
+ F TEST_CONSTANTS_PI,TEST_CONSTANTS_MOD_MP_test_constants_pi,result(TEST_PASS),#h("../test_constants.f90",50)
+  V VALUE_AT_PI,value_at_pi,Real(Kind=2),double,,0,#t("../test_constants.f90",56)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_constants.f90",52)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_constants.f90",54)
+ EF
+ F TEST_CONSTANTS_EXP,TEST_CONSTANTS_MOD_MP_test_constants_exp,result(TEST_PASS),#h("../test_constants.f90",72)
+  V VALUE_AT_EXP,value_at_exp,Real(Kind=2),double,,0,#t("../test_constants.f90",78)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_constants.f90",74)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_constants.f90",76)
+ EF
+ F TEST_CONSTANTS_ALLOC_ERRMSG_LEN,TEST_CONSTANTS_MOD_MP_test_constants_alloc_errmsg_len,result(TEST_PASS),#h("../test_constants.f90",90)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_constants.f90",92)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_constants.f90",94)
+ EF
+ F TEST_CONSTANTS,TEST_CONSTANTS_MOD_MP_test_constants,result(TEST_PASS),#h("../test_constants.f90",32)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_constants.f90",34)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_constants.f90",36)
+ EF
+EM

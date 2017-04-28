@@ -1,0 +1,30 @@
+M KERNEL_BACHELIER_MOD,#h("../kernel_bachelier.f90",27)
+ T kernel_summable,KERNEL_SUMMABLE_MOD_DT_kernel_summable
+ ET
+ T kernel_bachelier,KERNEL_BACHELIER_MOD_DT_kernel_bachelier,#d("../kernel_bachelier.f90",37)
+  C SIGMA,sigma,Real(Kind=2),double,32,,0,#c("../kernel_bachelier.f90",40)
+  C IS_CALL,is_call,Logical,int,40,,0,#c("../kernel_bachelier.f90",42)
+ ET
+ F EVAL_BACHELIER_KERNEL,KERNEL_BACHELIER_MOD_MP_eval_bachelier_kernel,result(EVAL_RES),#h("../kernel_bachelier.f90",59)
+  V THIS,this,Class(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,d,0,#t("../kernel_bachelier.f90",61)
+  V Y,y,Real(Kind=2),double,d,0,#t("../kernel_bachelier.f90",63)
+  V X,x,Real(Kind=2),double,d,0,#t("../kernel_bachelier.f90",62)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../kernel_bachelier.f90",65)
+ EF
+ F GET_SIGMA_PARAM,KERNEL_BACHELIER_MOD_MP_get_sigma_param,result(SIGMA_PARAM),#h("../kernel_bachelier.f90",75)
+  V THIS,this,Class(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,d,0,#t("../kernel_bachelier.f90",77)
+  V SIGMA_PARAM,sigma_param,Real(Kind=2),double,,0,#t("../kernel_bachelier.f90",79)
+ EF
+ S SET_SIGMA_PARAM,KERNEL_BACHELIER_MOD_MP_set_sigma_param,#h("../kernel_bachelier.f90",84)
+  V THIS,this,Class(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,d,0,#t("../kernel_bachelier.f90",86)
+  V SIGMA_PARAM,sigma_param,Real(Kind=2),double,d,0,#t("../kernel_bachelier.f90",87)
+ ES
+ F GET_IS_CALL,KERNEL_BACHELIER_MOD_MP_get_is_call,result(CALL_FLAG),#h("../kernel_bachelier.f90",92)
+  V THIS,this,Class(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,d,0,#t("../kernel_bachelier.f90",94)
+  V CALL_FLAG,call_flag,Logical,int,,0,#t("../kernel_bachelier.f90",96)
+ EF
+ S SET_IS_CALL,KERNEL_BACHELIER_MOD_MP_set_is_call,#h("../kernel_bachelier.f90",101)
+  V THIS,this,Class(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,d,0,#t("../kernel_bachelier.f90",103)
+  V CALL_FLAG,call_flag,Logical,int,d,0,#t("../kernel_bachelier.f90",104)
+ ES
+EM

@@ -1,0 +1,52 @@
+M LINEAR_COMBO_KERNEL_MOD,#h("../linear_combo_kernel.f90",34)
+ T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+ ET
+ T linear_combo_kernel,LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel,#d("../linear_combo_kernel.f90",45)
+  C IS_FUNC_OF_X,is_func_of_x,Logical,int,184,,0,#c("../linear_combo_kernel.f90",48)
+  C COMBO_RHO_VEC,combo_rho_vec,Real(Kind=2),double,16,a,1,a(*:*),#c("../linear_combo_kernel.f90",50)
+  C COMBO_A_MATRIX,combo_a_matrix,Real(Kind=2),double,56,a,2,a(*:*,*:*),#c("../linear_combo_kernel.f90",52)
+  C COMBO_COEFFS,combo_coeffs,Real(Kind=2),double,120,a,1,a(*:*),#c("../linear_combo_kernel.f90",54)
+  C COMBO_KERNEL,combo_kernel,Class(kernel),KERNEL_MOD_DT_kernel,160,a,0,#c("../linear_combo_kernel.f90",56)
+ ET
+ F SECOND_DERIV,LINEAR_COMBO_KERNEL_MOD_MP_second_deriv,result(DERIV),#h("../linear_combo_kernel.f90",151)
+  V X,x,Real(Kind=2),double,d,0,#t("../linear_combo_kernel.f90",154)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../linear_combo_kernel.f90",157)
+  V THIS,this,Class(linear_combo_kernel_mod:linear_combo_kernel),LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel,d,0,#t("../linear_combo_kernel.f90",153)
+  V D,d,Real(Kind=2),double,d,0,#t("../linear_combo_kernel.f90",155)
+ EF
+ F EVAL,LINEAR_COMBO_KERNEL_MOD_MP_eval,result(EVAL_RES),#h("../linear_combo_kernel.f90",82)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../linear_combo_kernel.f90",87)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../linear_combo_kernel.f90",85)
+  V THIS,this,Class(linear_combo_kernel_mod:linear_combo_kernel),LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel,d,0,#t("../linear_combo_kernel.f90",84)
+ EF
+ S INIT_COMBO,LINEAR_COMBO_KERNEL_MOD_MP_init_combo,#h("../linear_combo_kernel.f90",210)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V KERNEL_TO_USE,kernel_to_use,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../linear_combo_kernel.f90",219)
+  V RHO_VEC_TO_USE,rho_vec_to_use,Real(Kind=2),double,d,1,d(1:*),#t("../linear_combo_kernel.f90",220)
+  V A_MATRIX_TO_USE,a_matrix_to_use,Real(Kind=2),double,d,2,d(1:*,1:*),#t("../linear_combo_kernel.f90",221)
+  V COEFFS_TO_USE,coeffs_to_use,Real(Kind=2),double,d,1,d(1:*),#t("../linear_combo_kernel.f90",222)
+  V FUNC_OF_X,func_of_x,Logical,int,d,0,#t("../linear_combo_kernel.f90",223)
+  V THIS,this,Class(linear_combo_kernel_mod:linear_combo_kernel),LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel,d,0,#t("../linear_combo_kernel.f90",218)
+ ES
+ S COMBO_ASSIGN,LINEAR_COMBO_KERNEL_MOD_MP_combo_assign,#h("../linear_combo_kernel.f90",191)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V LEFT,left,Class(linear_combo_kernel_mod:linear_combo_kernel),LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel,d,0,#t("../linear_combo_kernel.f90",193)
+  V RIGHT,right,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../linear_combo_kernel.f90",194)
+ ES
+ F FIRST_DERIV,LINEAR_COMBO_KERNEL_MOD_MP_first_deriv,result(DERIV),#h("../linear_combo_kernel.f90",107)
+  V X,x,Real(Kind=2),double,d,0,#t("../linear_combo_kernel.f90",110)
+  V DERIV,deriv,Real(Kind=2),double,,0,#t("../linear_combo_kernel.f90",113)
+  V THIS,this,Class(linear_combo_kernel_mod:linear_combo_kernel),LINEAR_COMBO_KERNEL_MOD_DT_linear_combo_kernel,d,0,#t("../linear_combo_kernel.f90",109)
+  V D,d,Real(Kind=2),double,d,0,#t("../linear_combo_kernel.f90",111)
+ EF
+EM

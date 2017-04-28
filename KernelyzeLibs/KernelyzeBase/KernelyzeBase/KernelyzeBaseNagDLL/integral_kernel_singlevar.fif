@@ -1,0 +1,61 @@
+M INTEGRAL_KERNEL_SINGLEVAR_MOD,#h("../integral_kernel_singlevar.f90",34)
+ T kernel,KERNEL_MOD_DT_kernel
+  C X_LB,x_lb,Real(Kind=2),double,0,,0
+  C X_UB,x_ub,Real(Kind=2),double,8,,0
+  C Y_LB,y_lb,Real(Kind=2),double,16,,0
+  C Y_UB,y_ub,Real(Kind=2),double,24,,0
+ ET
+ T integral_kernel_measure,INTEGRAL_KERNEL_MEASURE_MOD_DT_integral_kernel_measure
+  C INTEGRAL_IS_OVER_X,integral_is_over_x,Logical,int,40,,0
+  C DESCRIPTION,description,Character(Len=255),Char[255],44,,0
+  C KERNEL_TO_USE,kernel_to_use,Class(kernel),KERNEL_MOD_DT_kernel,16,a,0
+ ET
+ T integral_kernel_singlevar,INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar,#d("../integral_kernel_singlevar.f90",46)
+  C SVAR_FUNC,svar_func,Class(singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,304,a,0,#c("../integral_kernel_singlevar.f90",47)
+ ET
+ F EVAL_KERNEL_SVAR,INTEGRAL_KERNEL_SINGLEVAR_MOD_MP_eval_kernel_svar,result(EVAL_RES),#h("../integral_kernel_singlevar.f90",67)
+  V EVAL_RES,eval_res,Real(Kind=2),double,,0,#t("../integral_kernel_singlevar.f90",72)
+  V ARG_PT,arg_pt,Real(Kind=2),double,d,0,#t("../integral_kernel_singlevar.f90",70)
+  V THIS,this,Class(integral_kernel_singlevar_mod:integral_kernel_singlevar),INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar,d,0,#t("../integral_kernel_singlevar.f90",69)
+ EF
+ S KERNEL_SVAR_ASSIGN,INTEGRAL_KERNEL_SINGLEVAR_MOD_MP_kernel_svar_assign,#h("../integral_kernel_singlevar.f90",80)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V LEFT,left,Class(integral_kernel_singlevar_mod:integral_kernel_singlevar),INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar,d,0,#t("../integral_kernel_singlevar.f90",82)
+  V RIGHT,right,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,d,0,#t("../integral_kernel_singlevar.f90",83)
+  V KERNEL_USED,kernel_used,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,a,0,#t("../integral_kernel_singlevar.f90",85)
+  V SINGLEVAR_USED,singlevar_used,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,a,0,#t("../integral_kernel_singlevar.f90",86)
+ ES
+ S GET_SINGLEVAR,INTEGRAL_KERNEL_SINGLEVAR_MOD_MP_get_singlevar,#h("../integral_kernel_singlevar.f90",100)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../integral_kernel_singlevar.f90",105)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../integral_kernel_singlevar.f90",106)
+  V THIS,this,Class(integral_kernel_singlevar_mod:integral_kernel_singlevar),INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar,d,0,#t("../integral_kernel_singlevar.f90",102)
+  V CURR_SVAR,curr_svar,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,da,0,#t("../integral_kernel_singlevar.f90",103)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../integral_kernel_singlevar.f90",108)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../integral_kernel_singlevar.f90",109)
+ ES
+ S SET_SINGLEVAR,INTEGRAL_KERNEL_SINGLEVAR_MOD_MP_set_singlevar,#h("../integral_kernel_singlevar.f90",143)
+  T singlevar_func,SINGLEVAR_FUNC_MOD_DT_singlevar_func
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+  ET
+  V ERR_STAT,err_stat,Integer,int,d,0,#t("../integral_kernel_singlevar.f90",148)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],d,0,#t("../integral_kernel_singlevar.f90",149)
+  V NEW_SVAR,new_svar,Class(singlevar_func_mod:singlevar_func),SINGLEVAR_FUNC_MOD_DT_singlevar_func,da,0,#t("../integral_kernel_singlevar.f90",146)
+  V THIS,this,Class(integral_kernel_singlevar_mod:integral_kernel_singlevar),INTEGRAL_KERNEL_SINGLEVAR_MOD_DT_integral_kernel_singlevar,d,0,#t("../integral_kernel_singlevar.f90",145)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../integral_kernel_singlevar.f90",151)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../integral_kernel_singlevar.f90",152)
+ ES
+EM

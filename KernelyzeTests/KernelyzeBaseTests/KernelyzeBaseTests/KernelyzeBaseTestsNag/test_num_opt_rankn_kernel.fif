@@ -1,0 +1,194 @@
+M TEST_NUM_OPT_RANKN_KERNEL_MOD,#h("../test_num_opt_rankn_kernel.f90",35)
+ F TEST_NUM_OPT_RANKN_KERNEL_GAUSSIAN,TEST_NUM_OPT_RANKN_KERNEL_MOD_MP_test_num_opt_rankn_kernel_gaussian,result(TEST_PASS),#h("../test_num_opt_rankn_kernel.f90",150)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V GAUSSIAN_EVAL,gaussian_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",168)
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",166)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_kernel.f90",152)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",165)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_num_opt_rankn_kernel.f90",162)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_kernel.f90",154)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",165)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",163)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_kernel.f90",164)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",167)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",167)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",168)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",168)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_num_opt_rankn_kernel.f90",161)
+ EF
+ F TEST_NUM_OPT_RANKN_KERNEL_CAUCHY,TEST_NUM_OPT_RANKN_KERNEL_MOD_MP_test_num_opt_rankn_kernel_cauchy,result(TEST_PASS),#h("../test_num_opt_rankn_kernel.f90",218)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_num_opt_rankn_kernel.f90",229)
+  V CAUCHY_EVAL,cauchy_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",236)
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",234)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_kernel.f90",220)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",233)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_num_opt_rankn_kernel.f90",230)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_kernel.f90",222)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",233)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",231)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_kernel.f90",232)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",235)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",235)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",236)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",236)
+ EF
+ F TEST_NUM_OPT_RANKN_KERNEL_BACHELIER,TEST_NUM_OPT_RANKN_KERNEL_MOD_MP_test_num_opt_rankn_kernel_bachelier,result(TEST_PASS),#h("../test_num_opt_rankn_kernel.f90",288)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_bachelier,KERNEL_BACHELIER_MOD_DT_kernel_bachelier
+   C SIGMA,sigma,Real(Kind=2),double,32,,0
+   C IS_CALL,is_call,Logical,int,40,,0
+  ET
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_kernel.f90",302)
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",304)
+  V ERR_STAT,err_stat,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",301)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_kernel.f90",290)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",303)
+  V BACHELIER_KERNEL,bachelier_kernel,Type(kernel_bachelier_mod:kernel_bachelier),KERNEL_BACHELIER_MOD_DT_kernel_bachelier,,0,#t("../test_num_opt_rankn_kernel.f90",299)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_num_opt_rankn_kernel.f90",300)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_kernel.f90",292)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",303)
+  V BACHELIER_EVAL,bachelier_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",306)
+  V TEST_GRID_X,test_grid_x,Real(Kind=2),double,,1,f(1:11),#t("../test_num_opt_rankn_kernel.f90",307)
+  V TEST_GRID_Y,test_grid_y,Real(Kind=2),double,,1,f(1:11),#t("../test_num_opt_rankn_kernel.f90",307)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",305)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",305)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",306)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",306)
+ EF
+ F TEST_NUM_OPT_RANKN_KERNEL,TEST_NUM_OPT_RANKN_KERNEL_MOD_MP_test_num_opt_rankn_kernel,result(TEST_PASS),#h("../test_num_opt_rankn_kernel.f90",52)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_kernel.f90",54)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_kernel.f90",56)
+ EF
+ F TEST_NUM_OPT_RANKN_KERNEL_BLACK,TEST_NUM_OPT_RANKN_KERNEL_MOD_MP_test_num_opt_rankn_kernel_black,result(TEST_PASS),#h("../test_num_opt_rankn_kernel.f90",364)
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  T kernel_blackscholes,KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes
+   C SIGMA,sigma,Real(Kind=2),double,32,,0
+   C IS_CALL,is_call,Logical,int,40,,0
+  ET
+  V BLACK_KERNEL,black_kernel,Type(kernel_blackscholes_mod:kernel_blackscholes),KERNEL_BLACKSCHOLES_MOD_DT_kernel_blackscholes,,0,#t("../test_num_opt_rankn_kernel.f90",375)
+  V BLACK_EVAL,black_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",382)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_kernel.f90",378)
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",380)
+  V ERR_STAT,err_stat,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",377)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_kernel.f90",366)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",379)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_num_opt_rankn_kernel.f90",376)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_kernel.f90",368)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",379)
+  V TEST_GRID_X,test_grid_x,Real(Kind=2),double,,1,f(1:11),#t("../test_num_opt_rankn_kernel.f90",383)
+  V TEST_GRID_Y,test_grid_y,Real(Kind=2),double,,1,f(1:11),#t("../test_num_opt_rankn_kernel.f90",383)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",381)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",381)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",382)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",382)
+ EF
+ F TEST_NUM_OPT_RANKN_KERNEL_EXPPROD,TEST_NUM_OPT_RANKN_KERNEL_MOD_MP_test_num_opt_rankn_kernel_expprod,result(TEST_PASS),#h("../test_num_opt_rankn_kernel.f90",73)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  T kernel_mod:kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  T compfunc_kernel_mod:compfunc_kernel,COMPFUNC_KERNEL_MOD_DT_compfunc_kernel
+   C X_IS_FIXED,x_is_fixed,Logical,int,48,,0
+   C EVAL_PT,eval_pt,Real(Kind=2),double,16,,0
+   C KERNEL_SECTIONED,kernel_sectioned,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,24,a,0
+  ET
+  T kernel_rankn,KERNEL_NSECT_MOD_DT_kernel_rankn
+   C F_ARRAY,f_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,32,a,1,a(*:*)
+   C G_ARRAY,g_array,Class(compfunc_kernel_mod:compfunc_kernel),COMPFUNC_KERNEL_MOD_DT_compfunc_kernel,88,a,1,a(*:*)
+   C V_MATRIX,v_matrix,Real(Kind=2),double,144,a,2,a(*:*,*:*)
+   C W_MATRIX,w_matrix,Real(Kind=2),double,208,a,2,a(*:*,*:*)
+  ET
+  V BORSUK_LB,borsuk_lb,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",89)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_kernel.f90",75)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",88)
+  V RANKN_KERNEL,rankn_kernel,Class(kernel_nsect_mod:kernel_rankn),KERNEL_NSECT_MOD_DT_kernel_rankn,a,0,#t("../test_num_opt_rankn_kernel.f90",85)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_kernel.f90",77)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",88)
+  V EXPPROD_KERNEL,expprod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_num_opt_rankn_kernel.f90",84)
+  V V_MATRIX,v_matrix,Real(Kind=2),double,a,2,a(*:*,*:*),#t("../test_num_opt_rankn_kernel.f90",92)
+  V ALLOC_STAT,alloc_stat,Integer,int,,0,#t("../test_num_opt_rankn_kernel.f90",86)
+  V ALLOC_ERR_MSG,alloc_err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_kernel.f90",87)
+  V TEST_X,test_x,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",90)
+  V TEST_Y,test_y,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",90)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",91)
+  V EXPPROD_EVAL,expprod_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",91)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_kernel.f90",91)
+ EF
+EM

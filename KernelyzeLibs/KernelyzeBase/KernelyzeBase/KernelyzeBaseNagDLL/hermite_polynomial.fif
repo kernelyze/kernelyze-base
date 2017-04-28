@@ -1,0 +1,14 @@
+M HERMITE_POLYNOMIAL_MOD,#h("../hermite_polynomial.f90",26)
+ F HERMITE_POLYNOMIAL,HERMITE_POLYNOMIAL_MOD_MP_hermite_polynomial,result(HPOLY),#h("../hermite_polynomial.f90",39)
+  V X,x,Real(Kind=2),double,d,0,#t("../hermite_polynomial.f90",42)
+  V HPOLY,hpoly,Real(Kind=2),double,,0,#t("../hermite_polynomial.f90",44)
+  V POLYS_UP_TO_N,polys_up_to_n,Real(Kind=2),double,,1,i(1:*),#t("../hermite_polynomial.f90",46)
+  V N,n,Integer,int,d,0,#t("../hermite_polynomial.f90",41)
+ EF
+ F HERMITE_POLYNOMIAL_VEC,HERMITE_POLYNOMIAL_MOD_MP_hermite_polynomial_vec,result(HPOLYS_UP_TO_N),#h("../hermite_polynomial.f90",55)
+  V X,x,Real(Kind=2),double,d,0,#t("../hermite_polynomial.f90",58)
+  V I,i,Integer,int,,0,#t("../hermite_polynomial.f90",62)
+  V HPOLYS_UP_TO_N,hpolys_up_to_n,Real(Kind=2),double,,1,i(1:*),#t("../hermite_polynomial.f90",60)
+  V N,n,Integer,int,d,0,#t("../hermite_polynomial.f90",57)
+ EF
+EM

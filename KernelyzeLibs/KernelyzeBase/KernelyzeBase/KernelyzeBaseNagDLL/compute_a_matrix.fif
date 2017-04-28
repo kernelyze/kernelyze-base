@@ -1,0 +1,19 @@
+M COMPUTE_A_MATRIX_MOD,#h("../compute_a_matrix.f90",29)
+ F COMPUTE_A_MATRIX,COMPUTE_A_MATRIX_MOD_MP_compute_a_matrix,result(A_MATRIX),#h("../compute_a_matrix.f90",37)
+  T kernel,KERNEL_MOD_DT_kernel
+   C X_LB,x_lb,Real(Kind=2),double,0,,0
+   C X_UB,x_ub,Real(Kind=2),double,8,,0
+   C Y_LB,y_lb,Real(Kind=2),double,16,,0
+   C Y_UB,y_ub,Real(Kind=2),double,24,,0
+  ET
+  V I,i,Integer,int,,0,#t("../compute_a_matrix.f90",44)
+  V J,j,Integer,int,,0,#t("../compute_a_matrix.f90",44)
+  V KERNEL_OBJ,kernel_obj,Class(kernel_mod:kernel),KERNEL_MOD_DT_kernel,d,0,#t("../compute_a_matrix.f90",39)
+  V RHO_VEC,rho_vec,Real(Kind=2),double,d,1,d(1:*),#t("../compute_a_matrix.f90",40)
+  V A_MATRIX,a_matrix,Real(Kind=2),double,,2,i(1:*,1:*),#t("../compute_a_matrix.f90",42)
+  V EIGVALS,eigvals,Real(Kind=2),double,,1,i(1:*),#t("../compute_a_matrix.f90",45)
+  V EIGVECS,eigvecs,Real(Kind=2),double,,2,i(1:*,1:*),#t("../compute_a_matrix.f90",46)
+  V KERMAT,kermat,Real(Kind=2),double,,1,i(1:*),#t("../compute_a_matrix.f90",49)
+  V INFO,info,Integer,int,,0,#t("../compute_a_matrix.f90",44)
+ EF
+EM

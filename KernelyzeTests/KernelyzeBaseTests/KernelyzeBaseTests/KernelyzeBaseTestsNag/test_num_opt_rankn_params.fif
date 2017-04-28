@@ -1,0 +1,73 @@
+M TEST_NUM_OPT_RANKN_PARAMS_MOD,#h("../test_num_opt_rankn_params.f90",29)
+ F TEST_NUM_OPT_RANKN_PARAMS_EXP_PROD,TEST_NUM_OPT_RANKN_PARAMS_MOD_MP_test_num_opt_rankn_params_exp_prod,result(TEST_PASS),#h("../test_num_opt_rankn_params.f90",61)
+  T kernel_expprod,KERNEL_EXPPROD_MOD_DT_kernel_expprod
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_params.f90",65)
+  V TEST_GRID_X,test_grid_x,Real(Kind=2),double,,1,f(1:201),#t("../test_num_opt_rankn_params.f90",73)
+  V TEST_GRID_Y,test_grid_y,Real(Kind=2),double,,1,f(1:201),#t("../test_num_opt_rankn_params.f90",73)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",74)
+  V KERNEL_EVAL,kernel_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",74)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",75)
+  V ERR_STAT,err_stat,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",76)
+  V B_LOWERBD,b_lowerbd,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",71)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_params.f90",77)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",72)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",72)
+  V EXP_PROD_KERNEL,exp_prod_kernel,Type(kernel_expprod_mod:kernel_expprod),KERNEL_EXPPROD_MOD_DT_kernel_expprod,,0,#t("../test_num_opt_rankn_params.f90",67)
+  V TEST_V_MATRIX,test_v_matrix,Real(Kind=2),double,,2,f(1:9,1:8),#t("../test_num_opt_rankn_params.f90",68)
+  V TEST_W_MATRIX,test_w_matrix,Real(Kind=2),double,,2,f(1:9,1:8),#t("../test_num_opt_rankn_params.f90",68)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:9),#t("../test_num_opt_rankn_params.f90",69)
+  V TEST_GAMMA,test_gamma,Real(Kind=2),double,,1,f(1:9),#t("../test_num_opt_rankn_params.f90",69)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_params.f90",63)
+ EF
+ F TEST_NUM_OPT_RANKN_PARAMS_GAUSSIAN,TEST_NUM_OPT_RANKN_PARAMS_MOD_MP_test_num_opt_rankn_params_gaussian,result(TEST_PASS),#h("../test_num_opt_rankn_params.f90",160)
+  T kernel_gaussian,KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian
+   C C,c,Real(Kind=2),double,32,,0
+  ET
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_params.f90",164)
+  V TEST_GRID_X,test_grid_x,Real(Kind=2),double,,1,f(1:201),#t("../test_num_opt_rankn_params.f90",172)
+  V TEST_GRID_Y,test_grid_y,Real(Kind=2),double,,1,f(1:201),#t("../test_num_opt_rankn_params.f90",172)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",173)
+  V KERNEL_EVAL,kernel_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",173)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",174)
+  V ERR_STAT,err_stat,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",175)
+  V B_LOWERBD,b_lowerbd,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",170)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_params.f90",176)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",171)
+  V GAUSSIAN_KERNEL,gaussian_kernel,Type(kernel_gaussian_mod:kernel_gaussian),KERNEL_GAUSSIAN_MOD_DT_kernel_gaussian,,0,#t("../test_num_opt_rankn_params.f90",166)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",171)
+  V TEST_V_MATRIX,test_v_matrix,Real(Kind=2),double,,2,f(1:6,1:5),#t("../test_num_opt_rankn_params.f90",167)
+  V TEST_W_MATRIX,test_w_matrix,Real(Kind=2),double,,2,f(1:6,1:5),#t("../test_num_opt_rankn_params.f90",167)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:6),#t("../test_num_opt_rankn_params.f90",168)
+  V TEST_GAMMA,test_gamma,Real(Kind=2),double,,1,f(1:6),#t("../test_num_opt_rankn_params.f90",168)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_params.f90",162)
+ EF
+ F TEST_NUM_OPT_RANKN_PARAMS_CAUCHY,TEST_NUM_OPT_RANKN_PARAMS_MOD_MP_test_num_opt_rankn_params_cauchy,result(TEST_PASS),#h("../test_num_opt_rankn_params.f90",259)
+  T kernel_cauchy,KERNEL_CAUCHY_MOD_DT_kernel_cauchy
+   C C,c,Real(Kind=2),double,32,,0
+   C ALPHA,alpha,Real(Kind=2),double,40,,0
+  ET
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_params.f90",263)
+  V TEST_GRID_X,test_grid_x,Real(Kind=2),double,,1,f(1:201),#t("../test_num_opt_rankn_params.f90",271)
+  V TEST_GRID_Y,test_grid_y,Real(Kind=2),double,,1,f(1:201),#t("../test_num_opt_rankn_params.f90",271)
+  V RANKN_EVAL,rankn_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",272)
+  V KERNEL_EVAL,kernel_eval,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",272)
+  V MAX_ABS_ERR,max_abs_err,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",273)
+  V ERR_STAT,err_stat,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",274)
+  V B_LOWERBD,b_lowerbd,Real(Kind=2),double,,0,#t("../test_num_opt_rankn_params.f90",269)
+  V ERR_MSG,err_msg,Character(Len=255),Char[255],,0,#t("../test_num_opt_rankn_params.f90",275)
+  V I,i,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",270)
+  V J,j,Integer,int,,0,#t("../test_num_opt_rankn_params.f90",270)
+  V TEST_V_MATRIX,test_v_matrix,Real(Kind=2),double,,2,f(1:8,1:7),#t("../test_num_opt_rankn_params.f90",266)
+  V TEST_W_MATRIX,test_w_matrix,Real(Kind=2),double,,2,f(1:8,1:7),#t("../test_num_opt_rankn_params.f90",266)
+  V CAUCHY_KERNEL,cauchy_kernel,Type(kernel_cauchy_mod:kernel_cauchy),KERNEL_CAUCHY_MOD_DT_kernel_cauchy,,0,#t("../test_num_opt_rankn_params.f90",265)
+  V TEST_RHO,test_rho,Real(Kind=2),double,,1,f(1:8),#t("../test_num_opt_rankn_params.f90",267)
+  V TEST_GAMMA,test_gamma,Real(Kind=2),double,,1,f(1:8),#t("../test_num_opt_rankn_params.f90",267)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_params.f90",261)
+ EF
+ F TEST_NUM_OPT_RANKN_PARAMS,TEST_NUM_OPT_RANKN_PARAMS_MOD_MP_test_num_opt_rankn_params,result(TEST_PASS),#h("../test_num_opt_rankn_params.f90",42)
+  V TEST_PASS,test_pass,Logical,int,,0,#t("../test_num_opt_rankn_params.f90",46)
+  V UNIT_TO_USE,unit_to_use,Integer,int,d,0,#t("../test_num_opt_rankn_params.f90",44)
+ EF
+EM
