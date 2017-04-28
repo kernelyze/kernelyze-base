@@ -1,0 +1,27 @@
+KernelyzeBase uses third-party codes available under terms distinct from the license here:
+
+1) Michel Olagnon (from his ORDERPACK, available at http://www.fortran-2000.com/, 
+    "A WEB site on the way to more public domain utilities");
+
+2) "Numerical Computing with Modern Fortran" by Richard J. Hanson and Tim Hopkins,
+    SIAM OT134 (2013).  "SIAM grants a royalty-free license to copy
+    and distribute the software code posted on the book's
+    supplemental Web page, provided the source is acknowledged."
+    (Statement above Library of Congress Cataloging-in-Publication
+    Data.)  The authors also state that (page x of the Introduction):
+    "there is no restriction on the use of the software for any
+    purpose.  The only requirement is that, if use is made of
+    our codes, our book and SIAM are referenced in any derived
+    work."  Kernelyze gratefully references the book (cited above)
+    and SIAM, and thanks the authors for their excellent work;
+	
+3) fmm.f90 from Public Domain Aeronautical Software (this is
+    in the public domain, as the website's title indicates; the
+	site is http://www.pdas.com/index.html and is very helpful)
+
+The book and the two websites referenced above are all very
+helpful; the interested reader would be well-served by reading
+the book and visiting the websites.
+
+Modifications made in KernelyzeBase to these codes do fall under
+the license used for this project.
